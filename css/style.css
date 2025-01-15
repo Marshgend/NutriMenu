@@ -1,0 +1,247 @@
+/* RESET Y BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;  /* Fondo oscuro */
+  color: #d0d0d0;            /* Texto claro */
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ENCABEZADO */
+header {
+  background-color: #5e3571; /* Morado oscuro */
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #fefefe;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+main {
+  padding: 1rem;
+}
+
+#app {
+  max-width: 700px;   /* Contenedor más ancho */
+  margin: 0 auto;
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background-color: #2e2e2e;
+  text-align: center;
+  color: #ccc;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* BLOQUES DE PREGUNTA / SELECCIÓN */
+.question-block {
+  background: #2f2f2f;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.question-block h3 {
+  margin-bottom: 1rem;
+}
+
+/* DISTRIBUCIÓN EN DOS LÍNEAS, DISTINTAS PROPORCIONES */
+.selection-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.selection-menu {
+  flex-basis: 70%;
+  margin-right: 1rem;
+}
+
+.selection-days {
+  flex-basis: 30%;
+}
+
+/* NUEVAS CLASES PARA SELECT FIXOS */
+.fixed-select-menu {
+  width: 100%;
+  min-width: 300px; /* Ajusta este valor según tus necesidades */
+  max-width: 100%;
+}
+
+.fixed-select-days {
+  width: 100%;
+  min-width: 100px; /* Ajusta este valor según tus necesidades */
+  max-width: 100%;
+}
+
+/* DISTRIBUCIÓN DE BOTONES */
+.button-row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.button-row button {
+  /* Elimina el width: 100% si está presente para evitar que los botones se estiren */
+  width: auto;
+}
+
+/* Botones y Selects */
+button, select {
+  background-color: #5e3571; /* Morado oscuro */
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+button:hover,
+select:hover {
+  background-color: #6f4183; 
+}
+
+button:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+}
+
+/* BOTÓN REINICIAR */
+.btn-restart {
+  background-color: #8c2f2f; /* Rojo oscuro */
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.btn-restart:hover {
+  background-color: #9a3838; /* Rojo un poco más claro al pasar el mouse */
+}
+
+/* BOTÓN ACEPTAR */
+.btn-accept-light {
+  background-color: #7a4b90; /* Morado más claro */
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.btn-accept-light:hover {
+  background-color: #8e5aa5; /* Morado aún más claro al pasar el mouse */
+}
+
+/* FIXED SELECT STYLES */
+.selection-row select.fixed-select-menu {
+  min-width: 300px; /* Asegura que los menús desplegables sean lo suficientemente anchos */
+}
+
+.selection-row select.fixed-select-days {
+  min-width: 100px; /* Asegura que el selector de días no sea demasiado pequeño */
+}
+
+/* RESUMEN FINAL */
+.selection-summary {
+  background: #262626;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #5e3571;
+}
+
+.selection-summary h2 {
+  color: #c8a2c8; /* Morado claro */
+  margin-bottom: 1rem;
+}
+
+.summary-menu-block {
+  background: #333;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border-radius: 5px;
+}
+
+.summary-menu-block h4 {
+  color: #d0d0d0;
+  margin-bottom: 0.5rem;
+}
+
+.summary-dish {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #aaaaaa;
+}
+
+.summary-ingredient {
+  margin-left: 2.5rem;
+  color: #888888;
+  margin-bottom: 0.2rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  #app {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .selection-row, .button-row {
+    flex-direction: column;
+  }
+
+  .selection-menu,
+  .selection-days,
+  .btn-restart,
+  .btn-accept-light {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    width: 100%; /* Asegura que ocupen todo el ancho en móviles */
+  }
+
+  /* Ajustar el min-width para dispositivos móviles si es necesario */
+  .fixed-select-menu {
+    min-width: 100%;
+  }
+
+  .fixed-select-days {
+    min-width: 100%;
+  }
+}

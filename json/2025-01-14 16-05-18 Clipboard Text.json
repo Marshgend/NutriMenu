@@ -1,0 +1,355 @@
+﻿{
+  "id": "menu_003",
+  "breakfast": [
+    {
+      "menuName": "Desayuno con jugo verde y torta de bistec",
+      "dishes": [
+        {
+          "name": "Jugo verde con manzana",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 200,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.833,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Manzana",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Espinaca",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jugo de limón",
+              "metricQuantity": 10,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Café negro",
+          "ingredients": []
+        },
+        {
+          "name": "Fruta con yogurt griego natural",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 80,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Melón",
+              "metricQuantity": 162,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Zarzamora",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Torta de bistec",
+          "ingredients": [
+            {
+              "name": "Bistec de res",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "unidades"
+            },
+            {
+              "name": "Bolillo",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Jícama, pepino y guayaba",
+      "dishes": [
+        {
+          "name": "Jícama con pepino y guayaba",
+          "ingredients": [
+            {
+              "name": "Pepino",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jícama",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Guayaba",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Chicken Burrito Bowl",
+      "dishes": [
+        {
+          "name": "Chicken Burrito Bowl",
+          "ingredients": [
+            {
+              "name": "Pechuga de pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Elote",
+              "metricQuantity": 46,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 86,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Arroz blanco cocido",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Carlota",
+      "dishes": [
+        {
+          "name": "Carlota",
+          "ingredients": [
+            {
+              "name": "Galletas dulces",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 73,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Licuado y tacos a la mexicana",
+      "dishes": [
+        {
+          "name": "Licuado de fresa y zarzamora",
+          "ingredients": [
+            {
+              "name": "Zarzamora",
+              "metricQuantity": 59,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 250,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "vaso"
+            }
+          ]
+        },
+        {
+          "name": "Tacos de huevo a la mexicana",
+          "ingredients": [
+            {
+              "name": "Clara de huevo",
+              "metricQuantity": 66,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Huevo entero",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Tortilla",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
