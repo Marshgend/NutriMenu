@@ -1,8 +1,8 @@
 ﻿{
-  "id": "menu_004",
+  "id": "menu_002",
   "breakfast": [
     {
-      "menuName": "Desayuno con jugo verde y ensalada de espárragos",
+      "menuName": "Jugo verde y ensalada de espárragos",
       "dishes": [
         {
           "name": "Jugo verde",
