@@ -12,7 +12,7 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   background-color: #1a1a1a;  /* Fondo oscuro */
-  color: #d0d0d0;            /* Texto claro */
+  color: #dbc5e6;            /* Texto claro */
   line-height: 1.4;
   margin: 0;
 }
@@ -195,53 +195,18 @@ button:disabled {
 }
 
 .summary-menu-block h4 {
-  color: #d0d0d0;
+  color: #d7cadd;
   margin-bottom: 0.5rem;
 }
 
 .summary-dish {
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #aaaaaa;
+  color: #dddddd;
 }
 
 .summary-ingredient {
   margin-left: 2.5rem;
-  color: #888888;
+  color: #b8b8b8;
   margin-bottom: 0.2rem;
-}
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  body {
-    font-size: 0.95rem;
-  }
-
-  #app {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .selection-row, .button-row {
-    flex-direction: column;
-  }
-
-  .selection-menu,
-  .selection-days,
-  .btn-restart,
-  .btn-accept-light {
-    flex-basis: 100%;
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-    width: 100%; /* Asegura que ocupen todo el ancho en móviles */
-  }
-
-  /* Ajustar el min-width para dispositivos móviles si es necesario */
-  .fixed-select-menu {
-    min-width: 100%;
-  }
-
-  .fixed-select-days {
-    min-width: 100%;
-  }
 }
