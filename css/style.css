@@ -14,10 +14,8 @@ body {
   background-color: #1a1a1a;  /* Fondo oscuro */
   color: #dbc5e6;            /* Texto claro */
   line-height: 1.4;
-  margin: 0;
 }
 
-/* ENCABEZADO */
 header {
   background-color: #5e3571; /* Morado oscuro */
   padding: 1rem;
@@ -27,20 +25,17 @@ header {
 header h1 {
   color: #fefefe;
   font-size: 1.8rem;
-  margin: 0;
 }
 
-/* CONTENEDOR PRINCIPAL */
 main {
   padding: 1rem;
 }
 
 #app {
-  max-width: 700px;   /* Contenedor más ancho */
+  max-width: 700px;
   margin: 0 auto;
 }
 
-/* PIE DE PÁGINA */
 footer {
   background-color: #2e2e2e;
   text-align: center;
@@ -50,7 +45,7 @@ footer {
   margin-top: 1rem;
 }
 
-/* BLOQUES DE PREGUNTA / SELECCIÓN */
+/* BLOQUE DE PREGUNTA */
 .question-block {
   background: #2f2f2f;
   margin: 1rem 0;
@@ -63,65 +58,38 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* DISTRIBUCIÓN EN DOS LÍNEAS, DISTINTAS PROPORCIONES */
+/* FILA DE SELECCIÓN */
 .selection-row {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.selection-menu {
-  flex-basis: 70%;
-  margin-right: 1rem;
+.selection-menu, .selection-days {
+  flex: 1 1 100%;
 }
 
-.selection-days {
-  flex-basis: 30%;
-}
-
-/* NUEVAS CLASES PARA SELECT FIXOS */
-.fixed-select-menu {
-  width: 100%;
-  min-width: 300px; /* Ajusta este valor según tus necesidades */
-  max-width: 100%;
-}
-
-.fixed-select-days {
-  width: 100%;
-  min-width: 100px; /* Ajusta este valor según tus necesidades */
-  max-width: 100%;
-}
-
-/* DISTRIBUCIÓN DE BOTONES */
+/* BOTONES */
 .button-row {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-top: 0.8rem;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.button-row button {
-  /* Elimina el width: 100% si está presente para evitar que los botones se estiren */
-  width: auto;
-}
-
-/* Botones y Selects */
-button, select {
+button {
   background-color: #5e3571; /* Morado oscuro */
   color: #fff;
   border: none;
-  outline: none;
   padding: 0.7rem 1rem;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  width: 100%; 
+  width: 100%;
   box-sizing: border-box;
 }
 
-button:hover,
-select:hover {
+button:hover {
   background-color: #6f4183; 
 }
 
@@ -130,47 +98,37 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* BOTÓN REINICIAR */
-.btn-restart {
-  background-color: #8c2f2f; /* Rojo oscuro */
-  color: #fff;
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 100%; 
-  box-sizing: border-box;
-}
-
-.btn-restart:hover {
-  background-color: #9a3838; /* Rojo un poco más claro al pasar el mouse */
-}
-
-/* BOTÓN ACEPTAR */
 .btn-accept-light {
   background-color: #7a4b90; /* Morado más claro */
-  color: #fff;
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  width: 100%; 
-  box-sizing: border-box;
 }
 
 .btn-accept-light:hover {
-  background-color: #8e5aa5; /* Morado aún más claro al pasar el mouse */
+  background-color: #8e5aa5;
 }
 
-/* FIXED SELECT STYLES */
-.selection-row select.fixed-select-menu {
-  min-width: 300px; /* Asegura que los menús desplegables sean lo suficientemente anchos */
+.btn-restart {
+  background-color: #8c2f2f; /* Rojo oscuro */
+  margin-top: 2rem; /* Aumenta la separación superior */
 }
 
-.selection-row select.fixed-select-days {
-  min-width: 100px; /* Asegura que el selector de días no sea demasiado pequeño */
+.btn-restart:hover {
+  background-color: #9a3838;
+}
+
+/* SELECTS */
+select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #6d5877; /* Fondo interno */
+  color: #fff; /* Texto */
+  border: none;
+  cursor: pointer;
+}
+
+select:hover {
+  background-color: #7b6585;
 }
 
 /* RESUMEN FINAL */
@@ -183,7 +141,7 @@ button:disabled {
 }
 
 .selection-summary h2 {
-  color: #c8a2c8; /* Morado claro */
+  color: #c8a2c8;
   margin-bottom: 1rem;
 }
 
@@ -209,4 +167,21 @@ button:disabled {
   margin-left: 2.5rem;
   color: #b8b8b8;
   margin-bottom: 0.2rem;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVIDAD */
+@media (max-width: 768px) {
+  #app {
+    padding: 0.5rem;
+  }
+
+  .selection-row {
+    flex-direction: column;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  /* Los botones ya ocupan 100% */
 }
