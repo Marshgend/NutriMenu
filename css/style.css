@@ -216,6 +216,37 @@ select:hover {
     font-size: 3rem;
   }
 
+  h3 {
+    margin: 5rem 0 2rem 0.6rem;
+    font-size: 4.3rem;
+  }
+
+  .selection-summary {
+    padding: 2rem;
+    border-radius: 3rem;
+    border: 3px solid #5e3571;
+  }
+
+  .summary-menu-block {
+    margin: 1rem 0;
+    padding: 2rem;
+    border-radius: 3rem;
+  }
+
+  .summary-dish{
+    margin: 3rem 0rem 1rem 0rem;
+  }
+
+  .summary-ingredient{
+    margin: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .summary-menu-block h4 {
+    font-size: 3rem;
+    margin: 2rem auto;
+  }
+
   .question-block {
     padding: 3rem;
     border-radius: 2rem;
