@@ -170,7 +170,7 @@ select:hover {
 }
 
 /* MEDIA QUERIES PARA RESPONSIVIDAD */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   #app {
     padding: 0.5rem;
     margin: 0;
