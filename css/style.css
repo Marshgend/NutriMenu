@@ -178,7 +178,7 @@ select:hover {
   }
 
   body {
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   .selection-row {
@@ -187,12 +187,12 @@ select:hover {
 
   select {
     padding: 0.9rem 1.5rem;
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   button {
     padding: 1rem 1.5rem;
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   .button-row {
