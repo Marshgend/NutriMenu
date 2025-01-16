@@ -170,18 +170,40 @@ select:hover {
 }
 
 /* MEDIA QUERIES PARA RESPONSIVIDAD */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   #app {
     padding: 0.5rem;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  body {
+    font-size: 2rem;
   }
 
   .selection-row {
     flex-direction: column;
   }
 
+  select {
+    padding: 0.9rem 1.5rem;
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+  }
+
   .button-row {
     flex-direction: column;
   }
+
+  header h1 {
+    color: #fefefe;
+    font-size: 3rem;
+  }
+
 
   /* Los botones ya ocupan 100% */
 }
