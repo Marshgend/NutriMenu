@@ -1,0 +1,309 @@
+﻿{
+  "id": "menu_007",
+  "breakfast": [
+    {
+      "menuName": "Hotcakes de avena y claras con pico de gallo",
+      "dishes": [
+        {
+          "name": "Hotcakes de avena",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 80,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 66,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 48,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Arándanos",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Miel",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Polvo para hornear",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Pico de gallo",
+          "ingredients": [
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Revuleto de claras",
+          "ingredients": [
+            {
+              "name": "Claras",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 3,
+              "metricUnit": "ml"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Bowl de arroz con pollo y verduras",
+      "dishes": [
+        {
+          "name": "Pollo a la plancha",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Bowl de arroz con verduras",
+          "ingredients": [
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.5,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Calabaza",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Salsa de soya",
+              "metricQuantity": 16,
+              "metricUnit": "g",
+              "alternativeQuantity": 3.2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 39,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Pan tostado con nutella y yogurt",
+      "dishes": [
+        {
+          "name": "Pan tostado con nutella",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 35,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Nutella",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Yogurt bajo en grasa",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Quesadillas de champiñones y bistec con licuado de fresas",
+      "dishes": [
+        {
+          "name": "Licuado de fresas",
+          "ingredients": [
+            {
+              "name": "Fresas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 8,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 250,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Quesadillas de champiñones",
+          "ingredients": [
+            {
+              "name": "Queso",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Champiñones",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Tortillas",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Bistec",
+          "ingredients": [
+            {
+              "name": "Carne de res",
+              "metricQuantity": 60,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 2.5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

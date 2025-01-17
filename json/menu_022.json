@@ -1,0 +1,324 @@
+﻿{
+  "id": "menu_022",
+  "breakfast": [
+    {
+      "menuName": "Té verde, licuado de manzana y cuernito",
+      "dishes": [
+        {
+          "name": "Té verde",
+          "ingredients": [
+            {
+              "name": "Té verde",
+              "metricQuantity": 220,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Licuado de manzana y avena",
+          "ingredients": [
+            {
+              "name": "Manzana",
+              "metricQuantity": 53,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 125,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 125,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Cuernito de jamón de pavo",
+          "ingredients": [
+            {
+              "name": "Cuernito",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 42,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 35,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 11.25,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Licuado de mango con espinacas",
+          "ingredients": [
+            {
+              "name": "Mango",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 2,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Gelatina light y agua",
+      "dishes": [
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Gelatina light",
+          "ingredients": [
+            {
+              "name": "Gelatina",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 250,
+              "metricUnit": "ml"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Ensalada de pollo con agua mineral",
+      "dishes": [
+        {
+          "name": "Agua mineral con limón",
+          "ingredients": [
+            {
+              "name": "Agua mineral",
+              "metricQuantity": 200,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 25,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Ensalada de pollo con queso, fresa y aguacate",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 180,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Lechuga y espinacas",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 72,
+              "metricUnit": "g",
+              "alternativeQuantity": 6,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 20,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Nuez",
+              "metricQuantity": 7,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Cacahuates y pera",
+      "dishes": [
+        {
+          "name": "Cacahuates",
+          "ingredients": [
+            {
+              "name": "Cacahuates",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": 12,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Pera",
+          "ingredients": [
+            {
+              "name": "Pera",
+              "metricQuantity": 190,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Tacos de lechuga y agua mineral",
+      "dishes": [
+        {
+          "name": "Tacos de lechuga con pollo",
+          "ingredients": [
+            {
+              "name": "Lechuga",
+              "metricQuantity": 89.87,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 120,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Aguacate o aderezo",
+              "metricQuantity": 27.9,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Pimiento",
+              "metricQuantity": 22.5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Agua mineral con limón",
+          "ingredients": [
+            {
+              "name": "Agua mineral",
+              "metricQuantity": 200,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 25,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

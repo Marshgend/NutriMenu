@@ -1,0 +1,356 @@
+﻿{
+  "id": "menu_012",
+  "breakfast": [
+    {
+      "menuName": "Licuado de Plátano y Sándwich",
+      "dishes": [
+        {
+          "name": "Licuado de plátano, nuez, amaranto y espinaca",
+          "ingredients": [
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Canela y vainilla",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Sándwich de queso panela",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 55,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 54,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 25,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 20,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Café negro",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Atún con Ensalada de Verduras",
+      "dishes": [
+        {
+          "name": "Atún con ensalada de verduras",
+          "ingredients": [
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Chícharos",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Elote",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Papa",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Alambre de res y tortillas",
+      "dishes": [
+        {
+          "name": "Alambre",
+          "ingredients": [
+            {
+              "name": "Pimiento",
+              "metricQuantity": 38,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Champiñones",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 16,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 70,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Salsa de soya",
+              "metricQuantity": 8,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.67,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Carne de res",
+              "metricQuantity": 150,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.5,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Tortillas",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 44,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Ponche Navideño y Galletas",
+      "dishes": [
+        {
+          "name": "Ponche navideño",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Manzana",
+              "metricQuantity": 27,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Guayaba",
+              "metricQuantity": 16,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Tamarindo",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jamaica",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Sustituto de azúcar",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 1,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Galletas dulces",
+          "ingredients": [
+            {
+              "name": "Galletas dulces",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Sopa Fría",
+      "dishes": [
+        {
+          "name": "Sopa fría",
+          "ingredients": [
+            {
+              "name": "Pasta",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Manzana",
+              "metricQuantity": 53,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 36,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 15,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Mayonesa",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 100,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

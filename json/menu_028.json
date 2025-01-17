@@ -1,0 +1,307 @@
+﻿{
+  "id": "menu_028",
+  "breakfast": [
+    {
+      "menuName": "Pan Tostado con Cottage y Omelette",
+      "dishes": [
+        {
+          "name": "Pan tostado con cottage y mango",
+          "ingredients": [
+            {
+              "name": "Pan tostado",
+              "metricQuantity": 25,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso cottage",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "unidades"
+            },
+            {
+              "name": "Mango",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Omelette a la mexicana con queso Oaxaca",
+          "ingredients": [
+            {
+              "name": "Claras",
+              "metricQuantity": 198,
+              "metricUnit": "g",
+              "alternativeQuantity": 6,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 42,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 2,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 1,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Melón",
+      "dishes": [
+        {
+          "name": "Melón",
+          "ingredients": [
+            {
+              "name": "Melón",
+              "metricQuantity": 179,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Bowl de Lentejas, Pollo y Agua de Jamaica",
+      "dishes": [
+        {
+          "name": "Agua de jamaica",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Bowl de lentejas y verduras",
+          "ingredients": [
+            {
+              "name": "Lentejas",
+              "metricQuantity": 180,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Calabaza",
+              "metricQuantity": 55,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 46,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Pollo a la plancha",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 120,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Mango",
+      "dishes": [
+        {
+          "name": "Mango",
+          "ingredients": [
+            {
+              "name": "Mango",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Cereal con Plátano y Ensalada de Nopales",
+      "dishes": [
+        {
+          "name": "Cereal con plátano",
+          "ingredients": [
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 125,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cereal",
+              "metricQuantity": 34,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 120,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Ensalada de nopales bandera",
+          "ingredients": [
+            {
+              "name": "Nopales",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Tostadas",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": 24,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

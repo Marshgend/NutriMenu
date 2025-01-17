@@ -1,0 +1,303 @@
+﻿{
+  "id": "menu_019",
+  "breakfast": [
+    {
+      "menuName": "Chilaquiles, pollo a la plancha y licuado de fresas",
+      "dishes": [
+        {
+          "name": "Chilaquiles",
+          "ingredients": [
+            {
+              "name": "Jitomate",
+              "metricQuantity": 57,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 7,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 150,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 13,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 200,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "paquetes"
+            }
+          ]
+        },
+        {
+          "name": "Pollo a la plancha",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 90,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Licuado de fresas con espinaca",
+          "ingredients": [
+            {
+              "name": "Espinacas",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Canela y vainilla",
+              "metricQuantity": 4,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Yogurt simple",
+      "dishes": [
+        {
+          "name": "Yogurt",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 300,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "unidad"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Sopa de lentejas, quesadilla simple y aguacate",
+      "dishes": [
+        {
+          "name": "Sopa de lentejas",
+          "ingredients": [
+            {
+              "name": "Lentejas",
+              "metricQuantity": 180,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Verduras",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Caldo",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Quesadilla simple",
+          "ingredients": [
+            {
+              "name": "Queso",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Tortillas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Aguacate",
+          "ingredients": [
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Pan tostado con mermelada y café",
+      "dishes": [
+        {
+          "name": "Pan tostado con mermelada",
+          "ingredients": [
+            {
+              "name": "Pan",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Mermelada",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        },
+        {
+          "name": "Café negro",
+          "ingredients": [
+            {
+              "name": "Café",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Tostada de pavo con pico de gallo y jícama",
+      "dishes": [
+        {
+          "name": "Tostada de pechuga de pavo",
+          "ingredients": [
+            {
+              "name": "Pavo",
+              "metricQuantity": 72,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Tostadas",
+              "metricQuantity": 48,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Pico de gallo",
+          "ingredients": [
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Jícama",
+          "ingredients": [
+            {
+              "name": "Jícama",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

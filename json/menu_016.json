@@ -1,0 +1,257 @@
+﻿{
+  "id": "menu_016",
+  "breakfast": [
+    {
+      "menuName": "Omelette de Claras y Licuado",
+      "dishes": [
+        {
+          "name": "Omelette de claras con ejotes",
+          "ingredients": [
+            {
+              "name": "Claras",
+              "metricQuantity": 132,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Ejotes",
+              "metricQuantity": 66,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Licuado de papaya y avena",
+          "ingredients": [
+            {
+              "name": "Papaya",
+              "metricQuantity": 75,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 120,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 150,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Galletas saladas",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Brócoli, Coliflor y Manzana",
+      "dishes": [
+        {
+          "name": "Brócoli con coliflor",
+          "ingredients": [
+            {
+              "name": "Coliflor",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 92,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Manzana roja",
+          "ingredients": [
+            {
+              "name": "Manzana",
+              "metricQuantity": 106,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Arroz, Pollo con Ejotes y Frijoles",
+      "dishes": [
+        {
+          "name": "Arroz blanco cocido",
+          "ingredients": [
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Pollo con ejotes",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Ejotes",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Frijoles enteros",
+          "ingredients": [
+            {
+              "name": "Frijoles",
+              "metricQuantity": 128,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Almendras",
+      "dishes": [
+        {
+          "name": "Almendras",
+          "ingredients": [
+            {
+              "name": "Almendras",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 10,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Corn Flakes y Quesadillas con Nopales",
+      "dishes": [
+        {
+          "name": "Corn Flakes",
+          "ingredients": [
+            {
+              "name": "Corn Flakes",
+              "metricQuantity": 16,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Quesadillas con nopales a la mexicana",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 149,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

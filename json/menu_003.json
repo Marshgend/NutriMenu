@@ -1,18 +1,78 @@
-{
+﻿{
   "id": "menu_003",
   "breakfast": [
     {
-      "menuName": "Jugo verde y pan francés",
+      "menuName": "Hot cakes, café con leche y jugo verde",
       "dishes": [
+        {
+          "name": "Hot cakes de manzana y canela",
+          "ingredients": [
+            {
+              "name": "Avena",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Manzana",
+              "metricQuantity": 53,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 73,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Café con leche",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 120,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 125,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
         {
           "name": "Jugo verde con manzana",
           "ingredients": [
             {
               "name": "Agua",
               "metricQuantity": 200,
-              "metricUnit": "ml",
-              "alternativeQuantity": 0.833,
-              "alternativeUnit": "taza"
+              "metricUnit": "ml"
             },
             {
               "name": "Manzana",
@@ -29,102 +89,18 @@
               "alternativeUnit": "taza"
             },
             {
-              "name": "Espinaca",
+              "name": "Espinacas",
               "metricQuantity": 15,
               "metricUnit": "g",
               "alternativeQuantity": 0.25,
               "alternativeUnit": "taza"
             },
             {
-              "name": "Jugo de limón",
+              "name": "Limón",
               "metricQuantity": 10,
               "metricUnit": "ml",
               "alternativeQuantity": 0.1,
               "alternativeUnit": "taza"
-            }
-          ]
-        },
-        {
-          "name": "Café negro",
-          "ingredients": []
-        },
-        {
-          "name": "Pan francés",
-          "ingredients": [
-            {
-              "name": "Agua",
-              "metricQuantity": 240,
-              "metricUnit": "ml",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "taza"
-            },
-            {
-              "name": "Leche",
-              "metricQuantity": 74,
-              "metricUnit": "ml",
-              "alternativeQuantity": 0.33,
-              "alternativeUnit": "taza"
-            },
-            {
-              "name": "Clara de huevo",
-              "metricQuantity": 66,
-              "metricUnit": "g",
-              "alternativeQuantity": 2,
-              "alternativeUnit": "piezas"
-            },
-            {
-              "name": "Pan de caja",
-              "metricQuantity": 60,
-              "metricUnit": "g",
-              "alternativeQuantity": 2,
-              "alternativeUnit": "piezas"
-            },
-            {
-              "name": "Zarzamora",
-              "metricQuantity": 50,
-              "metricUnit": "g",
-              "alternativeQuantity": 4.2,
-              "alternativeUnit": "piezas"
-            },
-            {
-              "name": "Mantequilla",
-              "metricQuantity": 6,
-              "metricUnit": "g",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "rebanada"
-            },
-            {
-              "name": "Plátano",
-              "metricQuantity": 60,
-              "metricUnit": "g",
-              "alternativeQuantity": 0.5,
-              "alternativeUnit": "pieza"
-            }
-          ]
-        },
-        {
-          "name": "Omelette de claras con espinacas",
-          "ingredients": [
-            {
-              "name": "Clara de huevo",
-              "metricQuantity": 132,
-              "metricUnit": "g",
-              "alternativeQuantity": 4,
-              "alternativeUnit": "piezas"
-            },
-            {
-              "name": "Espinaca",
-              "metricQuantity": 60,
-              "metricUnit": "g",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "taza"
-            },
-            {
-              "name": "Aceite",
-              "metricQuantity": 10,
-              "metricUnit": "ml",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "cucharada"
             }
           ]
         }
@@ -133,24 +109,25 @@
   ],
   "snack1": [
     {
-      "menuName": "Jícama y pepino",
+      "menuName": "Gelatina con tajín",
       "dishes": [
         {
-          "name": "Jícama con pepino",
+          "name": "Gelatina",
           "ingredients": [
             {
-              "name": "Pepino",
-              "metricQuantity": 50,
-              "metricUnit": "g",
-              "alternativeQuantity": 0.5,
-              "alternativeUnit": "taza"
+              "name": "Grenetina",
+              "metricQuantity": 7,
+              "metricUnit": "g"
             },
             {
-              "name": "Jícama",
-              "metricQuantity": 40,
-              "metricUnit": "g",
-              "alternativeQuantity": 0.5,
-              "alternativeUnit": "taza"
+              "name": "Tajín",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Gelatina",
+              "metricQuantity": 13,
+              "metricUnit": "g"
             }
           ]
         }
@@ -159,17 +136,41 @@
   ],
   "lunch": [
     {
-      "menuName": "Chuleta de cerdo con ensalada y tortillas",
+      "menuName": "Enchiladas verdes, frijoles y caldo de verduras",
       "dishes": [
         {
-          "name": "Chuleta de cerdo con ensalada",
+          "name": "Enchiladas verdes",
           "ingredients": [
             {
-              "name": "Chuletas de cerdo",
-              "metricQuantity": 120,
+              "name": "Tortillas",
+              "metricQuantity": 90,
               "metricUnit": "g",
-              "alternativeQuantity": 1,
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 32,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
               "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 13,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 75,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 120,
+              "metricUnit": "g"
             },
             {
               "name": "Aceite",
@@ -179,51 +180,49 @@
               "alternativeUnit": "cucharadita"
             },
             {
-              "name": "Jitomate",
-              "metricQuantity": 60,
-              "metricUnit": "g",
-              "alternativeQuantity": 0.5,
-              "alternativeUnit": "pieza"
-            },
-            {
-              "name": "Manzana",
-              "metricQuantity": 106,
+              "name": "Queso",
+              "metricQuantity": 40,
               "metricUnit": "g",
               "alternativeQuantity": 1,
-              "alternativeUnit": "pieza"
-            },
+              "alternativeUnit": "rebanada"
+            }
+          ]
+        },
+        {
+          "name": "Frijoles",
+          "ingredients": [
             {
-              "name": "Lechuga",
-              "metricQuantity": 45,
+              "name": "Frijoles",
+              "metricQuantity": 128,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Caldo de verduras",
+          "ingredients": [
+            {
+              "name": "Brócoli",
+              "metricQuantity": 60,
               "metricUnit": "g",
               "alternativeQuantity": 1,
               "alternativeUnit": "taza"
             },
             {
-              "name": "Sal y pimienta",
-              "metricQuantity": 2,
+              "name": "Zanahoria",
+              "metricQuantity": 40,
               "metricUnit": "g",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "pizca"
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
             },
             {
-              "name": "Ajo en polvo",
-              "metricQuantity": 1,
+              "name": "Coliflor",
+              "metricQuantity": 25,
               "metricUnit": "g",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "pizca"
-            }
-          ]
-        },
-        {
-          "name": "Tortilla de maíz",
-          "ingredients": [
-            {
-              "name": "Tortilla",
-              "metricQuantity": 44,
-              "metricUnit": "g",
-              "alternativeQuantity": 2,
-              "alternativeUnit": "piezas"
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
             }
           ]
         }
@@ -232,17 +231,48 @@
   ],
   "snack2": [
     {
-      "menuName": "Naranja fresca",
+      "menuName": "Papaya con melón, yogurt y granola",
       "dishes": [
         {
-          "name": "Naranja",
+          "name": "Papaya con melón",
           "ingredients": [
             {
-              "name": "Naranja",
-              "metricQuantity": 240,
+              "name": "Papaya",
+              "metricQuantity": 70,
               "metricUnit": "g",
-              "alternativeQuantity": 2,
-              "alternativeUnit": "piezas"
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Melón",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Yogurt",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 73,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Granola",
+          "ingredients": [
+            {
+              "name": "Granola",
+              "metricQuantity": 7,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
             }
           ]
         }
@@ -251,83 +281,74 @@
   ],
   "dinner": [
     {
-      "menuName": "Mollete con pico de gallo y melón",
+      "menuName": "Ensalada de manzana con pollo",
       "dishes": [
         {
-          "name": "Mollete con pico de gallo",
+          "name": "Ensalada",
           "ingredients": [
             {
-              "name": "Bolillo",
-              "metricQuantity": 60,
+              "name": "Manzana",
+              "metricQuantity": 106,
               "metricUnit": "g",
               "alternativeQuantity": 1,
               "alternativeUnit": "pieza"
             },
             {
-              "name": "Frijoles",
-              "metricQuantity": 86,
+              "name": "Nuez",
+              "metricQuantity": 4.5,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
-              "alternativeUnit": "taza"
+              "alternativeQuantity": 3,
+              "alternativeUnit": "mitades"
             },
             {
-              "name": "Queso fresco",
+              "name": "Queso",
               "metricQuantity": 40,
               "metricUnit": "g",
               "alternativeQuantity": 1,
               "alternativeUnit": "rebanada"
             },
             {
-              "name": "Jitomate",
-              "metricQuantity": 50,
-              "metricUnit": "g",
-              "alternativeQuantity": 5,
-              "alternativeUnit": "rebanadas"
-            },
-            {
-              "name": "Cebolla",
-              "metricQuantity": 20,
-              "metricUnit": "g",
-              "alternativeQuantity": 4,
-              "alternativeUnit": "cucharadas"
-            },
-            {
-              "name": "Chile serrano",
-              "metricQuantity": 10,
+              "name": "Naranja",
+              "metricQuantity": 76,
               "metricUnit": "g",
               "alternativeQuantity": 1,
               "alternativeUnit": "pieza"
             },
             {
-              "name": "Cilantro",
-              "metricQuantity": 10,
+              "name": "Arándanos",
+              "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": 0.2,
-              "alternativeUnit": "taza"
+              "alternativeQuantity": 9,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 42,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
             }
           ]
         },
         {
-          "name": "Melón",
+          "name": "Pollo a la plancha",
           "ingredients": [
             {
-              "name": "Melón",
-              "metricQuantity": 160,
-              "metricUnit": "g",
-              "alternativeQuantity": 0.33,
-              "alternativeUnit": "pieza"
-            }
-          ]
-        },
-        {
-          "name": "Yogurt natural",
-          "ingredients": [
-            {
-              "name": "Yogurt natural",
+              "name": "Pollo",
               "metricQuantity": 120,
-              "metricUnit": "ml",
-              "alternativeQuantity": 0.5,
-              "alternativeUnit": "taza"
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Galletas saladas",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
             }
           ]
         }

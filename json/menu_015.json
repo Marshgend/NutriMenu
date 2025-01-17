@@ -1,0 +1,317 @@
+﻿{
+  "id": "menu_015",
+  "breakfast": [
+    {
+      "menuName": "Café con leche, huevo con frijoles y tortilla",
+      "dishes": [
+        {
+          "name": "Café con leche",
+          "ingredients": [
+            {
+              "name": "Café",
+              "metricQuantity": 120,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "unidad"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 120,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Huevo con frijoles",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 88,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 86,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 66,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Tortillas",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 22,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Rollito de jamón con ensalada rusa",
+      "dishes": [
+        {
+          "name": "Rollito de jamón con ensalada rusa",
+          "ingredients": [
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 8,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Papa",
+              "metricQuantity": 17,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Chícharos",
+              "metricQuantity": 8,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 13,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Mayonesa",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Perejil",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 84,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 27,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 15,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Misil de atún, lentejas hervidas y galletas saladas",
+      "dishes": [
+        {
+          "name": "Misil de atún",
+          "ingredients": [
+            {
+              "name": "Pepino",
+              "metricQuantity": 208,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 16,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 18,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Lentejas hervidas",
+          "ingredients": [
+            {
+              "name": "Lentejas",
+              "metricQuantity": 180,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Galletas saladas",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "paquete pequeño"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Papaya con yogurt y almendras",
+      "dishes": [
+        {
+          "name": "Papaya con yogurt",
+          "ingredients": [
+            {
+              "name": "Papaya",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Miel",
+              "metricQuantity": 14,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Almendras",
+          "ingredients": [
+            {
+              "name": "Almendras",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Burrito de fajita de pollo",
+      "dishes": [
+        {
+          "name": "Burrito de fajita de pollo",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 135,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Tortillas de harina",
+              "metricQuantity": 58,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Pimiento",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Mostaza",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Vinagre balsámico",
+              "metricQuantity": 3,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

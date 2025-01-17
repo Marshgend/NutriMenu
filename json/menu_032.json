@@ -1,0 +1,329 @@
+﻿{
+  "id": "menu_032",
+  "breakfast": [
+    {
+      "menuName": "Jugo verde, café negro y ensalada con papas",
+      "dishes": [
+        {
+          "name": "Jugo verde",
+          "ingredients": [
+            {
+              "name": "Naranja",
+              "metricQuantity": 64,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 17,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 26,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 150,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Jengibre",
+              "metricQuantity": 0.75,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Café negro",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Azúcar",
+              "metricQuantity": 4,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Ensalada de espárragos con huevo",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 132,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Espinacas y lechuga",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Papas cocidas",
+          "ingredients": [
+            {
+              "name": "Papa",
+              "metricQuantity": 70,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Jícama, pepino, zanahoria y ajonjolí",
+      "dishes": [
+        {
+          "name": "Jícama, pepino, zanahoria y ajonjolí",
+          "ingredients": [
+            {
+              "name": "Jícama",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 52,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Ajonjolí",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Bowl de pollo empanizado y brócoli",
+      "dishes": [
+        {
+          "name": "Bowl de pollo empanizado",
+          "ingredients": [
+            {
+              "name": "Avena",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.75,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Lechuga y espinacas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 2.2,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.67,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Brócoli procesado",
+          "ingredients": [
+            {
+              "name": "Brócoli",
+              "metricQuantity": 92,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Galletas marías y leche",
+      "dishes": [
+        {
+          "name": "Galletas marías",
+          "ingredients": [
+            {
+              "name": "Galletas dulces",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Leche",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 250,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Ensalada mediterránea y galletas saladas",
+      "dishes": [
+        {
+          "name": "Ensalada mediterránea",
+          "ingredients": [
+            {
+              "name": "Lechuga",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Aceitunas o aguacate",
+              "metricQuantity": 30,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 2,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 60,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Carne de res o atún",
+              "metricQuantity": 90,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Galletas saladas",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

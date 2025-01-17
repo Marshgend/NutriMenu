@@ -1,0 +1,361 @@
+﻿{
+  "id": "menu_026",
+  "breakfast": [
+    {
+      "menuName": "Licuado verde, huevo con frijoles y galletas",
+      "dishes": [
+        {
+          "name": "Licuado verde",
+          "ingredients": [
+            {
+              "name": "Apio",
+              "metricQuantity": 14,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 26,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Papaya",
+              "metricQuantity": 38,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Piña",
+              "metricQuantity": 57,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 250,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Linaza",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Jengibre",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Huevo revuelto con tomate y cebolla",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 132,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Frijoles refritos",
+          "ingredients": [
+            {
+              "name": "Frijoles",
+              "metricQuantity": 67.5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Galletas saladas",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Té verde, naranja y cacahuates",
+      "dishes": [
+        {
+          "name": "Té verde",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 220,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Naranja",
+          "ingredients": [
+            {
+              "name": "Naranja",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Cacahuates",
+          "ingredients": [
+            {
+              "name": "Cacahuates",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": 12,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Pollo con papas y ensalada",
+      "dishes": [
+        {
+          "name": "Pollo con papas al horno",
+          "ingredients": [
+            {
+              "name": "Papa",
+              "metricQuantity": 280,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 210,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Ensalada California",
+          "ingredients": [
+            {
+              "name": "Jitomate",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Col morada",
+              "metricQuantity": 20,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Agua de jamaica",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Té verde y jícama",
+      "dishes": [
+        {
+          "name": "Té verde",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 220,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Jícama",
+          "ingredients": [
+            {
+              "name": "Jícama",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Licuado de papaya con sándwich",
+      "dishes": [
+        {
+          "name": "Té de manzanilla",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 220,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Licuado de papaya con avena",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Papaya",
+              "metricQuantity": 75,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Miel",
+              "metricQuantity": 7,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Sándwich de atún",
+          "ingredients": [
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 68,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Mayonesa",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

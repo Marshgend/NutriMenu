@@ -1,0 +1,324 @@
+﻿{
+  "id": "menu_033",
+  "breakfast": [
+    {
+      "menuName": "Jugo verde, café y hot cakes",
+      "dishes": [
+        {
+          "name": "Jugo verde con manzana",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 200,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Manzana",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 10,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Café negro",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Hot cakes de manzana y canela",
+          "ingredients": [
+            {
+              "name": "Avena",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Manzana",
+              "metricQuantity": 106,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 73,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Rice cake salados",
+          "ingredients": [
+            {
+              "name": "Tortitas de arroz",
+              "metricQuantity": 8,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "unidad"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 44,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 1,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Jícama con pepino",
+      "dishes": [
+        {
+          "name": "Jícama con pepino",
+          "ingredients": [
+            {
+              "name": "Pepino",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jícama",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Ensalada de manzana y pollo a la plancha",
+      "dishes": [
+        {
+          "name": "Ensalada de manzana con verduras",
+          "ingredients": [
+            {
+              "name": "Arúgula",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Manzana",
+              "metricQuantity": 53,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Nuez",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 7,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 38,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Arándanos",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Lechugas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 2.2,
+              "alternativeUnit": "tazas"
+            }
+          ]
+        },
+        {
+          "name": "Pollo a la plancha",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Galletas saladas",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Guayaba",
+      "dishes": [
+        {
+          "name": "Guayaba",
+          "ingredients": [
+            {
+              "name": "Guayaba",
+              "metricQuantity": 135,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Sándwich de atún y piña",
+      "dishes": [
+        {
+          "name": "Sándwich de atún",
+          "ingredients": [
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 68,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Mayonesa",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Piña",
+          "ingredients": [
+            {
+              "name": "Piña",
+              "metricQuantity": 82.67,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

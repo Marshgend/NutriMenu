@@ -167,6 +167,7 @@ select:hover {
   margin-left: 2.5rem;
   color: #b8b8b8;
   margin-bottom: 0.2rem;
+  font-size: rem;
 }
 
 /* MEDIA QUERIES PARA RESPONSIVIDAD */
@@ -239,7 +240,7 @@ select:hover {
 
   .summary-ingredient{
     margin: 1rem 0;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .summary-menu-block h4 {

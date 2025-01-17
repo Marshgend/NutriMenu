@@ -1,0 +1,268 @@
+﻿{
+  "id": "menu_014",
+  "breakfast": [
+    {
+      "menuName": "Smoothie de fresas y sandwich de huevo",
+      "dishes": [
+        {
+          "name": "Smoothie de fresas, plátano y espinacas",
+          "ingredients": [
+            {
+              "name": "Espinacas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 61,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 120,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Sandwich de huevo y jamón",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 46,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 43,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 42,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 18,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Albahaca",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Guayaba y almendras",
+      "dishes": [
+        {
+          "name": "Guayaba",
+          "ingredients": [
+            {
+              "name": "Guayaba",
+              "metricQuantity": 135,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Almendras",
+          "ingredients": [
+            {
+              "name": "Almendras",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Alambre de pollo con tortillas",
+      "dishes": [
+        {
+          "name": "Alambre de pollo",
+          "ingredients": [
+            {
+              "name": "Pimiento",
+              "metricQuantity": 38,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Champiñones",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 16,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 35,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Salsa de soya",
+              "metricQuantity": 8,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.67,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Carne de res",
+              "metricQuantity": 133,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.5,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Tortillas",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 44,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Papaya con yogurt",
+      "dishes": [
+        {
+          "name": "Papaya con yogurt",
+          "ingredients": [
+            {
+              "name": "Papaya",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Tostada con nopal y frijoles",
+      "dishes": [
+        {
+          "name": "Tostada con nopal",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": 72,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 67.5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 20,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

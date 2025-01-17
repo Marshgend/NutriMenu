@@ -1,0 +1,361 @@
+﻿{
+  "id": "menu_025",
+  "breakfast": [
+    {
+      "menuName": "Jugo verde y torta de bistec",
+      "dishes": [
+        {
+          "name": "Jugo verde",
+          "ingredients": [
+            {
+              "name": "Naranja",
+              "metricQuantity": 64,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 34,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 26,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Torta de bistec",
+          "ingredients": [
+            {
+              "name": "Carne de res o pollo",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "unidades"
+            },
+            {
+              "name": "Bolillo",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Mango",
+      "dishes": [
+        {
+          "name": "Mango",
+          "ingredients": [
+            {
+              "name": "Mango",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Aguachile o ceviche de atún",
+      "dishes": [
+        {
+          "name": "Aguachile",
+          "ingredients": [
+            {
+              "name": "Camarones",
+              "metricQuantity": 35,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 50,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 15,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pescado",
+              "metricQuantity": 160,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 200,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "paquetes"
+            }
+          ]
+        },
+        {
+          "name": "Ceviche de atún",
+          "ingredients": [
+            {
+              "name": "Atún",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "unidad"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Mango",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 27,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 100,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Salsa de soya",
+              "metricQuantity": 13,
+              "metricUnit": "g",
+              "alternativeQuantity": 2.67,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 200,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "paquetes"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Palomitas de maíz",
+      "dishes": [
+        {
+          "name": "Palomitas de maíz",
+          "ingredients": [
+            {
+              "name": "Palomitas",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 10,
+              "metricUnit": "ml",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Huevos revueltos con pico de gallo",
+      "dishes": [
+        {
+          "name": "Huevos revueltos con jamón y queso",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 40,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 36,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 20,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 54,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Pico de gallo",
+          "ingredients": [
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

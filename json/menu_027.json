@@ -1,0 +1,352 @@
+﻿{
+  "id": "menu_027",
+  "breakfast": [
+    {
+      "menuName": "Licuado de mango y torta de huevo",
+      "dishes": [
+        {
+          "name": "Licuado de mango con espinaca",
+          "ingredients": [
+            {
+              "name": "Mango",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 2,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 120,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 125,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Torta de huevo a la mexicana",
+          "ingredients": [
+            {
+              "name": "Bolillo",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Jalapeño",
+              "metricQuantity": 38,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 27,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 198,
+              "metricUnit": "g",
+              "alternativeQuantity": 6,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Frijoles refritos",
+          "ingredients": [
+            {
+              "name": "Frijoles",
+              "metricQuantity": 67.5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Yogurt sin azúcar bebible",
+      "dishes": [
+        {
+          "name": "Yogurt sin azúcar bebible",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 220,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "botella"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Agua de limón con chía, espagueti y pescado con verduras",
+      "dishes": [
+        {
+          "name": "Agua de limón con chía",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 20,
+              "metricUnit": "ml",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Chía",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Espagueti con champiñones",
+          "ingredients": [
+            {
+              "name": "Espagueti",
+              "metricQuantity": 94,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Champiñones",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.33,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.75,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 13,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Mantequilla",
+              "metricQuantity": 3,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 2,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Pimienta",
+              "metricQuantity": 1,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 60,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Filete de pescado con verduras",
+          "ingredients": [
+            {
+              "name": "Pescado",
+              "metricQuantity": 80,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Calabaza",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Salsa de soya",
+              "metricQuantity": 5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 5,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 1,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Sandía con jícama y cacahuates",
+      "dishes": [
+        {
+          "name": "Sandía con jícama",
+          "ingredients": [
+            {
+              "name": "Sandía",
+              "metricQuantity": 160,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jícama",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Cacahuates",
+          "ingredients": [
+            {
+              "name": "Cacahuates",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": 12,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Tostadas de surimi con galletas saladas",
+      "dishes": [
+        {
+          "name": "Tostadas de surimi",
+          "ingredients": [
+            {
+              "name": "Surimi",
+              "metricQuantity": 100,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 68,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.5,
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.67,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 13,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Elote",
+              "metricQuantity": 83,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Galletas saladas",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
