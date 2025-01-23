@@ -3,6 +3,7 @@
  * Versión con snack1 y snack2 barajados de forma diferente
  * Muestra un resumen COMPLETO (platillos e ingredientes)
  * Incluye persistencia de orden y de selecciones
+ * + Botón para copiar resumen al portapapeles
  ************************************************************/
 
 const CATEGORY_ORDER = ["breakfast", "snack1", "lunch", "snack2", "dinner"];
@@ -416,7 +417,8 @@ function renderApp() {
     });
   }
 
-  appDiv.appendChild(questionBlock);
+  const appDivContainer = document.getElementById("app");
+  appDivContainer.appendChild(questionBlock);
 }
 
 /**
@@ -496,6 +498,15 @@ function renderSummary() {
     }
   });
 
+  // Botón para copiar resumen
+  const btnCopy = document.createElement("button");
+  btnCopy.textContent = "Copiar Resumen";
+  btnCopy.classList.add("btn-copy");
+  btnCopy.style.marginRight = "1rem";
+  btnCopy.addEventListener("click", copySummaryToClipboard);
+  summaryDiv.appendChild(btnCopy);
+
+  // Botón Reiniciar Todo
   const btnReset = document.createElement("button");
   btnReset.textContent = "Reiniciar Todo";
   btnReset.classList.add("btn-restart");
@@ -507,6 +518,53 @@ function renderSummary() {
   summaryDiv.appendChild(btnReset);
 
   appDiv.appendChild(summaryDiv);
+}
+
+/**
+ * Copia el contenido del resumen al portapapeles.
+ */
+function copySummaryToClipboard() {
+  const text = buildSummaryText();
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      alert("¡Resumen copiado al portapapeles!");
+    })
+    .catch(err => {
+      console.error("Error al copiar al portapapeles:", err);
+      alert("Hubo un error al copiar el resumen.");
+    });
+}
+
+/**
+ * Genera una cadena con saltos de línea que representa el resumen.
+ */
+function buildSummaryText() {
+  let text = "Resumen de tu Semana\n\n";
+
+  CATEGORY_ORDER.forEach(cat => {
+    if (selectionState[cat].length > 0) {
+      text += `${mapCategoryToSpanish(cat)}\n`;
+      selectionState[cat].forEach(sel => {
+        text += `  ${sel.menuName} - ${sel.daysUsed} día${
+          sel.daysUsed > 1 ? "s" : ""
+        }\n`;
+        sel.dishes.forEach(dish => {
+          text += `    ${dish.name}\n`;
+          dish.ingredients.forEach(ing => {
+            let ingLine = `      ${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
+            if (ing.alternativeQuantity && ing.alternativeUnit) {
+              ingLine += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
+            }
+            text += ingLine + "\n";
+          });
+        });
+        text += "\n";
+      });
+      text += "\n";
+    }
+  });
+
+  return text.trim() + "\n";
 }
 
 /**

@@ -203,6 +203,14 @@ select:hover {
     border-radius: 2rem; /* Adjust the value for desired roundness */
   }
 
+  .btn-copy{
+    margin-top: 1.5rem;
+  }
+
+  .btn-restart {
+    margin-top: 6rem; /* Aumenta la separación superior */
+  }
+
   .selection-row {
     gap: 2rem;
   }
