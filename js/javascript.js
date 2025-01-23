@@ -2,8 +2,8 @@
  * javascript.js
  * Versión con snack1 y snack2 barajados de forma diferente
  * Muestra un resumen COMPLETO (platillos e ingredientes)
- * Incluye persistencia de orden y de selecciones
  * + Botón para copiar resumen al portapapeles
+ * + Parámetro URL para compartir el resumen
  ************************************************************/
 
 const CATEGORY_ORDER = ["breakfast", "snack1", "lunch", "snack2", "dinner"];
@@ -45,6 +45,25 @@ window.addEventListener("DOMContentLoaded", init);
  * Función principal de inicialización.
  */
 function init() {
+  // 1. Revisamos si la URL contiene un resumen compartido (en el hash #share=...)
+  const sharedData = checkForSharedSummary();
+  if (sharedData) {
+    // Si se detecta data en la URL, se omite todo lo de localStorage
+    // y se muestra directamente el resumen usando ese estado compartido.
+    try {
+      const decoded = JSON.parse(atob(sharedData));
+      // Sobrescribimos el selectionState
+      selectionState = decoded;
+      hideHeaderFooter(true);
+      renderSharedSummary(); // Renderizamos el resumen directamente
+      return; // Evitamos el flujo normal
+    } catch (err) {
+      console.warn("No se pudo decodificar el resumen compartido:", err);
+      // Si falla la decodificación, continuamos con el flujo normal
+    }
+  }
+
+  // 2. Si no hay sharedData, usamos la lógica de siempre.
   loadStateFromLocalStorage();
   ensureSelectionStateIntegrity();
 
@@ -72,6 +91,101 @@ function init() {
       const appDiv = document.getElementById("app");
       appDiv.textContent = "Error al cargar la lista de archivos JSON.";
     });
+}
+
+/**
+ * Si la URL contiene #share=..., devolvemos la parte después de "share="; de lo contrario null.
+ */
+function checkForSharedSummary() {
+  // Podemos usar window.location.hash
+  // Ejemplo de hash: "#share=BASE64AQUÍ"
+  const hash = window.location.hash || "";
+  const prefix = "#share=";
+  if (hash.startsWith(prefix)) {
+    const encoded = hash.slice(prefix.length);
+    return encoded;
+  }
+  return null;
+}
+
+/**
+ * Lógica para renderizar el resumen en modo "solo compartido".
+ * Omitimos la parte de localStorage e ignoramos menús, etc.
+ */
+function renderSharedSummary() {
+  const appDiv = document.getElementById("app");
+  appDiv.innerHTML = "";
+
+  // Ocultamos header y footer
+  hideHeaderFooter(true);
+
+  // Renderizamos igual que un "renderSummary", pero sin las partes de localStorage
+  const summaryDiv = document.createElement("div");
+  summaryDiv.classList.add("selection-summary");
+
+  const h2 = document.createElement("h2");
+  h2.textContent = "Resumen de tu Semana (Compartido)";
+  summaryDiv.appendChild(h2);
+
+  CATEGORY_ORDER.forEach(cat => {
+    if (selectionState[cat] && selectionState[cat].length > 0) {
+      const catHeader = document.createElement("h3");
+      catHeader.textContent = mapCategoryToSpanish(cat);
+      summaryDiv.appendChild(catHeader);
+
+      selectionState[cat].forEach(sel => {
+        const menuBlock = document.createElement("div");
+        menuBlock.classList.add("summary-menu-block");
+
+        const h4 = document.createElement("h4");
+        h4.textContent = `${sel.menuName} - ${sel.daysUsed} día${
+          sel.daysUsed > 1 ? "s" : ""
+        }`;
+        menuBlock.appendChild(h4);
+
+        sel.dishes.forEach(dish => {
+          const dishDiv = document.createElement("div");
+          dishDiv.classList.add("summary-dish");
+          dishDiv.textContent = dish.name;
+          menuBlock.appendChild(dishDiv);
+
+          dish.ingredients.forEach(ing => {
+            const ingDiv = document.createElement("div");
+            ingDiv.classList.add("summary-ingredient");
+            let txt = `${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
+            if (ing.alternativeQuantity && ing.alternativeUnit) {
+              txt += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
+            }
+            ingDiv.textContent = txt;
+            menuBlock.appendChild(ingDiv);
+          });
+        });
+
+        summaryDiv.appendChild(menuBlock);
+      });
+    }
+  });
+
+  // Botón para copiar resumen (solo texto)
+  const btnCopy = document.createElement("button");
+  btnCopy.textContent = "Copiar Resumen";
+  btnCopy.classList.add("btn-copy");
+  btnCopy.style.marginRight = "1rem";
+  btnCopy.addEventListener("click", copySummaryToClipboard);
+  summaryDiv.appendChild(btnCopy);
+
+  // Botón para "Regresar" (o "Reiniciar Todo")
+  // Podrías poner un link a tu página principal, o lo que gustes.
+  const btnGoHome = document.createElement("button");
+  btnGoHome.textContent = "Ir a la página inicial";
+  btnGoHome.classList.add("btn-restart");
+  btnGoHome.addEventListener("click", () => {
+    // Simplemente recarga sin hash, para que no muestre el resumen compartido
+    window.location.href = window.location.origin + window.location.pathname;
+  });
+  summaryDiv.appendChild(btnGoHome);
+
+  appDiv.appendChild(summaryDiv);
 }
 
 /**
@@ -294,8 +408,8 @@ function renderApp() {
   daysDiv.classList.add("selection-days");
   selectionRow.appendChild(daysDiv);
 
-  // En lugar de "snack", ahora snack1 y snack2 tienen su propio array.
-  let arrayKey = categoryKey; // "breakfast", "snack1", "lunch", "snack2", "dinner"
+  // "snack1", "snack2", etc.
+  let arrayKey = categoryKey;
 
   if (!allMenus[arrayKey] || allMenus[arrayKey].length === 0) {
     const p = document.createElement("p");
@@ -417,8 +531,7 @@ function renderApp() {
     });
   }
 
-  const appDivContainer = document.getElementById("app");
-  appDivContainer.appendChild(questionBlock);
+  appDiv.appendChild(questionBlock);
 }
 
 /**
@@ -498,13 +611,21 @@ function renderSummary() {
     }
   });
 
-  // Botón para copiar resumen
+  // Botón para copiar resumen (texto)
   const btnCopy = document.createElement("button");
   btnCopy.textContent = "Copiar Resumen";
   btnCopy.classList.add("btn-copy");
   btnCopy.style.marginRight = "1rem";
   btnCopy.addEventListener("click", copySummaryToClipboard);
   summaryDiv.appendChild(btnCopy);
+
+  // Botón para compartir link
+  const btnShareLink = document.createElement("button");
+  btnShareLink.textContent = "Compartir Resumen (Link)";
+  btnShareLink.classList.add("btn-copy");
+  btnShareLink.style.marginRight = "1rem";
+  btnShareLink.addEventListener("click", shareSummaryLink);
+  summaryDiv.appendChild(btnShareLink);
 
   // Botón Reiniciar Todo
   const btnReset = document.createElement("button");
@@ -521,7 +642,7 @@ function renderSummary() {
 }
 
 /**
- * Copia el contenido del resumen al portapapeles.
+ * Copia el contenido del resumen al portapapeles (texto).
  */
 function copySummaryToClipboard() {
   const text = buildSummaryText();
@@ -568,6 +689,39 @@ function buildSummaryText() {
 }
 
 /**
+ * Genera un link que codifica el resumen en base64 dentro de la URL (hash).
+ * Luego lo copia al portapapeles.
+ */
+function shareSummaryLink() {
+  try {
+    // 1. Convertimos el "selectionState" a JSON
+    //    Realmente sólo necesitamos la parte que define el resumen,
+    //    pero en este ejemplo usamos todo el objeto para reproducir el final.
+    const jsonState = JSON.stringify(selectionState);
+    // 2. Lo codificamos en base64
+    const encoded = btoa(jsonState);
+
+    // 3. Construimos la URL con hash
+    // Ejemplo: https://midominio.com/mipagina.html#share=XXXXX
+    const baseUrl = window.location.origin + window.location.pathname;
+    const shareUrl = baseUrl + "#share=" + encoded;
+
+    // 4. Lo copiamos al portapapeles
+    navigator.clipboard.writeText(shareUrl)
+      .then(() => {
+        alert("Link de resumen copiado al portapapeles:\n" + shareUrl);
+      })
+      .catch(err => {
+        console.error("Error al copiar link:", err);
+        alert("Ocurrió un error al copiar el link.");
+      });
+  } catch (err) {
+    console.error("Error al generar link de compartir:", err);
+    alert("Ocurrió un error al generar el link de compartir.");
+  }
+}
+
+/**
  * Restablece todo, genera nuevos órdenes aleatorios y vuelve al inicio.
  */
 function resetAll() {
@@ -585,7 +739,10 @@ function resetAll() {
   selectionState.shuffledMenus = deepClone(allMenus);
   saveStateToLocalStorage();
 
-  // 5. Renderizamos todo desde cero
+  // 5. Limpiamos el hash para evitar confusiones
+  window.location.hash = "";
+
+  // 6. Renderizamos todo desde cero
   renderApp();
 }
 

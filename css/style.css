@@ -108,7 +108,7 @@ button:disabled {
 
 .btn-restart {
   background-color: #8c2f2f; /* Rojo oscuro */
-  margin-top: 4rem; /* Aumenta la separación superior */
+  margin-top: 2.1rem; /* Aumenta la separación superior */
 }
 
 .btn-restart:hover {
@@ -168,6 +168,10 @@ select:hover {
   color: #b8b8b8;
   margin-bottom: 0.2rem;
   font-size: rem;
+}
+
+.btn-copy{
+  margin-top: 0.7rem;
 }
 
 /* MEDIA QUERIES PARA RESPONSIVIDAD */
