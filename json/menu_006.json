@@ -2,7 +2,7 @@
   "id": "menu_006",
   "breakfast": [
     {
-      "menuName": "Jugo verde, huevo con papa y frijoles",
+      "menuName": "Huevo con papa y jamón con jugo verde de mandarina, guayaba y espinaca",
       "dishes": [
         {
           "name": "Jugo verde",
@@ -116,7 +116,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Bowl de pollo buffalo con arroz y durazno",
+      "menuName": "Pollo búfalo con arroz, aguacate y vegetales frescos",
       "dishes": [
         {
           "name": "Bowl de pollo buffalo con arroz",
@@ -185,7 +185,7 @@
   ],
   "snack1": [
     {
-      "menuName": "Carlota de limón con yogurt",
+      "menuName": "Carlota de limón con galletas marías",
       "dishes": [
         {
           "name": "Carlota",
@@ -216,7 +216,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Sándwich de atún y licuado de fresa",
+      "menuName": "Sándwich de atún con aguacate y licuado de fresa, espinaca y avena",
       "dishes": [
         {
           "name": "Sándwich de atún",

@@ -197,23 +197,6 @@
       ]
     }
   ],
-  "snack2": [
-    {
-      "menuName": "Pan de plátano",
-      "dishes": [
-        {
-          "name": "Pan de plátano",
-          "ingredients": [
-            {
-              "name": "Pan de plátano",
-              "alternativeQuantity": 0.5,
-              "alternativeUnit": "taza porción"
-            }
-          ]
-        }
-      ]
-    }
-  ],
   "dinner": [
     {
       "menuName": "Pizza fit y verduras cocidas",

@@ -2,7 +2,7 @@
   "id": "menu_005",
   "breakfast": [
     {
-      "menuName": "Claras a la mexicana y licuado de plátano con fresa",
+      "menuName": "Huevos a la mexicana con licuado de plátano, fresa y avena",
       "dishes": [
         {
           "name": "Claras a la mexicana",
@@ -80,7 +80,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Pescado con arroz y verduras",
+      "menuName": "Filete de pescado a la plancha con arroz y vegetales al vapor",
       "dishes": [
         {
           "name": "Filete de pescado y arroz",
@@ -156,7 +156,7 @@
   ],
   "snack1": [
     {
-      "menuName": "Yogurt con arándanos y granola",
+      "menuName": "Yogur griego con granola y arándanos",
       "dishes": [
         {
           "name": "Yogurt",
@@ -199,7 +199,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Hamburguesa con vegetales",
+      "menuName": "Hamburguesa de res con queso y verduras frescas",
       "dishes": [
         {
           "name": "Hamburguesa",
@@ -275,7 +275,7 @@
   ],
   "snack2": [
     {
-      "menuName": "Gelatina y jícama con pepino",
+      "menuName": "Gelatina sin azúcar con jícama y pepino",
       "dishes": [
         {
           "name": "Gelatina sin azúcar",

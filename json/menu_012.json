@@ -2,7 +2,7 @@
   "id": "menu_012",
   "breakfast": [
     {
-      "menuName": "Licuado de Plátano y Sándwich",
+      "menuName": "Licuado de plátano con espinaca y sándwich de jamón con aguacate",
       "dishes": [
         {
           "name": "Licuado de plátano, nuez, amaranto y espinaca",
@@ -104,7 +104,7 @@
   ],
   "snack1": [
     {
-      "menuName": "Atún con Ensalada de Verduras",
+      "menuName": "Atún con ensalada de verduras",
       "dishes": [
         {
           "name": "Atún con ensalada de verduras",
@@ -151,7 +151,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Alambre de res y tortillas",
+      "menuName": "Alambre de res con champiñones, pimientos y brócoli",
       "dishes": [
         {
           "name": "Alambre",
@@ -227,7 +227,7 @@
   ],
   "snack2": [
     {
-      "menuName": "Ponche Navideño y Galletas",
+      "menuName": "Ponche navideño con galletas marías",
       "dishes": [
         {
           "name": "Ponche navideño",
@@ -296,7 +296,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Sopa Fría",
+      "menuName": "Pasta de codito con pollo, jamón, manzana y queso",
       "dishes": [
         {
           "name": "Sopa fría",

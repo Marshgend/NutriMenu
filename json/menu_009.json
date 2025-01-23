@@ -2,7 +2,7 @@
   "id": "menu_009",
   "breakfast": [
     {
-      "menuName": "Jugo verde con mandarina y huevo a la mexicana",
+      "menuName": "Huevos a la mexicana con jugo verde ricecake de maní",
       "dishes": [
         {
           "name": "Jugo verde",
@@ -165,7 +165,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Bowl de pollo buffalo con arroz",
+      "menuName": "Pollo búfalo con arroz, aguacate y vegetales",
       "dishes": [
         {
           "name": "Bowl de pollo buffalo con arroz",
@@ -222,7 +222,7 @@
   ],
   "snack2": [
     {
-      "menuName": "Tiramisú",
+      "menuName": "Tiramisú de galletas marías con yogur y queso cottage",
       "dishes": [
         {
           "name": "Tiramisú",
@@ -267,7 +267,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Wrap de pollo y licuado de manzana",
+      "menuName": "Wrap de pollo con licuado de manzana y avena",
       "dishes": [
         {
           "name": "Licuado de manzana y avena",

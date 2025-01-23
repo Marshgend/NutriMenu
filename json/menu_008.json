@@ -2,7 +2,7 @@
   "id": "menu_008",
   "breakfast": [
     {
-      "menuName": "Chilaquiles con huevo y frijoles",
+      "menuName": "Chilaquiles con pollo, acompañados de frijoles y un huevo estrellado",
       "dishes": [
         {
           "name": "Frijoles",
@@ -90,7 +90,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Arrachera con Verduras",
+      "menuName": "Arrachera con verduras, aguacate y tortillas",
       "dishes": [
         {
           "name": "Arrachera con verduras",
@@ -147,7 +147,7 @@
   ],
   "snack1": [
     {
-      "menuName": "Galletas y Frappe",
+      "menuName": "Galletas marías y frappe",
       "dishes": [
         {
           "name": "Galletas dulces",
@@ -185,7 +185,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Torta de Bistec",
+      "menuName": "Torta de bistec con aguacate, queso y jitomate",
       "dishes": [
         {
           "name": "Torta de bistec",

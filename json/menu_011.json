@@ -2,7 +2,7 @@
   "id": "menu_011",
   "breakfast": [
     {
-      "menuName": "Jugo verde, huevo con frijoles y verduras",
+      "menuName": "Huevos con verduras, queso panela, frijoles y jugo verde",
       "dishes": [
         {
           "name": "Jugo verde de piña y nopal",
@@ -152,7 +152,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Ensalada navideña y pechuga hawaiana",
+      "menuName": "Ensalada navideña, pechuga hawaiana y agua de jamaica",
       "dishes": [
         {
           "name": "Ensalada navideña",
@@ -280,7 +280,7 @@
   ],
   "snack2": [
     {
-      "menuName": "Yogurt y galletas dulces",
+      "menuName": "Yogur griego con galletas marías",
       "dishes": [
         {
           "name": "Yogurt",
@@ -311,7 +311,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Quesadillas de pollo, pico de gallo y helado",
+      "menuName": "Quesadillas de pollo con pico de gallo y helado de chocolate",
       "dishes": [
         {
           "name": "Quesadillas",

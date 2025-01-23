@@ -2,7 +2,7 @@
   "id": "menu_010",
   "breakfast": [
     {
-      "menuName": "Sandwich de pollo y jugo verde",
+      "menuName": "Sándwich de pollo con panela y jugo verde",
       "dishes": [
         {
           "name": "Sandwich de pechuga de pollo",
@@ -106,7 +106,7 @@
   ],
   "snack1": [
     {
-      "menuName": "Gelatina de coco",
+      "menuName": "Gelatina de coco con leche",
       "dishes": [
         {
           "name": "Gelatina de coco",
@@ -153,7 +153,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Pastel azteca con verduras",
+      "menuName": "Pastel azteca con pollo, queso y guarnición de verduras",
       "dishes": [
         {
           "name": "Pastel azteca",
@@ -241,7 +241,7 @@
   ],
   "snack2": [
     {
-      "menuName": "Chocolate caliente y mug cake de zanahoria",
+      "menuName": "Mug cake de zanahoria y chocolate caliente",
       "dishes": [
         {
           "name": "Chocolate caliente",
@@ -333,7 +333,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Ensalada navideña fit",
+      "menuName": "Ensalada navideña con pollo, nuez y arándanos",
       "dishes": [
         {
           "name": "Ensalada navideña fit",

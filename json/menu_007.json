@@ -2,7 +2,7 @@
   "id": "menu_007",
   "breakfast": [
     {
-      "menuName": "Hotcakes de avena y claras con pico de gallo",
+      "menuName": "Hotcakes de avena con fruta y claras revueltas con pico de gallo",
       "dishes": [
         {
           "name": "Hotcakes de avena",
@@ -125,7 +125,7 @@
   ],
   "lunch": [
     {
-      "menuName": "Bowl de arroz con pollo y verduras",
+      "menuName": "Pollo a la plancha con arroz, brócoli, zanahoria y calabaza",
       "dishes": [
         {
           "name": "Pollo a la plancha",
@@ -201,7 +201,7 @@
   ],
   "snack1": [
     {
-      "menuName": "Pan tostado con nutella y yogurt",
+      "menuName": "Pan tostado con nutella y yogur bajo en grasa",
       "dishes": [
         {
           "name": "Pan tostado con nutella",
@@ -239,7 +239,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Quesadillas de champiñones y bistec con licuado de fresas",
+      "menuName": "Bistec con quesadillas de champiñones y licuado de fresa con leche",
       "dishes": [
         {
           "name": "Licuado de fresas",

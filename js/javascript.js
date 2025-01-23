@@ -1,33 +1,53 @@
 /************************************************************
  * javascript.js
- * Versión simplificada para unificación de Snack1 & Snack2 en "snack"
- * Tema oscuro/morado
+ * Versión con snack1 y snack2 barajados de forma diferente
  * Muestra un resumen COMPLETO (platillos e ingredientes)
+ * Incluye persistencia de orden y de selecciones
  ************************************************************/
 
 const CATEGORY_ORDER = ["breakfast", "snack1", "lunch", "snack2", "dinner"];
 const TOTAL_DAYS = 7;
 
-// Unificación de snack1 y snack2 en "snack"
+/*
+ * Guardamos el contenido original (sin barajar) de los menús
+ * exactamente como se cargan de los JSON.
+ */
+let originalMenus = {
+  breakfast: [],
+  snack: [],   // <-- Este será la "pool" de snacks
+  lunch: [],
+  dinner: []
+};
+
+/*
+ * "allMenus" es lo que realmente se muestra en la página:
+ *  - Se baraja al pulsar "Reiniciar Todo".
+ *  - Se guardan dos copias diferentes para snack1 y snack2.
+ */
 let allMenus = {
-  "breakfast": [],
-  "snack": [],
-  "lunch": [],
-  "dinner": []
+  breakfast: [],
+  snack1: [],
+  snack2: [],
+  lunch: [],
+  dinner: []
 };
 
 // Estado de selección (guardado en localStorage)
 let selectionState = {};
 
+/**
+ * Al cargar el DOM, iniciamos.
+ */
 window.addEventListener("DOMContentLoaded", init);
 
+/**
+ * Función principal de inicialización.
+ */
 function init() {
   loadStateFromLocalStorage();
   ensureSelectionStateIntegrity();
-  if (!selectionState.initialized) {
-    initializeSelectionState();
-  }
 
+  // Cargamos los archivos JSON
   fetch("json_directory.json")
     .then(res => res.json())
     .then(directoryData => {
@@ -35,6 +55,15 @@ function init() {
       return loadAllJsonMenus(files);
     })
     .then(() => {
+      // Revisamos si hay un "shuffledMenus" ya guardado
+      if (selectionState.shuffledMenus) {
+        // Si existe, lo usamos (mismo orden que la última vez)
+        allMenus = selectionState.shuffledMenus;
+      } else {
+        // Si no existe, tomamos "originalMenus" tal cual (sin barajar)
+        copyOriginalToAllMenus_NoShuffle();
+      }
+
       renderApp();
     })
     .catch(err => {
@@ -44,6 +73,9 @@ function init() {
     });
 }
 
+/**
+ * Carga la data de cada archivo JSON y la almacena en "originalMenus".
+ */
 function loadAllJsonMenus(fileList) {
   const promises = fileList.map(file =>
     fetch(file)
@@ -67,16 +99,17 @@ function loadAllJsonMenus(fileList) {
         if (key === "id") return;
 
         let targetKey = key.toLowerCase();
+        // Se unifica snack... pero realmente se usa "originalMenus.snack"
         if (targetKey.startsWith("snack")) {
           targetKey = "snack";
         }
 
-        if (!allMenus[targetKey]) {
-          allMenus[targetKey] = [];
+        if (!originalMenus[targetKey]) {
+          originalMenus[targetKey] = [];
         }
 
         if (Array.isArray(menuData[key])) {
-          allMenus[targetKey].push(...menuData[key]);
+          originalMenus[targetKey].push(...menuData[key]);
         } else {
           console.warn(`El valor de '${key}' no es un array.`, menuData[key]);
         }
@@ -85,6 +118,9 @@ function loadAllJsonMenus(fileList) {
   });
 }
 
+/**
+ * Inicializa por completo el estado (selectionState).
+ */
 function initializeSelectionState() {
   selectionState = {
     initialized: true,
@@ -101,15 +137,26 @@ function initializeSelectionState() {
       dinner: 0
     },
     currentCategoryIndex: 0,
-    tempSelections: {}
+    tempSelections: {},
+    /*
+     * Aquí guardaremos la versión barajada de allMenus.
+     * Si es null => usamos el orden "original" sin barajar.
+     */
+    shuffledMenus: null
   };
   saveStateToLocalStorage();
 }
 
+/**
+ * Guarda el estado en localStorage.
+ */
 function saveStateToLocalStorage() {
   localStorage.setItem("nutriSelectionStateDark", JSON.stringify(selectionState));
 }
 
+/**
+ * Carga el estado desde localStorage.
+ */
 function loadStateFromLocalStorage() {
   const data = localStorage.getItem("nutriSelectionStateDark");
   if (data) {
@@ -121,6 +168,9 @@ function loadStateFromLocalStorage() {
   }
 }
 
+/**
+ * Asegura que "selectionState" sea válido.
+ */
 function ensureSelectionStateIntegrity() {
   if (!selectionState || typeof selectionState !== 'object') {
     initializeSelectionState();
@@ -151,12 +201,63 @@ function ensureSelectionStateIntegrity() {
     selectionState.initialized = true;
   }
 
+  // Asegurar que exista la propiedad "shuffledMenus"
+  if (!("shuffledMenus" in selectionState)) {
+    selectionState.shuffledMenus = null;
+  }
+
   saveStateToLocalStorage();
 }
 
+/**
+ * Copia "originalMenus" en "allMenus" sin barajar (modo original).
+ */
+function copyOriginalToAllMenus_NoShuffle() {
+  allMenus.breakfast = deepClone(originalMenus.breakfast);
+  allMenus.snack1 = deepClone(originalMenus.snack);
+  allMenus.snack2 = deepClone(originalMenus.snack);
+  allMenus.lunch = deepClone(originalMenus.lunch);
+  allMenus.dinner = deepClone(originalMenus.dinner);
+}
+
+/**
+ * Clona en profundidad un objeto/array anidado (en este caso basta con JSON).
+ */
+function deepClone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+/**
+ * Barajar un array in-place (Fisher-Yates).
+ */
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+/**
+ * Baraja cada categoría en "allMenus" de manera independiente.
+ */
+function shuffleAllMenus() {
+  shuffleArray(allMenus.breakfast);
+  shuffleArray(allMenus.snack1);
+  shuffleArray(allMenus.snack2);
+  shuffleArray(allMenus.lunch);
+  shuffleArray(allMenus.dinner);
+}
+
+/**
+ * Lógica principal de renderizado:
+ * Si se completó todo => renderSummary,
+ * en caso contrario => render de la selección de la categoría actual.
+ */
 function renderApp() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
+
+  hideHeaderFooter(false);
 
   if (allCategoriesCompleted()) {
     renderSummary();
@@ -192,10 +293,8 @@ function renderApp() {
   daysDiv.classList.add("selection-days");
   selectionRow.appendChild(daysDiv);
 
-  let arrayKey = categoryKey;
-  if (arrayKey === "snack1" || arrayKey === "snack2") {
-    arrayKey = "snack";
-  }
+  // En lugar de "snack", ahora snack1 y snack2 tienen su propio array.
+  let arrayKey = categoryKey; // "breakfast", "snack1", "lunch", "snack2", "dinner"
 
   if (!allMenus[arrayKey] || allMenus[arrayKey].length === 0) {
     const p = document.createElement("p");
@@ -212,6 +311,7 @@ function renderApp() {
     defaultOpt.textContent = "--Selecciona--";
     selectMenu.appendChild(defaultOpt);
 
+    // Llenamos el select con las opciones en "allMenus[arrayKey]"
     allMenus[arrayKey].forEach((menuObj, idx) => {
       const opt = document.createElement("option");
       opt.value = idx;
@@ -226,29 +326,34 @@ function renderApp() {
     for (let i = 1; i <= remainingDays; i++) {
       const opt = document.createElement("option");
       opt.value = i;
-      opt.textContent = `${i} día${i > 1 ? 's' : ''}`;
+      opt.textContent = `${i} día${i > 1 ? "s" : ""}`;
       selectDays.appendChild(opt);
     }
     daysDiv.appendChild(selectDays);
 
-    // Restaurar selección
+    // Restaurar selección temporal
     const temp = selectionState.tempSelections[categoryKey] || {};
-    if (temp.menuIndex !== undefined && temp.menuIndex < allMenus[arrayKey].length) {
+    if (
+      temp.menuIndex !== undefined &&
+      temp.menuIndex < allMenus[arrayKey].length
+    ) {
       selectMenu.value = temp.menuIndex;
     }
     if (temp.dayIndex !== undefined && temp.dayIndex < selectDays.options.length) {
       selectDays.selectedIndex = temp.dayIndex;
     }
 
-    // Guardar selección temporal
+    // Guardar selección temporal al cambiar
     selectMenu.addEventListener("change", () => {
-      selectionState.tempSelections[categoryKey] = selectionState.tempSelections[categoryKey] || {};
+      selectionState.tempSelections[categoryKey] =
+        selectionState.tempSelections[categoryKey] || {};
       selectionState.tempSelections[categoryKey].menuIndex = selectMenu.value;
       saveStateToLocalStorage();
     });
 
     selectDays.addEventListener("change", () => {
-      selectionState.tempSelections[categoryKey] = selectionState.tempSelections[categoryKey] || {};
+      selectionState.tempSelections[categoryKey] =
+        selectionState.tempSelections[categoryKey] || {};
       selectionState.tempSelections[categoryKey].dayIndex = selectDays.selectedIndex;
       saveStateToLocalStorage();
     });
@@ -268,12 +373,14 @@ function renderApp() {
     btnReset.classList.add("btn-restart");
     buttonRow.appendChild(btnReset);
 
+    // Manejo del botón "Reiniciar Todo"
     btnReset.addEventListener("click", () => {
       if (confirm("¿Estás seguro de reiniciar todo?")) {
         resetAll();
       }
     });
 
+    // Manejo del botón "Aceptar"
     btnAccept.addEventListener("click", () => {
       const menuIndexStr = selectMenu.value;
       if (!menuIndexStr) {
@@ -285,20 +392,22 @@ function renderApp() {
       const menuIndex = parseInt(menuIndexStr, 10);
       const chosenMenu = allMenus[arrayKey][menuIndex];
 
-      // Almacenar la selección
+      // Guardar la selección ya "aceptada"
       selectionState[categoryKey].push({
         menuName: chosenMenu.menuName,
         daysUsed: daysSelected,
         dishes: chosenMenu.dishes
       });
 
-      // Actualizar conteo
+      // Aumentar el conteo en esta categoría
       selectionState.completedCategories[categoryKey] += daysSelected;
 
-      // Limpiar selección temporal
+      // Limpiar la selección temporal
       delete selectionState.tempSelections[categoryKey];
+
       saveStateToLocalStorage();
 
+      // Si esta categoría ya sumó 7 días, pasamos a la siguiente
       if (selectionState.completedCategories[categoryKey] >= TOTAL_DAYS) {
         goToNextCategory();
       } else {
@@ -310,12 +419,18 @@ function renderApp() {
   appDiv.appendChild(questionBlock);
 }
 
+/**
+ * Avanza a la siguiente categoría en CATEGORY_ORDER y re-renderiza.
+ */
 function goToNextCategory() {
   selectionState.currentCategoryIndex++;
   saveStateToLocalStorage();
   renderApp();
 }
 
+/**
+ * Verifica si ya se completaron las 5 categorías (7 días cada una).
+ */
 function allCategoriesCompleted() {
   for (let cat of CATEGORY_ORDER) {
     if (selectionState.completedCategories[cat] < TOTAL_DAYS) {
@@ -325,9 +440,15 @@ function allCategoriesCompleted() {
   return true;
 }
 
+/**
+ * Renderiza el resumen final.
+ */
 function renderSummary() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
+
+  // Ocultar header y footer en el resumen
+  hideHeaderFooter(true);
 
   const summaryDiv = document.createElement("div");
   summaryDiv.classList.add("selection-summary");
@@ -347,7 +468,9 @@ function renderSummary() {
         menuBlock.classList.add("summary-menu-block");
 
         const h4 = document.createElement("h4");
-        h4.textContent = `${sel.menuName} - ${sel.daysUsed} día${sel.daysUsed > 1 ? 's' : ''}`;
+        h4.textContent = `${sel.menuName} - ${sel.daysUsed} día${
+          sel.daysUsed > 1 ? "s" : ""
+        }`;
         menuBlock.appendChild(h4);
 
         sel.dishes.forEach(dish => {
@@ -386,20 +509,54 @@ function renderSummary() {
   appDiv.appendChild(summaryDiv);
 }
 
+/**
+ * Restablece todo, genera nuevos órdenes aleatorios y vuelve al inicio.
+ */
 function resetAll() {
+  // 1. Eliminar el estado actual de localStorage
   localStorage.removeItem("nutriSelectionStateDark");
   initializeSelectionState();
+
+  // 2. Copiar la base original en "allMenus" (dos arrays para snack1 y snack2)
+  copyOriginalToAllMenus_NoShuffle();
+
+  // 3. Barajar cada uno por separado
+  shuffleAllMenus();
+
+  // 4. Guardar en "selectionState.shuffledMenus" la versión barajada
+  selectionState.shuffledMenus = deepClone(allMenus);
+  saveStateToLocalStorage();
+
+  // 5. Renderizamos todo desde cero
   renderApp();
 }
 
+/**
+ * Muestra u oculta el header y footer.
+ * @param {boolean} hide - true para ocultar, false para mostrar
+ */
+function hideHeaderFooter(hide) {
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+  if (header) header.style.display = hide ? "none" : "";
+  if (footer) footer.style.display = hide ? "none" : "";
+}
+
+/**
+ * Traduce la categoría a su nombre en español.
+ */
 function mapCategoryToSpanish(cat) {
   switch (cat) {
-    case "breakfast": return "Desayuno";
+    case "breakfast":
+      return "Desayuno";
     case "snack1":
     case "snack2":
       return "Colación / Snack";
-    case "lunch": return "Comida";
-    case "dinner": return "Cena";
-    default: return cat;
+    case "lunch":
+      return "Comida";
+    case "dinner":
+      return "Cena";
+    default:
+      return cat;
   }
 }
