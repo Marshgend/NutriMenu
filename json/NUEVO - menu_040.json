@@ -1,0 +1,286 @@
+﻿{
+  "id": "menu_040",
+  "breakfast": [
+    {
+      "menuName": "NUEVO - Tortillas, Huevo y Papas con Nopales",
+      "dishes": [
+        {
+          "name": "Tortillas",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 22,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Huevo estrellado y papas con nopales",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 149,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "NUEVO - Rice Cake con Atún",
+      "dishes": [
+        {
+          "name": "Rice cake con atún",
+          "ingredients": [
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Galletas de arroz",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Salsa de tomate",
+              "metricQuantity": 15,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "NUEVO - Verduras Cocidas y Enfrijoladas de Queso",
+      "dishes": [
+        {
+          "name": "Verduras cocidas",
+          "ingredients": [
+            {
+              "name": "Coliflor",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Enfrijoladas de queso",
+          "ingredients": [
+            {
+              "name": "Frijoles",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 13,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Tortillas",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 90,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "NUEVO - Sandía con Jícama",
+      "dishes": [
+        {
+          "name": "Sandía con jícama",
+          "ingredients": [
+            {
+              "name": "Sandía",
+              "metricQuantity": 160,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jícama",
+              "metricQuantity": 160,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "NUEVO - Sushi Bowl y Aderezo Chipotle",
+      "dishes": [
+        {
+          "name": "Agua de jamaica",
+          "ingredients": [
+            {
+              "name": "Agua de jamaica",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Sushi bowl",
+          "ingredients": [
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 52,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 47,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Mayonesa",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Salsa de soja",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Ajonjolí",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Surimi",
+              "metricQuantity": 100,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Aderezo chipotle con yogurt",
+          "ingredients": [
+            {
+              "name": "Chipotle",
+              "metricQuantity": 23,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 73,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Ajo en polvo",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
