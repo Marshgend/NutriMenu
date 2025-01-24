@@ -4,6 +4,8 @@
  * Muestra un resumen COMPLETO (platillos e ingredientes)
  * + Botón para copiar resumen al portapapeles
  * + Parámetro URL para compartir el resumen
+ * + Se elimina la opción elegida de la lista para evitar
+ *   que reaparezca si todavía faltan días por completar.
  ************************************************************/
 
 const CATEGORY_ORDER = ["breakfast", "snack1", "lunch", "snack2", "dinner"];
@@ -97,8 +99,6 @@ function init() {
  * Si la URL contiene #share=..., devolvemos la parte después de "share="; de lo contrario null.
  */
 function checkForSharedSummary() {
-  // Podemos usar window.location.hash
-  // Ejemplo de hash: "#share=BASE64AQUÍ"
   const hash = window.location.hash || "";
   const prefix = "#share=";
   if (hash.startsWith(prefix)) {
@@ -175,7 +175,6 @@ function renderSharedSummary() {
   summaryDiv.appendChild(btnCopy);
 
   // Botón para "Regresar" (o "Reiniciar Todo")
-  // Podrías poner un link a tu página principal, o lo que gustes.
   const btnGoHome = document.createElement("button");
   btnGoHome.textContent = "Ir a la página inicial";
   btnGoHome.classList.add("btn-restart");
@@ -503,11 +502,11 @@ function renderApp() {
         return;
       }
       const daysSelected = parseInt(selectDays.value, 10);
-
       const menuIndex = parseInt(menuIndexStr, 10);
+
       const chosenMenu = allMenus[arrayKey][menuIndex];
 
-      // Guardar la selección ya "aceptada"
+      // Guardar la selección "aceptada"
       selectionState[categoryKey].push({
         menuName: chosenMenu.menuName,
         daysUsed: daysSelected,
@@ -517,15 +516,25 @@ function renderApp() {
       // Aumentar el conteo en esta categoría
       selectionState.completedCategories[categoryKey] += daysSelected;
 
+      // Quitar la opción elegida del array para que no reaparezca
+      allMenus[arrayKey].splice(menuIndex, 1);
+
+      // Si tenemos un 'shuffledMenus', también removemos de ahí
+      if (selectionState.shuffledMenus && selectionState.shuffledMenus[arrayKey]) {
+        selectionState.shuffledMenus[arrayKey].splice(menuIndex, 1);
+      }
+
       // Limpiar la selección temporal
       delete selectionState.tempSelections[categoryKey];
 
+      // Guardamos el estado y la lista actualizada
       saveStateToLocalStorage();
 
       // Si esta categoría ya sumó 7 días, pasamos a la siguiente
       if (selectionState.completedCategories[categoryKey] >= TOTAL_DAYS) {
         goToNextCategory();
       } else {
+        // Si aún faltan días en la misma categoría, volvemos a renderizar
         renderApp();
       }
     });
@@ -694,19 +703,11 @@ function buildSummaryText() {
  */
 function shareSummaryLink() {
   try {
-    // 1. Convertimos el "selectionState" a JSON
-    //    Realmente sólo necesitamos la parte que define el resumen,
-    //    pero en este ejemplo usamos todo el objeto para reproducir el final.
     const jsonState = JSON.stringify(selectionState);
-    // 2. Lo codificamos en base64
     const encoded = btoa(jsonState);
-
-    // 3. Construimos la URL con hash
-    // Ejemplo: https://midominio.com/mipagina.html#share=XXXXX
     const baseUrl = window.location.origin + window.location.pathname;
     const shareUrl = baseUrl + "#share=" + encoded;
 
-    // 4. Lo copiamos al portapapeles
     navigator.clipboard.writeText(shareUrl)
       .then(() => {
         alert("Link de resumen copiado al portapapeles:\n" + shareUrl);
