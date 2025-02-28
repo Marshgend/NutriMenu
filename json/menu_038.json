@@ -2,7 +2,7 @@
   "id": "menu_038",
   "breakfast": [
     {
-      "menuName": "NUEVO - Tostadas, Té, Melón y Yogurt",
+      "menuName": "Tostadas, Té, Melón y Yogurt",
       "dishes": [
         {
           "name": "Tostadas con dip de aguacate, huevo y queso",
@@ -83,7 +83,7 @@
   ],
   "snack1": [
     {
-      "menuName": "NUEVO - Pepitas y Rice Cake con Plátano",
+      "menuName": "Pepitas y Rice Cake con Plátano",
       "dishes": [
         {
           "name": "Pepitas de girasol",
@@ -128,7 +128,7 @@
   ],
   "lunch": [
     {
-      "menuName": "NUEVO - Ensalada de Pollo y Galletas Saladas",
+      "menuName": "Ensalada de Pollo y Galletas Saladas",
       "dishes": [
         {
           "name": "Ensalada de pollo, lechuga y elote",
@@ -194,7 +194,7 @@
   ],
   "snack2": [
     {
-      "menuName": "NUEVO - Guayaba",
+      "menuName": "Guayaba",
       "dishes": [
         {
           "name": "Guayaba",
@@ -213,7 +213,7 @@
   ],
   "dinner": [
     {
-      "menuName": "NUEVO - Sardinas y Galletas Saladas",
+      "menuName": "Sardinas y Galletas Saladas",
       "dishes": [
         {
           "name": "Sardinas",

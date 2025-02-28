@@ -2,7 +2,7 @@
   "id": "menu_040",
   "breakfast": [
     {
-      "menuName": "NUEVO - Tortillas, Huevo y Papas con Nopales",
+      "menuName": "Tortillas, Huevo y Papas con Nopales",
       "dishes": [
         {
           "name": "Tortillas",
@@ -45,7 +45,7 @@
   ],
   "snack1": [
     {
-      "menuName": "NUEVO - Rice Cake con Atún",
+      "menuName": "Rice Cake con Atún",
       "dishes": [
         {
           "name": "Rice cake con atún",
@@ -76,7 +76,7 @@
   ],
   "lunch": [
     {
-      "menuName": "NUEVO - Verduras Cocidas y Enfrijoladas de Queso",
+      "menuName": "Verduras Cocidas y Enfrijoladas de Queso",
       "dishes": [
         {
           "name": "Verduras cocidas",
@@ -152,7 +152,7 @@
   ],
   "snack2": [
     {
-      "menuName": "NUEVO - Sandía con Jícama",
+      "menuName": "Sandía con Jícama",
       "dishes": [
         {
           "name": "Sandía con jícama",
@@ -178,7 +178,7 @@
   ],
   "dinner": [
     {
-      "menuName": "NUEVO - Sushi Bowl y Aderezo Chipotle",
+      "menuName": "Sushi Bowl y Aderezo Chipotle",
       "dishes": [
         {
           "name": "Agua de jamaica",

@@ -1,0 +1,358 @@
+﻿{
+  "id": "menu_044",
+  "breakfast": [
+    {
+      "menuName": "NUEVO - Jugo verde, plátano, pancakes de betabel",
+      "dishes": [
+        {
+          "name": "Jugo verde (solo verduras)",
+          "ingredients": [
+            {
+              "name": "Nopales",
+              "metricQuantity": 13,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 21,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Apio",
+              "metricQuantity": 14,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 24,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jengibre",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 200,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Plátano con miel",
+          "ingredients": [
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Miel",
+              "metricQuantity": 7,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Pancakes de betabel",
+          "ingredients": [
+            {
+              "name": "Betabel",
+              "metricQuantity": 43,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Harina de avena",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Mantequilla",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Arándanos",
+              "metricQuantity": 54,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cúrcuma",
+              "metricQuantity": 4,
+              "metricUnit": "g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "NUEVO - Manzana verde y almendras",
+      "dishes": [
+        {
+          "name": "Manzana verde",
+          "ingredients": [
+            {
+              "name": "Manzana",
+              "metricQuantity": 140,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Almendras",
+          "ingredients": [
+            {
+              "name": "Almendras",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 10,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "NUEVO - Espagueti, albóndigas y agua de jamaica",
+      "dishes": [
+        {
+          "name": "Espagueti con albóndigas",
+          "ingredients": [
+            {
+              "name": "Espagueti",
+              "metricQuantity": 141,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Carne de res",
+              "metricQuantity": 120,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 169.5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 26.5,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 1.2,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333333333,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Perejil",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.6666666667,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Pimiento",
+              "metricQuantity": 37.5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 100,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 33,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Agua de jamaica",
+          "ingredients": [
+            {
+              "name": "Agua de jamaica",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Azúcar",
+              "metricQuantity": 2.5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "NUEVO - Yogur sin azúcar",
+      "dishes": [
+        {
+          "name": "Yogur Danone Natural sin azúcar",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "NUEVO - Molletes, huevo revuelto y agua",
+      "dishes": [
+        {
+          "name": "Molletes de frijoles",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 86,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 42,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 16,
+              "metricUnit": "g",
+              "alternativeQuantity": 3.2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Jalapeño",
+              "metricQuantity": 16,
+              "metricUnit": "g"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 14,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333333333,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Huevo revuelto con tomate y cebolla",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "cucharadas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

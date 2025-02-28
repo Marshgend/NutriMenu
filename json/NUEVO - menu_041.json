@@ -1,0 +1,293 @@
+﻿{
+  "id": "menu_041",
+  "breakfast": [
+    {
+      "menuName": "NUEVO - Avena con plátano, pan y huevos",
+      "dishes": [
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            }
+          ]
+        },
+        {
+          "name": "Avena de refri plátano",
+          "ingredients": [
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 245,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Pan tostado con requesón",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 24,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            }
+          ]
+        },
+        {
+          "name": "Huevo cocido",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 88,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "NUEVO - Yogurt con guayaba",
+      "dishes": [
+        {
+          "name": "Yogurt con guayaba",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Guayaba",
+              "metricQuantity": 135,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "NUEVO - Pollo con pimientos, aguacate y agua",
+      "dishes": [
+        {
+          "name": "Bowl de pollo y pimientos",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 140,
+              "metricUnit": "g",
+              "alternativeQuantity": "4 2/3",
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pimiento",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 29,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 2.5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Aguacate",
+          "ingredients": [
+            {
+              "name": "Aguacate",
+              "metricQuantity": 25.83,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "NUEVO - Gelatina sin azúcar",
+      "dishes": [
+        {
+          "name": "Gelatina 0 azúcar",
+          "ingredients": [
+            {
+              "name": "Gelatina",
+              "metricQuantity": 121,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "NUEVO - Tostadas con bisteck y té",
+      "dishes": [
+        {
+          "name": "Tostadas de nopales con frijoles",
+          "ingredients": [
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 48,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.6666666667,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.6666666667,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 123,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            }
+          ]
+        },
+        {
+          "name": "Bisteck",
+          "ingredients": [
+            {
+              "name": "Carne de res",
+              "metricQuantity": 90,
+              "metricUnit": "g"
+            }
+          ]
+        },
+        {
+          "name": "Té de canela",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "unidad"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

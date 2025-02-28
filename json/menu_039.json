@@ -2,7 +2,7 @@
   "id": "menu_039",
   "breakfast": [
     {
-      "menuName": "NUEVO - Batido Plátano, Huevo y Papa",
+      "menuName": "Batido Plátano, Huevo y Papa",
       "dishes": [
         {
           "name": "Batido proteico de plátano",
@@ -82,7 +82,7 @@
   ],
   "snack1": [
     {
-      "menuName": "NUEVO - Rice Cake, Plátano y Cacahuate",
+      "menuName": "Rice Cake, Plátano y Cacahuate",
       "dishes": [
         {
           "name": "Rice cake de crema de cacahuate y plátano",
@@ -115,7 +115,7 @@
   ],
   "lunch": [
     {
-      "menuName": "NUEVO - Pescado con Papas, Ensalada y Tortillas",
+      "menuName": "Pescado con Papas, Ensalada y Tortillas",
       "dishes": [
         {
           "name": "Pescado con papas y ensalada",
@@ -177,7 +177,7 @@
   ],
   "snack2": [
     {
-      "menuName": "NUEVO - Fresas con Panela y Espinacas",
+      "menuName": "Fresas con Panela y Espinacas",
       "dishes": [
         {
           "name": "Fresas con panela y espinacas",
@@ -224,7 +224,7 @@
   ],
   "dinner": [
     {
-      "menuName": "NUEVO - Pollo con Vegetales y Arroz",
+      "menuName": "Pollo con Vegetales y Arroz",
       "dishes": [
         {
           "name": "Pollo con vegetales",

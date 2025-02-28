@@ -2,7 +2,7 @@
   "id": "menu_037",
   "breakfast": [
     {
-      "menuName": "NUEVO - Sándwich, Té de Menta y Leche",
+      "menuName": "Sándwich, Té de Menta y Leche",
       "dishes": [
         {
           "name": "Sándwich arcoiris",
@@ -98,7 +98,7 @@
   ],
   "snack1": [
     {
-      "menuName": "NUEVO - Rice Cake, Aguacate y Panela Asada",
+      "menuName": "Rice Cake, Aguacate y Panela Asada",
       "dishes": [
         {
           "name": "Rice cake con aguacate",
@@ -146,7 +146,7 @@
   ],
   "lunch": [
     {
-      "menuName": "NUEVO - Bistec, Arroz, Galletas, Agua de Fresa",
+      "menuName": "Bistec, Arroz, Galletas, Agua de Fresa",
       "dishes": [
         {
           "name": "Bistec con verduras",
@@ -223,7 +223,7 @@
   ],
   "snack2": [
     {
-      "menuName": "NUEVO - Yogurt, Almendras, Rice Cake y Mermelada",
+      "menuName": "Yogurt, Almendras, Rice Cake y Mermelada",
       "dishes": [
         {
           "name": "Yogurt",
@@ -273,7 +273,7 @@
   ],
   "dinner": [
     {
-      "menuName": "NUEVO - Ensalada de Atún y Frutos Rojos",
+      "menuName": "Ensalada de Atún y Frutos Rojos",
       "dishes": [
         {
           "name": "Ensalada de frutos rojos",
