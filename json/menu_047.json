@@ -1,0 +1,330 @@
+﻿{
+  "id": "menu_047",
+  "breakfast": [
+    {
+      "menuName": "Sándwich de Huevo y Naranja",
+      "dishes": [
+        {
+          "name": "Sándwich de huevo",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 70,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 2.5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 132,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Naranja",
+          "ingredients": [
+            {
+              "name": "Naranja",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Smoothie Snickers",
+      "dishes": [
+        {
+          "name": "Smoothie Snickers",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 245,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cacao en polvo",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Crema de cacahuate",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Stevia",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "sobre"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Albóndigas de Pollo y Verduras Cocidas",
+      "dishes": [
+        {
+          "name": "Albóndigas de pollo",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Tomate verde",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.2,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Cebolla blanca",
+              "metricQuantity": 53,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Caldo de pollo",
+              "metricQuantity": 79,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Verduras cocidas",
+          "ingredients": [
+            {
+              "name": "Coliflor",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Mug Cake Zanahoria y Miel",
+      "dishes": [
+        {
+          "name": "Mug cake zanahoria",
+          "ingredients": [
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 37,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.1667,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Mantequilla de maní",
+              "metricQuantity": 7,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 132,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Miel",
+          "ingredients": [
+            {
+              "name": "Miel",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Pizzadillas con Champiñón y Aceitunas",
+      "dishes": [
+        {
+          "name": "Pizzadillas",
+          "ingredients": [
+            {
+              "name": "Queso",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 1.5,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Salsa de jitomate",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Champiñón",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceitunas",
+              "metricQuantity": 32,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Tortillas",
+              "metricQuantity": 64,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Cebolla morada",
+              "metricQuantity": 8,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
