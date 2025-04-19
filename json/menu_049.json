@@ -1,0 +1,368 @@
+﻿{
+  "id": "menu_049",
+  "breakfast": [
+    {
+      "menuName": "Omelette Mexicano Tortillas y Verduras",
+      "dishes": [
+        {
+          "name": "Omelette a la mexicana con queso",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Claras",
+              "metricQuantity": 66,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            }
+          ]
+        },
+        {
+          "name": "Tortillas",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 44,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Verduras cocidas",
+          "ingredients": [
+            {
+              "name": "Brócoli",
+              "metricQuantity": 80,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 36,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Snack tipo galleta",
+      "dishes": [
+        {
+          "name": "Snack tipo galleta",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 35,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 44,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Mermelada",
+              "metricQuantity": 7,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Chocolate semi amargo",
+              "metricQuantity": 17,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Taquitos Pollo, Caldo Verduras y Agua",
+      "dishes": [
+        {
+          "name": "Taquitos de pollo y frijoles",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Salsa de jitomate",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 22.67,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 27.9,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Agua de limón con chía",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "vaso"
+            },
+            {
+              "name": "Jugo de limón",
+              "metricQuantity": 20,
+              "metricUnit": "ml",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Chía",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Caldo de verduras",
+          "ingredients": [
+            {
+              "name": "Brócoli",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Coliflor",
+              "metricQuantity": 25,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Caldo de verduras",
+              "metricQuantity": 250,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Yogurt con Fruta",
+      "dishes": [
+        {
+          "name": "Yogurt con fruta",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 75,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Almendras",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Chía",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Calabazas Rellenas y Agua Limón",
+      "dishes": [
+        {
+          "name": "Agua de limón con chía",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "vaso"
+            },
+            {
+              "name": "Jugo de limón",
+              "metricQuantity": 20,
+              "metricUnit": "ml",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Chía",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Calabazas rellenas",
+          "ingredients": [
+            {
+              "name": "Calabaza",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Carne de res",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 35,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla blanca",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

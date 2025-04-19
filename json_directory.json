@@ -1,7 +1,11 @@
 {
   "//": "json/.json",
   "jsonFiles": [
+    "json/menu_045.json",
     "json/menu_046.json",
-    "json/menu_047.json"
+    "json/menu_047.json",
+    "json/menu_048.json",
+    "json/menu_049.json",
+    "json/menu_050.json"
   ]
 }

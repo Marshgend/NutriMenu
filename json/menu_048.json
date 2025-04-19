@@ -1,0 +1,300 @@
+﻿{
+  "id": "menu_048",
+  "breakfast": [
+    {
+      "menuName": "Jugo de Nopal, Sándwich y Café",
+      "dishes": [
+        {
+          "name": "Jugo verde de nopal",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 150,
+              "metricUnit": "ml",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "vaso"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jugo de limón",
+              "metricQuantity": 10,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Naranja",
+              "metricQuantity": 76,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Sándwich de huevo",
+          "ingredients": [
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 132,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.25,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pimienta, sal y ajo",
+              "metricQuantity": 2.5,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Café",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Zanahoria",
+      "dishes": [
+        {
+          "name": "Zanahoria",
+          "ingredients": [
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 64,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Ceviche de Garbanzo con Galletas",
+      "dishes": [
+        {
+          "name": "Ceviche de garbanzo",
+          "ingredients": [
+            {
+              "name": "Garbanzos",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Mango ataulfo",
+              "metricQuantity": 180,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla morada",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 47,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Galletas saladas",
+              "metricQuantity": 48,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Arándanos con Yogurt y Cacahuates",
+      "dishes": [
+        {
+          "name": "Arándanos con yogurt",
+          "ingredients": [
+            {
+              "name": "Arándanos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Cacahuates",
+          "ingredients": [
+            {
+              "name": "Cacahuates",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 10,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Tacos y Ensalada de Nopales",
+      "dishes": [
+        {
+          "name": "Tacos",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Cerdo",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Ensalada de nopales",
+          "ingredients": [
+            {
+              "name": "Nopales",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.5,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 0.3333,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
