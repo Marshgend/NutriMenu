@@ -2,7 +2,7 @@
   "id": "menu_045",
   "breakfast": [
     {
-      "menuName": "Smoothie y Hot Cakes de Zanahoria",
+      "menuName": "Green Smoothie y Hot cakes de zanahoria",
       "dishes": [
         {
           "name": "Agua",
@@ -30,21 +30,21 @@
               "name": "Espinacas",
               "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": 0.3333,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Nopales",
               "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": 0.3333,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
               "name": "Pepino",
               "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": 0.2,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
@@ -55,7 +55,7 @@
               "alternativeUnit": "taza"
             },
             {
-              "name": "Jugo de limón",
+              "name": "Limón",
               "metricQuantity": 10,
               "metricUnit": "ml",
               "alternativeQuantity": 0.1,
@@ -77,21 +77,21 @@
               "name": "Zanahoria",
               "metricQuantity": 40,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Avena",
               "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Leche",
               "metricQuantity": 96,
               "metricUnit": "ml",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
@@ -116,7 +116,7 @@
               "alternativeUnit": "cucharadita"
             },
             {
-              "name": "Claras",
+              "name": "Claras de huevo",
               "metricQuantity": 132,
               "metricUnit": "g",
               "alternativeQuantity": 4,
@@ -126,7 +126,7 @@
               "name": "Plátano",
               "metricQuantity": 60,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             }
           ]
@@ -142,7 +142,7 @@
           "name": "Guayaba",
           "ingredients": [
             {
-              "name": "Guayaba",
+              "name": "Guayabas",
               "metricQuantity": 135,
               "metricUnit": "g",
               "alternativeQuantity": 3,
@@ -167,13 +167,13 @@
   ],
   "lunch": [
     {
-      "menuName": "Pollo a la Poblana y Galletas Saladas",
+      "menuName": "Pollo a la poblana con Tostadas",
       "dishes": [
         {
           "name": "Pollo a la poblana",
           "ingredients": [
             {
-              "name": "Queso",
+              "name": "Queso Oaxaca",
               "metricQuantity": 30,
               "metricUnit": "g",
               "alternativeQuantity": 1,
@@ -183,32 +183,32 @@
               "name": "Yogurt",
               "metricQuantity": 73,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
               "name": "Elote",
               "metricQuantity": 40,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "taza"
             },
             {
-              "name": "Cebolla blanca",
+              "name": "Cebolla",
               "metricQuantity": 27,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "taza"
             },
             {
               "name": "Chile poblano",
               "metricQuantity": 53,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": 1,
               "alternativeUnit": "pieza"
             },
             {
-              "name": "Pollo",
+              "name": "Pechuga de Pollo",
               "metricQuantity": 150,
               "metricUnit": "g",
               "alternativeQuantity": 1,
@@ -217,10 +217,10 @@
           ]
         },
         {
-          "name": "Galletas saladas",
+          "name": "Tostadas",
           "ingredients": [
             {
-              "name": "Galletas saladas",
+              "name": "Tostadas",
               "metricQuantity": 36,
               "metricUnit": "g",
               "alternativeQuantity": 2,
@@ -252,13 +252,13 @@
   ],
   "dinner": [
     {
-      "menuName": "Pan Pita con Atún y Mango",
+      "menuName": "Pan pita con atún",
       "dishes": [
         {
           "name": "Pan pita con atún",
           "ingredients": [
             {
-              "name": "Pan pita integral",
+              "name": "Pan de caja",
               "metricQuantity": 40,
               "metricUnit": "g",
               "alternativeQuantity": 1,
@@ -275,43 +275,43 @@
               "name": "Yogurt",
               "metricQuantity": 73,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
               "name": "Apio",
               "metricQuantity": 24,
               "metricUnit": "g",
-              "alternativeQuantity": 0.3333,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
-              "name": "Mango ataulfo",
+              "name": "Mango",
               "metricQuantity": 100,
               "metricUnit": "g",
-              "alternativeQuantity": 0.6667,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
               "name": "Pepino",
               "metricQuantity": 45,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "taza"
             },
             {
-              "name": "Pimienta negra",
+              "name": "Pimienta",
               "metricQuantity": 1,
               "metricUnit": "g",
-              "alternativeQuantity": 0.2,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "cucharadita"
             },
             {
               "name": "Atún",
               "metricQuantity": 100,
-              "metricUnit": "g",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "lata"
+              "metricUnit": "ml",
+              "alternativeQuantity": 1.1,
+              "alternativeUnit": "latas"
             }
           ]
         }

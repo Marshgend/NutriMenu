@@ -2,7 +2,7 @@
   "id": "menu_046",
   "breakfast": [
     {
-      "menuName": "Huevos con Ejotes, Frijoles y Licuado",
+      "menuName": "Huevos revueltos con ejotes, Licuado de fresa y Frijoles",
       "dishes": [
         {
           "name": "Huevos revueltos con ejotes",
@@ -11,11 +11,11 @@
               "name": "Ejotes",
               "metricQuantity": 30,
               "metricUnit": "g",
-              "alternativeQuantity": 0.2,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
-              "name": "Claras",
+              "name": "Claras de huevo",
               "metricQuantity": 132,
               "metricUnit": "g",
               "alternativeQuantity": 4,
@@ -38,7 +38,7 @@
           ]
         },
         {
-          "name": "Licuado de fresas",
+          "name": "Licuado de fresa",
           "ingredients": [
             {
               "name": "Leche",
@@ -55,36 +55,36 @@
               "alternativeUnit": "piezas"
             },
             {
-              "name": "Mango ataulfo",
+              "name": "Mango",
               "metricQuantity": 45,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "pieza"
             },
             {
               "name": "Vainilla",
-              "metricQuantity": 2.5,
+              "metricQuantity": 5,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": 1,
               "alternativeUnit": "cucharadita"
             },
             {
               "name": "Canela",
-              "metricQuantity": 2.5,
+              "metricQuantity": 5,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": 1,
               "alternativeUnit": "cucharadita"
             }
           ]
         },
         {
-          "name": "Frijoles refritos",
+          "name": "Frijoles refritos sin grasa",
           "ingredients": [
             {
-              "name": "Frijoles refritos",
+              "name": "Frijoles",
               "metricQuantity": 75,
               "metricUnit": "g",
-              "alternativeQuantity": 0.3333,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             }
           ]
@@ -94,27 +94,27 @@
   ],
   "snack1": [
     {
-      "menuName": "Queso Cottage, Zarzamoras y Nuez",
+      "menuName": "Queso cottage con zarzamoras y Nuez",
       "dishes": [
         {
           "name": "Queso cottage con zarzamoras",
           "ingredients": [
             {
-              "name": "Queso cottage",
+              "name": "Queso Cottage",
               "metricQuantity": 48,
               "metricUnit": "g",
               "alternativeQuantity": 3,
               "alternativeUnit": "cucharadas"
             },
             {
-              "name": "Zarzamora",
+              "name": "Zarzamoras",
               "metricQuantity": 59,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
-              "name": "Nuez de la india",
+              "name": "Nuez de la India",
               "metricQuantity": 11,
               "metricUnit": "g",
               "alternativeQuantity": 11,
@@ -127,13 +127,13 @@
   ],
   "lunch": [
     {
-      "menuName": "Chilaquiles Verdes con Pollo",
+      "menuName": "Chilaquiles verdes de pollo",
       "dishes": [
         {
-          "name": "Chilaquiles verdes con pollo",
+          "name": "Chilaquiles verdes de pollo",
           "ingredients": [
             {
-              "name": "Galletas saladas",
+              "name": "Tostadas",
               "metricQuantity": 72,
               "metricUnit": "g",
               "alternativeQuantity": 6,
@@ -148,23 +148,23 @@
             },
             {
               "name": "Salsa verde",
-              "metricQuantity": 50,
-              "metricUnit": "ml",
-              "alternativeQuantity": 0.25,
-              "alternativeUnit": "taza"
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
             },
             {
-              "name": "Cebolla morada",
-              "metricQuantity": 20,
+              "name": "Cebolla",
+              "metricQuantity": 1,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
-              "alternativeUnit": "taza"
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
             },
             {
               "name": "Lechuga",
-              "metricQuantity": 33.75,
+              "metricQuantity": 34,
               "metricUnit": "g",
-              "alternativeQuantity": 0.75,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
@@ -188,16 +188,16 @@
   ],
   "snack2": [
     {
-      "menuName": "Gaspacho",
+      "menuName": "Gaspacho chico con Queso Fresco",
       "dishes": [
         {
-          "name": "Gaspacho",
+          "name": "Gaspacho chico",
           "ingredients": [
             {
-              "name": "Mango ataulfo",
+              "name": "Mango",
               "metricQuantity": 100,
               "metricUnit": "g",
-              "alternativeQuantity": 0.6667,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
@@ -211,21 +211,21 @@
               "name": "Pepino",
               "metricQuantity": 100,
               "metricUnit": "g",
-              "alternativeQuantity": 0.6667,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Naranja",
-              "metricQuantity": 63,
-              "metricUnit": "ml",
-              "alternativeQuantity": 0.3333,
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
-              "name": "Queso",
+              "name": "Queso Fresco",
               "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "rebanada"
             }
           ]
@@ -235,7 +235,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Quesadilla, Chayote y Cottage con Zarzamoras",
+      "menuName": "Quesadilla de queso panela, Chayote y Queso cottage con zarzamoras",
       "dishes": [
         {
           "name": "Quesadilla de queso panela",
@@ -248,7 +248,7 @@
               "alternativeUnit": "piezas"
             },
             {
-              "name": "Queso panela",
+              "name": "Queso Panela",
               "metricQuantity": 80,
               "metricUnit": "g",
               "alternativeQuantity": 2,
@@ -258,15 +258,15 @@
               "name": "Jitomate",
               "metricQuantity": 30,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
-              "alternativeUnit": "taza"
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
             },
             {
-              "name": "Cebolla blanca",
+              "name": "Cebolla",
               "metricQuantity": 25,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
-              "alternativeUnit": "taza"
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "pieza"
             }
           ]
         },
@@ -286,17 +286,17 @@
           "name": "Queso cottage con zarzamoras",
           "ingredients": [
             {
-              "name": "Queso cottage",
+              "name": "Queso Cottage",
               "metricQuantity": 48,
               "metricUnit": "g",
               "alternativeQuantity": 3,
               "alternativeUnit": "cucharadas"
             },
             {
-              "name": "Zarzamora",
+              "name": "Zarzamoras",
               "metricQuantity": 59,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             }
           ]

@@ -2,7 +2,7 @@
   "id": "menu_047",
   "breakfast": [
     {
-      "menuName": "Sándwich de Huevo y Naranja",
+      "menuName": "Sándwich de huevo y Naranja",
       "dishes": [
         {
           "name": "Sándwich de huevo",
@@ -23,9 +23,9 @@
             },
             {
               "name": "Aceite",
-              "metricQuantity": 2.5,
+              "metricQuantity": 3,
               "metricUnit": "ml",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "cucharadita"
             },
             {
@@ -36,7 +36,7 @@
               "alternativeUnit": "taza"
             },
             {
-              "name": "Claras",
+              "name": "Claras de huevo",
               "metricQuantity": 132,
               "metricUnit": "g",
               "alternativeQuantity": 4,
@@ -64,7 +64,7 @@
       "menuName": "Smoothie Snickers",
       "dishes": [
         {
-          "name": "Smoothie Snickers",
+          "name": "Smoothie snickers",
           "ingredients": [
             {
               "name": "Leche",
@@ -84,7 +84,7 @@
               "name": "Plátano",
               "metricQuantity": 60,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
@@ -95,11 +95,11 @@
               "alternativeUnit": "cucharada"
             },
             {
-              "name": "Stevia",
+              "name": "Endulzante",
               "metricQuantity": 1,
               "metricUnit": "g",
               "alternativeQuantity": 1,
-              "alternativeUnit": "sobre"
+              "alternativeUnit": "pieza"
             }
           ]
         }
@@ -108,13 +108,13 @@
   ],
   "lunch": [
     {
-      "menuName": "Albóndigas de Pollo y Verduras Cocidas",
+      "menuName": "Albóndigas de pollo con Arroz y Verduras cocidas",
       "dishes": [
         {
           "name": "Albóndigas de pollo",
           "ingredients": [
             {
-              "name": "Pollo",
+              "name": "Pechuga de Pollo",
               "metricQuantity": 100,
               "metricUnit": "g",
               "alternativeQuantity": 1,
@@ -124,7 +124,7 @@
               "name": "Arroz",
               "metricQuantity": 100,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
@@ -135,7 +135,7 @@
               "alternativeUnit": "pieza"
             },
             {
-              "name": "Tomate verde",
+              "name": "Tomate",
               "metricQuantity": 80,
               "metricUnit": "g",
               "alternativeQuantity": 5,
@@ -145,35 +145,35 @@
               "name": "Serrano",
               "metricQuantity": 12,
               "metricUnit": "g",
-              "alternativeQuantity": 2,
-              "alternativeUnit": "piezas"
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
             },
             {
               "name": "Cilantro",
               "metricQuantity": 10,
               "metricUnit": "g",
-              "alternativeQuantity": 0.2,
+              "alternativeQuantity": "1/3",
               "alternativeUnit": "taza"
             },
             {
               "name": "Ajo",
               "metricQuantity": 2,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "cucharadita"
             },
             {
-              "name": "Cebolla blanca",
+              "name": "Cebolla",
               "metricQuantity": 53,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Caldo de pollo",
               "metricQuantity": 79,
-              "metricUnit": "ml",
-              "alternativeQuantity": 0.3333,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
               "alternativeUnit": "taza"
             }
           ]
@@ -185,21 +185,21 @@
               "name": "Coliflor",
               "metricQuantity": 40,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "taza"
             },
             {
               "name": "Brócoli",
               "metricQuantity": 40,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "taza"
             },
             {
               "name": "Zanahoria",
               "metricQuantity": 30,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/3",
               "alternativeUnit": "taza"
             }
           ]
@@ -209,7 +209,7 @@
   ],
   "snack2": [
     {
-      "menuName": "Mug Cake Zanahoria y Miel",
+      "menuName": "Mug cake de zanahoria con Miel",
       "dishes": [
         {
           "name": "Mug cake zanahoria",
@@ -218,28 +218,28 @@
               "name": "Avena",
               "metricQuantity": 10,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "taza"
             },
             {
               "name": "Leche",
               "metricQuantity": 37,
               "metricUnit": "ml",
-              "alternativeQuantity": 0.1667,
+              "alternativeQuantity": "1/8",
               "alternativeUnit": "taza"
             },
             {
               "name": "Zanahoria",
               "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": 0.25,
+              "alternativeQuantity": "1/4",
               "alternativeUnit": "taza"
             },
             {
               "name": "Plátano",
               "metricQuantity": 60,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
@@ -250,7 +250,7 @@
               "alternativeUnit": "cucharadita"
             },
             {
-              "name": "Claras",
+              "name": "Claras de huevo",
               "metricQuantity": 132,
               "metricUnit": "g",
               "alternativeQuantity": 4,
@@ -259,7 +259,7 @@
           ]
         },
         {
-          "name": "Miel",
+          "name": "Miel maple sin azúcar",
           "ingredients": [
             {
               "name": "Miel",
@@ -281,14 +281,14 @@
           "name": "Pizzadillas",
           "ingredients": [
             {
-              "name": "Queso",
+              "name": "Queso Oaxaca",
               "metricQuantity": 45,
               "metricUnit": "g",
-              "alternativeQuantity": 1.5,
+              "alternativeQuantity": "1 1/2",
               "alternativeUnit": "rebanadas"
             },
             {
-              "name": "Salsa de jitomate",
+              "name": "Salsa de tomate",
               "metricQuantity": 45,
               "metricUnit": "g",
               "alternativeQuantity": 3,
@@ -298,14 +298,14 @@
               "name": "Champiñón",
               "metricQuantity": 45,
               "metricUnit": "g",
-              "alternativeQuantity": 0.5,
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Aceitunas",
               "metricQuantity": 32,
               "metricUnit": "g",
-              "alternativeQuantity": 5,
+              "alternativeQuantity": "5 1/2",
               "alternativeUnit": "piezas"
             },
             {
@@ -316,7 +316,7 @@
               "alternativeUnit": "piezas"
             },
             {
-              "name": "Cebolla morada",
+              "name": "Cebolla",
               "metricQuantity": 8,
               "metricUnit": "g",
               "alternativeQuantity": 1,
