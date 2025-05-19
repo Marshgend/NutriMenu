@@ -1,6 +1,7 @@
 /************************************************************
  * javascript.js
  * Optimizado y robusto, con eliminación segura y estilos mejorados
+ * + Separadores de ingredientes solo si hay datos
  ************************************************************/
 
 const CATEGORY_ORDER = ["breakfast", "snack1", "lunch", "snack2", "dinner"];
@@ -58,7 +59,6 @@ function init() {
         );
       }
       if (selectionState.shuffledMenus) {
-        // Siempre deepClone para evitar referencias cruzadas
         allMenus = deepClone(selectionState.shuffledMenus);
       } else {
         copyOriginalToAllMenus_NoShuffle();
@@ -344,7 +344,6 @@ function renderApp() {
         const daysSelected = parseInt(selectDays.value, 10);
         const menuIndex = parseInt(menuIndexStr, 10);
 
-        // --- Validación adicional para evitar bugs de doble eliminación ---
         if (
           isNaN(menuIndex) ||
           menuIndex < 0 ||
@@ -376,10 +375,7 @@ function renderApp() {
           daysUsed: daysSelected,
         });
 
-        // --- SOLO eliminar de allMenus, NO de shuffledMenus ---
         allMenus[arrayKey].splice(menuIndex, 1);
-
-        // NO eliminar de shuffledMenus aquí
 
         delete selectionState.tempSelections[categoryKey];
 
@@ -434,11 +430,8 @@ function undoLastSelectionGlobal() {
     selectionState.completedCategories[category] -= daysUsed;
 
     if (!allMenus[category]) allMenus[category] = [];
-    // --- Validación para evitar insertar fuera de rango ---
     const idx = Math.max(0, Math.min(menuIndex, allMenus[category].length));
     allMenus[category].splice(idx, 0, menu);
-
-    // NO restaurar en shuffledMenus aquí
   }
 
   const catIdx = CATEGORY_ORDER.indexOf(category);
@@ -491,7 +484,6 @@ function renderSummary() {
     Array.isArray(selectionState.globalUndoHistory) &&
     selectionState.globalUndoHistory.length > 0
   ) {
-    // --- Separación visual para el botón de deshacer en el resumen ---
     const btnUndo = createButton("Deshacer última selección", "btn-undo btn-undo-summary", undoLastSelectionGlobal);
     summaryDiv.appendChild(btnUndo);
   }
@@ -529,11 +521,7 @@ function buildSummaryText() {
         sel.dishes.forEach((dish) => {
           text += `    ${dish.name}\n`;
           dish.ingredients.forEach((ing) => {
-            let ingLine = `      ${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
-            if (ing.alternativeQuantity && ing.alternativeUnit) {
-              ingLine += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
-            }
-            text += ingLine + "\n";
+            text += `      ${buildIngredientLine(ing)}\n`;
           });
         });
         text += "\n";
@@ -542,6 +530,28 @@ function buildSummaryText() {
     }
   });
   return text.trim() + "\n";
+}
+
+// NUEVO: Construye la línea del ingrediente solo con los datos presentes
+function buildIngredientLine(ing) {
+  const parts = [];
+  // Métrica
+  if (ing.metricQuantity && ing.metricUnit) {
+    parts.push(`${ing.metricQuantity} ${ing.metricUnit}`);
+  } else if (ing.metricQuantity) {
+    parts.push(`${ing.metricQuantity}`);
+  } else if (ing.metricUnit) {
+    parts.push(`${ing.metricUnit}`);
+  }
+  // Alternativa
+  if (ing.alternativeQuantity && ing.alternativeUnit) {
+    parts.push(`${ing.alternativeQuantity} ${ing.alternativeUnit}`);
+  } else if (ing.alternativeQuantity) {
+    parts.push(`${ing.alternativeQuantity}`);
+  } else if (ing.alternativeUnit) {
+    parts.push(`${ing.alternativeUnit}`);
+  }
+  return [ing.name, ...parts].join(" | ");
 }
 
 async function shareSummaryLink() {
@@ -564,7 +574,6 @@ function resetAll() {
   initializeSelectionState();
   copyOriginalToAllMenus_NoShuffle();
   shuffleAllMenus();
-  // Guardar solo una copia inmutable para reinicio
   selectionState.shuffledMenus = deepClone(allMenus);
   saveStateToLocalStorage();
   window.location.hash = "";
@@ -622,11 +631,8 @@ function renderMenuBlock(sel) {
   sel.dishes.forEach((dish) => {
     menuBlock.appendChild(createElement("div", dish.name, "summary-dish"));
     dish.ingredients.forEach((ing) => {
-      let txt = `${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
-      if (ing.alternativeQuantity && ing.alternativeUnit) {
-        txt += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
-      }
-      menuBlock.appendChild(createElement("div", txt, "summary-ingredient"));
+      // Usar buildIngredientLine para evitar separadores extra
+      menuBlock.appendChild(createElement("div", buildIngredientLine(ing), "summary-ingredient"));
     });
   });
   return menuBlock;
