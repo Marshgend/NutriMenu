@@ -5,32 +5,28 @@
   padding: 0;
 }
 
-/* Ojo: utilizamos flex para que el footer se pegue al fondo */
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  /* Flex container */
   display: flex;
   flex-direction: column;
-
   font-family: Arial, sans-serif;
-  background-color: #1a1a1a;  /* Fondo oscuro */
-  color: #dbc5e6;            /* Texto claro */
+  background-color: #1a1a1a;
+  color: #dbc5e6;
   line-height: 1.4;
 }
 
-/* El header se muestra arriba */
 header {
-  background-color: #5e3571; /* Morado oscuro */
+  background-color: #5e3571;
   padding: 1rem;
   text-align: center;
 }
 
-/* main crece para ocupar el espacio disponible */
 main {
-  flex: 1;  /* Ocupa espacio flexible */
+  flex: 1;
   padding: 1rem;
 }
 
@@ -39,7 +35,7 @@ main {
   margin: 0 auto;
 }
 
-/* El footer queda al fondo, sin margen extra */
+/* FOOTER */
 footer {
   background-color: #2e2e2e;
   text-align: center;
@@ -54,7 +50,7 @@ footer {
   margin: 1rem 0;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .question-block h3 {
@@ -73,7 +69,8 @@ h3 {
   gap: 1rem;
 }
 
-.selection-menu, .selection-days {
+.selection-menu,
+.selection-days {
   flex: 1 1 100%;
 }
 
@@ -85,8 +82,9 @@ h3 {
   margin-top: 1rem;
 }
 
-button {
-  background-color: #5e3571; /* Morado oscuro */
+button,
+.nutri-modal-btn {
+  background-color: #5e3571;
   color: #fff;
   border: none;
   padding: 0.7rem 1rem;
@@ -95,32 +93,51 @@ button {
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
+  transition: background 0.2s;
 }
 
-button:hover {
-  background-color: #6f4183; 
+button:hover,
+.nutri-modal-btn:hover {
+  background-color: #6f4183;
 }
 
-button:disabled {
+button:disabled,
+.nutri-modal-btn:disabled {
   background-color: #444;
   cursor: not-allowed;
 }
 
-.btn-accept-light {
-  background-color: #7a4b90; /* Morado más claro */
+.btn-accept-light,
+.nutri-modal-btn-yes,
+.nutri-modal-btn-ok {
+  background-color: #7a4b90;
 }
 
-.btn-accept-light:hover {
+.btn-accept-light:hover,
+.nutri-modal-btn-yes:hover,
+.nutri-modal-btn-ok:hover {
   background-color: #8e5aa5;
 }
 
-.btn-restart {
-  background-color: #8c2f2f; /* Rojo oscuro */
-  margin-top: 2.1rem; /* Aumenta la separación superior */
+.btn-restart,
+.nutri-modal-btn-no {
+  background-color: #8c2f2f;
+  margin-top: 2.1rem;
 }
 
-.btn-restart:hover {
+.btn-restart:hover,
+.nutri-modal-btn-no:hover {
   background-color: #9a3838;
+}
+
+.btn-undo {
+  background-color: #444;
+  color: #fff;
+  margin-top: .7rem; /* <-- mejora visual para separación en el resumen */
+}
+
+.btn-undo:hover {
+  background-color: #666;
 }
 
 /* SELECTS */
@@ -129,8 +146,8 @@ select {
   padding: 0.7rem 1rem;
   border-radius: 4px;
   font-size: 1rem;
-  background-color: #6d5877; /* Fondo interno */
-  color: #fff; /* Texto */
+  background-color: #6d5877;
+  color: #fff;
   border: none;
   cursor: pointer;
 }
@@ -176,11 +193,98 @@ select:hover {
   margin-left: 2.5rem;
   color: #b8b8b8;
   margin-bottom: 0.2rem;
-  font-size: rem;
+  font-size: 1rem;
 }
 
 .btn-copy {
   margin-top: 0.7rem;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #222;
+  color: #c8a2c8;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.progress-label {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.progress-outer {
+  width: 100%;
+  height: 12px;
+  background: #3a2d44;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #7a4b90 0%, #c8a2c8 100%);
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+/* MODAL NATIVO */
+.nutri-modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nutri-modal {
+  background: #2f2f2f;
+  color: #dbc5e6;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  max-width: 90vw;
+  min-width: 260px;
+  text-align: center;
+  font-size: 1.15rem;
+  outline: none;
+}
+
+.nutri-modal-message {
+  margin-bottom: 1.2rem;
+  word-break: break-word;
+}
+
+.nutri-modal-btnrow {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.nutri-modal-btn {
+  min-width: 100px;
+  margin: 0;
+  font-size: 1.1rem;
+  padding: 0.7rem 2.2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nutri-modal-btn:focus {
+  outline: 2px solid #c8a2c8;
 }
 
 /* MEDIA QUERIES PARA RESPONSIVIDAD */
@@ -208,13 +312,14 @@ select:hover {
   select {
     padding: 4rem 2rem;
     font-size: 2.5rem;
-    border-radius: 2rem; /* Ajustar redondez */
+    border-radius: 2rem;
   }
 
-  button {
+  button,
+  .nutri-modal-btn {
     padding: 2rem 1.5rem;
     font-size: 2.5rem;
-    border-radius: 2rem; /* Ajustar redondez */
+    border-radius: 2rem;
   }
 
   .btn-copy {
@@ -222,7 +327,7 @@ select:hover {
   }
 
   .btn-restart {
-    margin-top: 6rem; /* Aumenta la separación superior */
+    margin-top: 6rem;
   }
 
   .selection-row {
@@ -281,6 +386,17 @@ select:hover {
 
   .question-block {
     padding: 3rem;
+    border-radius: 2rem;
+  }
+
+  .progress-bar {
+    font-size: 2rem;
+    border-radius: 2rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .progress-outer {
+    height: 2.5rem;
     border-radius: 2rem;
   }
 }

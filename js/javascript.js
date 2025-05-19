@@ -1,240 +1,155 @@
 /************************************************************
  * javascript.js
- * Versión con snack1 y snack2 barajados de forma diferente
- * Muestra un resumen COMPLETO (platillos e ingredientes)
- * + Botón para copiar resumen al portapapeles
- * + Parámetro URL para compartir el resumen
- * + Se elimina la opción elegida de la lista para evitar
- *   que reaparezca si todavía faltan días por completar.
+ * Optimizado y robusto, con eliminación segura y estilos mejorados
  ************************************************************/
 
 const CATEGORY_ORDER = ["breakfast", "snack1", "lunch", "snack2", "dinner"];
 const TOTAL_DAYS = 7;
 
-/*
- * Guardamos el contenido original (sin barajar) de los menús
- * exactamente como se cargan de los JSON.
- */
 let originalMenus = {
   breakfast: [],
-  snack: [],   // <-- Este será la "pool" de snacks
+  snack: [],
   lunch: [],
-  dinner: []
+  dinner: [],
 };
 
-/*
- * "allMenus" es lo que realmente se muestra en la página:
- *  - Se baraja al pulsar "Reiniciar Todo".
- *  - Se guardan dos copias diferentes para snack1 y snack2.
- */
 let allMenus = {
   breakfast: [],
   snack1: [],
   snack2: [],
   lunch: [],
-  dinner: []
+  dinner: [],
 };
 
-// Estado de selección (guardado en localStorage)
 let selectionState = {};
 
-/**
- * Al cargar el DOM, iniciamos.
- */
 window.addEventListener("DOMContentLoaded", init);
 
-/**
- * Función principal de inicialización.
- */
 function init() {
-  // 1. Revisamos si la URL contiene un resumen compartido (en el hash #share=...)
   const sharedData = checkForSharedSummary();
   if (sharedData) {
-    // Si se detecta data en la URL, se omite todo lo de localStorage
-    // y se muestra directamente el resumen usando ese estado compartido.
     try {
       const decoded = JSON.parse(atob(sharedData));
-      // Sobrescribimos el selectionState
       selectionState = decoded;
       hideHeaderFooter(true);
-      renderSharedSummary(); // Renderizamos el resumen directamente
-      return; // Evitamos el flujo normal
+      renderSharedSummary();
+      return;
     } catch (err) {
-      console.warn("No se pudo decodificar el resumen compartido:", err);
-      // Si falla la decodificación, continuamos con el flujo normal
+      showModal("No se pudo decodificar el resumen compartido.", { type: "error" });
     }
   }
 
-  // 2. Si no hay sharedData, usamos la lógica de siempre.
   loadStateFromLocalStorage();
   ensureSelectionStateIntegrity();
 
-  // Cargamos los archivos JSON
   fetch("json_directory.json")
-    .then(res => res.json())
-    .then(directoryData => {
+    .then((res) => res.json())
+    .then((directoryData) => {
       const files = directoryData.jsonFiles || [];
       return loadAllJsonMenus(files);
     })
-    .then(() => {
-      // Revisamos si hay un "shuffledMenus" ya guardado
+    .then((loadResult) => {
+      if (loadResult && loadResult.errors && loadResult.errors.length > 0) {
+        showModal(
+          `Algunos menús no se pudieron cargar:<br>${loadResult.errors
+            .map((e) => `<div style="color:#e88">${e}</div>`)
+            .join("")}`,
+          { type: "warning" }
+        );
+      }
       if (selectionState.shuffledMenus) {
-        // Si existe, lo usamos (mismo orden que la última vez)
-        allMenus = selectionState.shuffledMenus;
+        // Siempre deepClone para evitar referencias cruzadas
+        allMenus = deepClone(selectionState.shuffledMenus);
       } else {
-        // Si no existe, tomamos "originalMenus" tal cual (sin barajar)
         copyOriginalToAllMenus_NoShuffle();
       }
-
       renderApp();
     })
-    .catch(err => {
-      console.error("Error al cargar json_directory.json:", err);
+    .catch((err) => {
+      showModal("Error al cargar la lista de archivos JSON.", { type: "error" });
       const appDiv = document.getElementById("app");
       appDiv.textContent = "Error al cargar la lista de archivos JSON.";
     });
 }
 
-/**
- * Si la URL contiene #share=..., devolvemos la parte después de "share="; de lo contrario null.
- */
 function checkForSharedSummary() {
   const hash = window.location.hash || "";
   const prefix = "#share=";
   if (hash.startsWith(prefix)) {
-    const encoded = hash.slice(prefix.length);
-    return encoded;
+    return hash.slice(prefix.length);
   }
   return null;
 }
 
-/**
- * Lógica para renderizar el resumen en modo "solo compartido".
- * Omitimos la parte de localStorage e ignoramos menús, etc.
- */
 function renderSharedSummary() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
-
-  // Ocultamos header y footer
   hideHeaderFooter(true);
 
-  // Renderizamos igual que un "renderSummary", pero sin las partes de localStorage
   const summaryDiv = document.createElement("div");
-  summaryDiv.classList.add("selection-summary");
+  summaryDiv.className = "selection-summary";
 
-  const h2 = document.createElement("h2");
-  h2.textContent = "Resumen de tu Semana (Compartido)";
-  summaryDiv.appendChild(h2);
+  summaryDiv.appendChild(createElement("h2", "Resumen de tu Semana (Compartido)"));
 
-  CATEGORY_ORDER.forEach(cat => {
+  CATEGORY_ORDER.forEach((cat) => {
     if (selectionState[cat] && selectionState[cat].length > 0) {
-      const catHeader = document.createElement("h3");
-      catHeader.textContent = mapCategoryToSpanish(cat);
-      summaryDiv.appendChild(catHeader);
-
-      selectionState[cat].forEach(sel => {
-        const menuBlock = document.createElement("div");
-        menuBlock.classList.add("summary-menu-block");
-
-        const h4 = document.createElement("h4");
-        h4.textContent = `${sel.menuName} - ${sel.daysUsed} día${
-          sel.daysUsed > 1 ? "s" : ""
-        }`;
-        menuBlock.appendChild(h4);
-
-        sel.dishes.forEach(dish => {
-          const dishDiv = document.createElement("div");
-          dishDiv.classList.add("summary-dish");
-          dishDiv.textContent = dish.name;
-          menuBlock.appendChild(dishDiv);
-
-          dish.ingredients.forEach(ing => {
-            const ingDiv = document.createElement("div");
-            ingDiv.classList.add("summary-ingredient");
-            let txt = `${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
-            if (ing.alternativeQuantity && ing.alternativeUnit) {
-              txt += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
-            }
-            ingDiv.textContent = txt;
-            menuBlock.appendChild(ingDiv);
-          });
-        });
-
-        summaryDiv.appendChild(menuBlock);
+      summaryDiv.appendChild(createElement("h3", mapCategoryToSpanish(cat)));
+      selectionState[cat].forEach((sel) => {
+        summaryDiv.appendChild(renderMenuBlock(sel));
       });
     }
   });
 
-  // Botón para copiar resumen (solo texto)
-  const btnCopy = document.createElement("button");
-  btnCopy.textContent = "Copiar Resumen";
-  btnCopy.classList.add("btn-copy");
-  btnCopy.style.marginRight = "1rem";
-  btnCopy.addEventListener("click", copySummaryToClipboard);
-  summaryDiv.appendChild(btnCopy);
-
-  // Botón para "Regresar" (o "Reiniciar Todo")
-  const btnGoHome = document.createElement("button");
-  btnGoHome.textContent = "Ir a la página inicial";
-  btnGoHome.classList.add("btn-restart");
-  btnGoHome.addEventListener("click", () => {
-    // Simplemente recarga sin hash, para que no muestre el resumen compartido
-    window.location.href = window.location.origin + window.location.pathname;
-  });
-  summaryDiv.appendChild(btnGoHome);
+  summaryDiv.appendChild(createButton("Copiar Resumen", "btn-copy", copySummaryToClipboard));
+  summaryDiv.appendChild(
+    createButton("Ir a la página inicial", "btn-restart", () => {
+      window.location.href = window.location.origin + window.location.pathname;
+    })
+  );
 
   appDiv.appendChild(summaryDiv);
 }
 
-/**
- * Carga la data de cada archivo JSON y la almacena en "originalMenus".
- */
 function loadAllJsonMenus(fileList) {
-  const promises = fileList.map(file =>
+  const errors = [];
+  const promises = fileList.map((file) =>
     fetch(file)
-      .then(r => {
-        if (!r.ok) {
-          throw new Error(`Error al cargar ${file}: ${r.statusText}`);
-        }
+      .then((r) => {
+        if (!r.ok) throw new Error(`Error al cargar ${file}: ${r.statusText}`);
         return r.json();
       })
-      .catch(err => {
-        console.error(`Error al cargar el archivo ${file}:`, err);
-        return null;
+      .then((menuData) => {
+        if (!menuData || typeof menuData !== "object") {
+          errors.push(`Archivo inválido: ${file}`);
+          return;
+        }
+        Object.keys(menuData).forEach((key) => {
+          if (key === "id") return;
+          let targetKey = key.toLowerCase();
+          if (targetKey.startsWith("snack")) targetKey = "snack";
+          if (!originalMenus[targetKey]) originalMenus[targetKey] = [];
+          if (Array.isArray(menuData[key])) {
+            const validMenus = menuData[key].filter(
+              (m) =>
+                m &&
+                typeof m.menuName === "string" &&
+                Array.isArray(m.dishes) &&
+                m.dishes.length > 0
+            );
+            originalMenus[targetKey].push(...validMenus);
+          } else {
+            errors.push(`El valor de '${key}' no es un array en ${file}.`);
+          }
+        });
+      })
+      .catch((err) => {
+        errors.push(`Error al cargar el archivo ${file}: ${err.message}`);
       })
   );
 
-  return Promise.all(promises).then(listOfMenus => {
-    listOfMenus.forEach(menuData => {
-      if (!menuData) return;
-
-      Object.keys(menuData).forEach(key => {
-        if (key === "id") return;
-
-        let targetKey = key.toLowerCase();
-        // Se unifica snack... pero realmente se usa "originalMenus.snack"
-        if (targetKey.startsWith("snack")) {
-          targetKey = "snack";
-        }
-
-        if (!originalMenus[targetKey]) {
-          originalMenus[targetKey] = [];
-        }
-
-        if (Array.isArray(menuData[key])) {
-          originalMenus[targetKey].push(...menuData[key]);
-        } else {
-          console.warn(`El valor de '${key}' no es un array.`, menuData[key]);
-        }
-      });
-    });
-  });
+  return Promise.all(promises).then(() => ({ errors }));
 }
 
-/**
- * Inicializa por completo el estado (selectionState).
- */
 function initializeSelectionState() {
   selectionState = {
     initialized: true,
@@ -248,84 +163,60 @@ function initializeSelectionState() {
       snack1: 0,
       lunch: 0,
       snack2: 0,
-      dinner: 0
+      dinner: 0,
     },
     currentCategoryIndex: 0,
     tempSelections: {},
-    /*
-     * Aquí guardaremos la versión barajada de allMenus.
-     * Si es null => usamos el orden "original" sin barajar.
-     */
-    shuffledMenus: null
+    shuffledMenus: null,
+    globalUndoHistory: [],
   };
   saveStateToLocalStorage();
 }
 
-/**
- * Guarda el estado en localStorage.
- */
 function saveStateToLocalStorage() {
-  localStorage.setItem("nutriSelectionStateDark", JSON.stringify(selectionState));
+  try {
+    localStorage.setItem("nutriSelectionStateDark", JSON.stringify(selectionState));
+  } catch (e) {
+    showModal("No se pudo guardar el estado local.", { type: "error" });
+  }
 }
 
-/**
- * Carga el estado desde localStorage.
- */
 function loadStateFromLocalStorage() {
   const data = localStorage.getItem("nutriSelectionStateDark");
   if (data) {
     try {
       selectionState = JSON.parse(data);
     } catch (err) {
-      console.warn("No se pudo parsear localStorage:", err);
+      selectionState = {};
     }
   }
 }
 
-/**
- * Asegura que "selectionState" sea válido.
- */
 function ensureSelectionStateIntegrity() {
-  if (!selectionState || typeof selectionState !== 'object') {
+  if (!selectionState || typeof selectionState !== "object") {
     initializeSelectionState();
     return;
   }
-
-  CATEGORY_ORDER.forEach(cat => {
-    if (!Array.isArray(selectionState[cat])) {
-      selectionState[cat] = [];
-    }
-    if (!selectionState.completedCategories) {
-      selectionState.completedCategories = {};
-    }
-    if (selectionState.completedCategories[cat] === undefined) {
+  CATEGORY_ORDER.forEach((cat) => {
+    if (!Array.isArray(selectionState[cat])) selectionState[cat] = [];
+    if (!selectionState.completedCategories) selectionState.completedCategories = {};
+    if (selectionState.completedCategories[cat] === undefined)
       selectionState.completedCategories[cat] = 0;
-    }
   });
-
-  if (!selectionState.tempSelections || typeof selectionState.tempSelections !== 'object') {
+  if (
+    !selectionState.tempSelections ||
+    typeof selectionState.tempSelections !== "object"
+  )
     selectionState.tempSelections = {};
-  }
-
-  if (selectionState.currentCategoryIndex === undefined) {
+  if (selectionState.currentCategoryIndex === undefined)
     selectionState.currentCategoryIndex = 0;
-  }
-
-  if (!selectionState.initialized) {
-    selectionState.initialized = true;
-  }
-
-  // Asegurar que exista la propiedad "shuffledMenus"
-  if (!("shuffledMenus" in selectionState)) {
-    selectionState.shuffledMenus = null;
-  }
-
+  if (!selectionState.initialized) selectionState.initialized = true;
+  if (!("shuffledMenus" in selectionState)) selectionState.shuffledMenus = null;
+  if (!Array.isArray(selectionState.globalUndoHistory))
+    selectionState.globalUndoHistory = [];
   saveStateToLocalStorage();
 }
 
-/**
- * Copia "originalMenus" en "allMenus" sin barajar (modo original).
- */
 function copyOriginalToAllMenus_NoShuffle() {
   allMenus.breakfast = deepClone(originalMenus.breakfast);
   allMenus.snack1 = deepClone(originalMenus.snack);
@@ -334,16 +225,10 @@ function copyOriginalToAllMenus_NoShuffle() {
   allMenus.dinner = deepClone(originalMenus.dinner);
 }
 
-/**
- * Clona en profundidad un objeto/array anidado (en este caso basta con JSON).
- */
 function deepClone(obj) {
   return JSON.parse(JSON.stringify(obj));
 }
 
-/**
- * Barajar un array in-place (Fisher-Yates).
- */
 function shuffleArray(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -351,9 +236,6 @@ function shuffleArray(arr) {
   }
 }
 
-/**
- * Baraja cada categoría en "allMenus" de manera independiente.
- */
 function shuffleAllMenus() {
   shuffleArray(allMenus.breakfast);
   shuffleArray(allMenus.snack1);
@@ -362,15 +244,9 @@ function shuffleAllMenus() {
   shuffleArray(allMenus.dinner);
 }
 
-/**
- * Lógica principal de renderizado:
- * Si se completó todo => renderSummary,
- * en caso contrario => render de la selección de la categoría actual.
- */
 function renderApp() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
-
   hideHeaderFooter(false);
 
   if (allCategoriesCompleted()) {
@@ -387,65 +263,45 @@ function renderApp() {
     return;
   }
 
-  const questionBlock = document.createElement("div");
-  questionBlock.classList.add("question-block");
+  appDiv.appendChild(renderProgressBar(categoryKey, usedDays));
 
-  const catSpanish = mapCategoryToSpanish(categoryKey);
-  const h3 = document.createElement("h3");
-  h3.textContent = `Selecciona tu opción de ${catSpanish}`;
-  questionBlock.appendChild(h3);
+  const questionBlock = createElement("div", null, "question-block");
+  questionBlock.appendChild(createElement("h3", `Selecciona tu opción de ${mapCategoryToSpanish(categoryKey)}`));
 
-  const selectionRow = document.createElement("div");
-  selectionRow.classList.add("selection-row");
+  const selectionRow = createElement("div", null, "selection-row");
   questionBlock.appendChild(selectionRow);
 
-  const menuDiv = document.createElement("div");
-  menuDiv.classList.add("selection-menu");
+  const menuDiv = createElement("div", null, "selection-menu");
   selectionRow.appendChild(menuDiv);
 
-  const daysDiv = document.createElement("div");
-  daysDiv.classList.add("selection-days");
+  const daysDiv = createElement("div", null, "selection-days");
   selectionRow.appendChild(daysDiv);
 
-  // "snack1", "snack2", etc.
   let arrayKey = categoryKey;
 
   if (!allMenus[arrayKey] || allMenus[arrayKey].length === 0) {
-    const p = document.createElement("p");
-    p.textContent = "No hay menús disponibles para esta categoría.";
-    questionBlock.appendChild(p);
+    questionBlock.appendChild(createElement("p", "No hay menús disponibles para esta categoría."));
   } else {
-    // Select Menú
-    const selectMenu = document.createElement("select");
-    selectMenu.classList.add("menu-select");
+    const selectMenu = createElement("select", null, "menu-select");
     menuDiv.appendChild(selectMenu);
 
-    const defaultOpt = document.createElement("option");
-    defaultOpt.value = "";
-    defaultOpt.textContent = "--Selecciona--";
-    selectMenu.appendChild(defaultOpt);
+    selectMenu.appendChild(createElement("option", "--Selecciona--", null, { value: "" }));
 
-    // Llenamos el select con las opciones en "allMenus[arrayKey]"
     allMenus[arrayKey].forEach((menuObj, idx) => {
-      const opt = document.createElement("option");
-      opt.value = idx;
-      opt.textContent = menuObj.menuName;
-      selectMenu.appendChild(opt);
+      selectMenu.appendChild(
+        createElement("option", menuObj.menuName, null, { value: idx })
+      );
     });
 
-    // Select Días
     const remainingDays = TOTAL_DAYS - usedDays;
-    const selectDays = document.createElement("select");
-    selectDays.classList.add("days-select");
+    const selectDays = createElement("select", null, "days-select");
     for (let i = 1; i <= remainingDays; i++) {
-      const opt = document.createElement("option");
-      opt.value = i;
-      opt.textContent = `${i} día${i > 1 ? "s" : ""}`;
-      selectDays.appendChild(opt);
+      selectDays.appendChild(
+        createElement("option", `${i} día${i > 1 ? "s" : ""}`, null, { value: i })
+      );
     }
     daysDiv.appendChild(selectDays);
 
-    // Restaurar selección temporal
     const temp = selectionState.tempSelections[categoryKey] || {};
     if (
       temp.menuIndex !== undefined &&
@@ -453,11 +309,13 @@ function renderApp() {
     ) {
       selectMenu.value = temp.menuIndex;
     }
-    if (temp.dayIndex !== undefined && temp.dayIndex < selectDays.options.length) {
+    if (
+      temp.dayIndex !== undefined &&
+      temp.dayIndex < selectDays.options.length
+    ) {
       selectDays.selectedIndex = temp.dayIndex;
     }
 
-    // Guardar selección temporal al cambiar
     selectMenu.addEventListener("change", () => {
       selectionState.tempSelections[categoryKey] =
         selectionState.tempSelections[categoryKey] || {};
@@ -468,219 +326,209 @@ function renderApp() {
     selectDays.addEventListener("change", () => {
       selectionState.tempSelections[categoryKey] =
         selectionState.tempSelections[categoryKey] || {};
-      selectionState.tempSelections[categoryKey].dayIndex = selectDays.selectedIndex;
+      selectionState.tempSelections[categoryKey].dayIndex =
+        selectDays.selectedIndex;
       saveStateToLocalStorage();
     });
 
-    // Botones
-    const buttonRow = document.createElement("div");
-    buttonRow.classList.add("button-row");
+    const buttonRow = createElement("div", null, "button-row");
     questionBlock.appendChild(buttonRow);
 
-    const btnAccept = document.createElement("button");
-    btnAccept.textContent = "Aceptar";
-    btnAccept.classList.add("btn-accept-light");
-    buttonRow.appendChild(btnAccept);
+    buttonRow.appendChild(
+      createButton("Aceptar", "btn-accept-light", async () => {
+        const menuIndexStr = selectMenu.value;
+        if (!menuIndexStr) {
+          await showModal("Por favor, selecciona un menú.");
+          return;
+        }
+        const daysSelected = parseInt(selectDays.value, 10);
+        const menuIndex = parseInt(menuIndexStr, 10);
 
-    const btnReset = document.createElement("button");
-    btnReset.textContent = "Reiniciar Todo";
-    btnReset.classList.add("btn-restart");
-    buttonRow.appendChild(btnReset);
+        // --- Validación adicional para evitar bugs de doble eliminación ---
+        if (
+          isNaN(menuIndex) ||
+          menuIndex < 0 ||
+          menuIndex >= allMenus[arrayKey].length
+        ) {
+          await showModal("Selección inválida.");
+          return;
+        }
 
-    // Manejo del botón "Reiniciar Todo"
-    btnReset.addEventListener("click", () => {
-      if (confirm("¿Estás seguro de reiniciar todo?")) {
-        resetAll();
-      }
-    });
+        const chosenMenu = allMenus[arrayKey][menuIndex];
+        if (!chosenMenu || !chosenMenu.menuName) {
+          await showModal("Menú inválido.");
+          return;
+        }
 
-    // Manejo del botón "Aceptar"
-    btnAccept.addEventListener("click", () => {
-      const menuIndexStr = selectMenu.value;
-      if (!menuIndexStr) {
-        alert("Por favor, selecciona un menú.");
-        return;
-      }
-      const daysSelected = parseInt(selectDays.value, 10);
-      const menuIndex = parseInt(menuIndexStr, 10);
+        selectionState[categoryKey].push({
+          menuName: chosenMenu.menuName,
+          daysUsed: daysSelected,
+          dishes: chosenMenu.dishes,
+        });
 
-      const chosenMenu = allMenus[arrayKey][menuIndex];
+        selectionState.completedCategories[categoryKey] += daysSelected;
 
-      // Guardar la selección "aceptada"
-      selectionState[categoryKey].push({
-        menuName: chosenMenu.menuName,
-        daysUsed: daysSelected,
-        dishes: chosenMenu.dishes
-      });
+        selectionState.globalUndoHistory = selectionState.globalUndoHistory || [];
+        selectionState.globalUndoHistory.push({
+          category: categoryKey,
+          menu: deepClone(chosenMenu),
+          menuIndex: menuIndex,
+          daysUsed: daysSelected,
+        });
 
-      // Aumentar el conteo en esta categoría
-      selectionState.completedCategories[categoryKey] += daysSelected;
+        // --- SOLO eliminar de allMenus, NO de shuffledMenus ---
+        allMenus[arrayKey].splice(menuIndex, 1);
 
-      // Quitar la opción elegida del array para que no reaparezca
-      allMenus[arrayKey].splice(menuIndex, 1);
+        // NO eliminar de shuffledMenus aquí
 
-      // Si tenemos un 'shuffledMenus', también removemos de ahí
-      if (selectionState.shuffledMenus && selectionState.shuffledMenus[arrayKey]) {
-        selectionState.shuffledMenus[arrayKey].splice(menuIndex, 1);
-      }
+        delete selectionState.tempSelections[categoryKey];
 
-      // Limpiar la selección temporal
-      delete selectionState.tempSelections[categoryKey];
+        saveStateToLocalStorage();
 
-      // Guardamos el estado y la lista actualizada
-      saveStateToLocalStorage();
+        if (selectionState.completedCategories[categoryKey] >= TOTAL_DAYS) {
+          goToNextCategory();
+        } else {
+          renderApp();
+        }
+      })
+    );
 
-      // Si esta categoría ya sumó 7 días, pasamos a la siguiente
-      if (selectionState.completedCategories[categoryKey] >= TOTAL_DAYS) {
-        goToNextCategory();
-      } else {
-        // Si aún faltan días en la misma categoría, volvemos a renderizar
-        renderApp();
-      }
-    });
+    if (
+      Array.isArray(selectionState.globalUndoHistory) &&
+      selectionState.globalUndoHistory.length > 0
+    ) {
+      buttonRow.appendChild(
+        createButton("Deshacer última selección", "btn-undo", undoLastSelectionGlobal)
+      );
+    }
+
+    buttonRow.appendChild(
+      createButton("Reiniciar Todo", "btn-restart", async () => {
+        const confirmed = await showModal(
+          "¿Estás seguro de reiniciar todo?",
+          { confirm: true }
+        );
+        if (confirmed) resetAll();
+      })
+    );
   }
 
   appDiv.appendChild(questionBlock);
 }
 
-/**
- * Avanza a la siguiente categoría en CATEGORY_ORDER y re-renderiza.
- */
+function undoLastSelectionGlobal() {
+  if (
+    !Array.isArray(selectionState.globalUndoHistory) ||
+    selectionState.globalUndoHistory.length === 0
+  ) {
+    return;
+  }
+  const last = selectionState.globalUndoHistory.pop();
+  const { category, menu, menuIndex, daysUsed } = last;
+
+  if (
+    Array.isArray(selectionState[category]) &&
+    selectionState[category].length > 0
+  ) {
+    selectionState[category].pop();
+    selectionState.completedCategories[category] -= daysUsed;
+
+    if (!allMenus[category]) allMenus[category] = [];
+    // --- Validación para evitar insertar fuera de rango ---
+    const idx = Math.max(0, Math.min(menuIndex, allMenus[category].length));
+    allMenus[category].splice(idx, 0, menu);
+
+    // NO restaurar en shuffledMenus aquí
+  }
+
+  const catIdx = CATEGORY_ORDER.indexOf(category);
+  if (catIdx < selectionState.currentCategoryIndex) {
+    selectionState.currentCategoryIndex = catIdx;
+  }
+
+  saveStateToLocalStorage();
+
+  if (!allCategoriesCompleted()) {
+    renderApp();
+  } else {
+    renderSummary();
+  }
+}
+
 function goToNextCategory() {
   selectionState.currentCategoryIndex++;
   saveStateToLocalStorage();
   renderApp();
 }
 
-/**
- * Verifica si ya se completaron las 5 categorías (7 días cada una).
- */
 function allCategoriesCompleted() {
-  for (let cat of CATEGORY_ORDER) {
-    if (selectionState.completedCategories[cat] < TOTAL_DAYS) {
-      return false;
-    }
-  }
-  return true;
+  return CATEGORY_ORDER.every(
+    (cat) => selectionState.completedCategories[cat] >= TOTAL_DAYS
+  );
 }
 
-/**
- * Renderiza el resumen final.
- */
 function renderSummary() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
-
-  // Ocultar header y footer en el resumen
   hideHeaderFooter(true);
 
-  const summaryDiv = document.createElement("div");
-  summaryDiv.classList.add("selection-summary");
+  const summaryDiv = createElement("div", null, "selection-summary");
+  summaryDiv.appendChild(createElement("h2", "Resumen de tu Semana"));
 
-  const h2 = document.createElement("h2");
-  h2.textContent = "Resumen de tu Semana";
-  summaryDiv.appendChild(h2);
-
-  CATEGORY_ORDER.forEach(cat => {
+  CATEGORY_ORDER.forEach((cat) => {
     if (selectionState[cat].length > 0) {
-      const catHeader = document.createElement("h3");
-      catHeader.textContent = mapCategoryToSpanish(cat);
-      summaryDiv.appendChild(catHeader);
-
-      selectionState[cat].forEach(sel => {
-        const menuBlock = document.createElement("div");
-        menuBlock.classList.add("summary-menu-block");
-
-        const h4 = document.createElement("h4");
-        h4.textContent = `${sel.menuName} - ${sel.daysUsed} día${
-          sel.daysUsed > 1 ? "s" : ""
-        }`;
-        menuBlock.appendChild(h4);
-
-        sel.dishes.forEach(dish => {
-          const dishDiv = document.createElement("div");
-          dishDiv.classList.add("summary-dish");
-          dishDiv.textContent = dish.name;
-          menuBlock.appendChild(dishDiv);
-
-          dish.ingredients.forEach(ing => {
-            const ingDiv = document.createElement("div");
-            ingDiv.classList.add("summary-ingredient");
-            let txt = `${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
-            if (ing.alternativeQuantity && ing.alternativeUnit) {
-              txt += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
-            }
-            ingDiv.textContent = txt;
-            menuBlock.appendChild(ingDiv);
-          });
-        });
-
-        summaryDiv.appendChild(menuBlock);
+      summaryDiv.appendChild(createElement("h3", mapCategoryToSpanish(cat)));
+      selectionState[cat].forEach((sel) => {
+        summaryDiv.appendChild(renderMenuBlock(sel));
       });
     }
   });
 
-  // Botón para copiar resumen (texto)
-  const btnCopy = document.createElement("button");
-  btnCopy.textContent = "Copiar Resumen";
-  btnCopy.classList.add("btn-copy");
-  btnCopy.style.marginRight = "1rem";
-  btnCopy.addEventListener("click", copySummaryToClipboard);
-  summaryDiv.appendChild(btnCopy);
+  summaryDiv.appendChild(createButton("Copiar Resumen", "btn-copy", copySummaryToClipboard));
+  summaryDiv.appendChild(createButton("Compartir Resumen (Link)", "btn-copy", shareSummaryLink));
 
-  // Botón para compartir link
-  const btnShareLink = document.createElement("button");
-  btnShareLink.textContent = "Compartir Resumen (Link)";
-  btnShareLink.classList.add("btn-copy");
-  btnShareLink.style.marginRight = "1rem";
-  btnShareLink.addEventListener("click", shareSummaryLink);
-  summaryDiv.appendChild(btnShareLink);
+  if (
+    Array.isArray(selectionState.globalUndoHistory) &&
+    selectionState.globalUndoHistory.length > 0
+  ) {
+    // --- Separación visual para el botón de deshacer en el resumen ---
+    const btnUndo = createButton("Deshacer última selección", "btn-undo btn-undo-summary", undoLastSelectionGlobal);
+    summaryDiv.appendChild(btnUndo);
+  }
 
-  // Botón Reiniciar Todo
-  const btnReset = document.createElement("button");
-  btnReset.textContent = "Reiniciar Todo";
-  btnReset.classList.add("btn-restart");
-  btnReset.addEventListener("click", () => {
-    if (confirm("¿Estás seguro de reiniciar todo?")) {
-      resetAll();
-    }
-  });
-  summaryDiv.appendChild(btnReset);
+  summaryDiv.appendChild(
+    createButton("Reiniciar Todo", "btn-restart", async () => {
+      const confirmed = await showModal(
+        "¿Estás seguro de reiniciar todo?",
+        { confirm: true }
+      );
+      if (confirmed) resetAll();
+    })
+  );
 
   appDiv.appendChild(summaryDiv);
 }
 
-/**
- * Copia el contenido del resumen al portapapeles (texto).
- */
-function copySummaryToClipboard() {
+async function copySummaryToClipboard() {
   const text = buildSummaryText();
-  navigator.clipboard.writeText(text)
-    .then(() => {
-      alert("¡Resumen copiado al portapapeles!");
-    })
-    .catch(err => {
-      console.error("Error al copiar al portapapeles:", err);
-      alert("Hubo un error al copiar el resumen.");
-    });
+  try {
+    await navigator.clipboard.writeText(text);
+    await showModal("¡Resumen copiado al portapapeles!");
+  } catch (err) {
+    await showModal("Hubo un error al copiar el resumen.", { type: "error" });
+  }
 }
 
-/**
- * Genera una cadena con saltos de línea que representa el resumen.
- */
 function buildSummaryText() {
   let text = "Resumen de tu Semana\n\n";
-
-  CATEGORY_ORDER.forEach(cat => {
+  CATEGORY_ORDER.forEach((cat) => {
     if (selectionState[cat].length > 0) {
       text += `${mapCategoryToSpanish(cat)}\n`;
-      selectionState[cat].forEach(sel => {
-        text += `  ${sel.menuName} - ${sel.daysUsed} día${
-          sel.daysUsed > 1 ? "s" : ""
-        }\n`;
-        sel.dishes.forEach(dish => {
+      selectionState[cat].forEach((sel) => {
+        text += `  ${sel.menuName} - ${sel.daysUsed} día${sel.daysUsed > 1 ? "s" : ""}\n`;
+        sel.dishes.forEach((dish) => {
           text += `    ${dish.name}\n`;
-          dish.ingredients.forEach(ing => {
+          dish.ingredients.forEach((ing) => {
             let ingLine = `      ${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
             if (ing.alternativeQuantity && ing.alternativeUnit) {
               ingLine += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
@@ -693,64 +541,36 @@ function buildSummaryText() {
       text += "\n";
     }
   });
-
   return text.trim() + "\n";
 }
 
-/**
- * Genera un link que codifica el resumen en base64 dentro de la URL (hash).
- * Luego lo copia al portapapeles.
- */
-function shareSummaryLink() {
+async function shareSummaryLink() {
   try {
     const jsonState = JSON.stringify(selectionState);
     const encoded = btoa(jsonState);
     const baseUrl = window.location.origin + window.location.pathname;
     const shareUrl = baseUrl + "#share=" + encoded;
-
-    navigator.clipboard.writeText(shareUrl)
-      .then(() => {
-        alert("Link de resumen copiado al portapapeles:\n" + shareUrl);
-      })
-      .catch(err => {
-        console.error("Error al copiar link:", err);
-        alert("Ocurrió un error al copiar el link.");
-      });
+    await navigator.clipboard.writeText(shareUrl);
+    await showModal(
+      "Link de resumen copiado al portapapeles:<br><small>" + shareUrl + "</small>"
+    );
   } catch (err) {
-    console.error("Error al generar link de compartir:", err);
-    alert("Ocurrió un error al generar el link de compartir.");
+    await showModal("Ocurrió un error al copiar el link.", { type: "error" });
   }
 }
 
-/**
- * Restablece todo, genera nuevos órdenes aleatorios y vuelve al inicio.
- */
 function resetAll() {
-  // 1. Eliminar el estado actual de localStorage
   localStorage.removeItem("nutriSelectionStateDark");
   initializeSelectionState();
-
-  // 2. Copiar la base original en "allMenus" (dos arrays para snack1 y snack2)
   copyOriginalToAllMenus_NoShuffle();
-
-  // 3. Barajar cada uno por separado
   shuffleAllMenus();
-
-  // 4. Guardar en "selectionState.shuffledMenus" la versión barajada
+  // Guardar solo una copia inmutable para reinicio
   selectionState.shuffledMenus = deepClone(allMenus);
   saveStateToLocalStorage();
-
-  // 5. Limpiamos el hash para evitar confusiones
   window.location.hash = "";
-
-  // 6. Renderizamos todo desde cero
   renderApp();
 }
 
-/**
- * Muestra u oculta el header y footer.
- * @param {boolean} hide - true para ocultar, false para mostrar
- */
 function hideHeaderFooter(hide) {
   const header = document.querySelector("header");
   const footer = document.querySelector("footer");
@@ -758,9 +578,6 @@ function hideHeaderFooter(hide) {
   if (footer) footer.style.display = hide ? "none" : "";
 }
 
-/**
- * Traduce la categoría a su nombre en español.
- */
 function mapCategoryToSpanish(cat) {
   switch (cat) {
     case "breakfast":
@@ -775,4 +592,130 @@ function mapCategoryToSpanish(cat) {
     default:
       return cat;
   }
+}
+
+// --------- COMPONENTES Y UTILIDADES ---------
+
+function createElement(tag, text, className, attrs = {}) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  if (text !== null && text !== undefined) el.innerHTML = text;
+  Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+  return el;
+}
+
+function createButton(text, className, onClick) {
+  const btn = createElement("button", text, className);
+  btn.type = "button";
+  btn.addEventListener("click", onClick);
+  return btn;
+}
+
+function renderMenuBlock(sel) {
+  const menuBlock = createElement("div", null, "summary-menu-block");
+  menuBlock.appendChild(
+    createElement(
+      "h4",
+      `${sel.menuName} - ${sel.daysUsed} día${sel.daysUsed > 1 ? "s" : ""}`
+    )
+  );
+  sel.dishes.forEach((dish) => {
+    menuBlock.appendChild(createElement("div", dish.name, "summary-dish"));
+    dish.ingredients.forEach((ing) => {
+      let txt = `${ing.name} | ${ing.metricQuantity} ${ing.metricUnit}`;
+      if (ing.alternativeQuantity && ing.alternativeUnit) {
+        txt += ` | ${ing.alternativeQuantity} ${ing.alternativeUnit}`;
+      }
+      menuBlock.appendChild(createElement("div", txt, "summary-ingredient"));
+    });
+  });
+  return menuBlock;
+}
+
+function renderProgressBar(categoryKey, usedDays) {
+  const bar = createElement("div", null, "progress-bar");
+  const label = createElement(
+    "span",
+    `Progreso: ${mapCategoryToSpanish(categoryKey)} (${usedDays} / ${TOTAL_DAYS} días)`,
+    "progress-label"
+  );
+  const outer = createElement("div", null, "progress-outer");
+  const inner = createElement("div", null, "progress-inner");
+  const percent = Math.min(usedDays / TOTAL_DAYS, 1);
+  inner.style.width = `${percent * 100}%`;
+  outer.appendChild(inner);
+  bar.appendChild(label);
+  bar.appendChild(outer);
+  return bar;
+}
+
+// --------- MODAL ACCESIBLE ---------
+
+function showModal(message, options = {}) {
+  return new Promise((resolve) => {
+    const oldModal = document.getElementById("nutri-modal-bg");
+    if (oldModal) oldModal.remove();
+
+    const bg = document.createElement("div");
+    bg.id = "nutri-modal-bg";
+    bg.className = "nutri-modal-bg";
+    bg.tabIndex = -1;
+
+    const modal = document.createElement("div");
+    modal.className = "nutri-modal";
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
+    modal.setAttribute("tabindex", "0");
+    modal.innerHTML = `<div class="nutri-modal-message">${message}</div>`;
+
+    const btnRow = document.createElement("div");
+    btnRow.className = "nutri-modal-btnrow";
+
+    if (options.confirm) {
+      const btnYes = createButton("Sí", "nutri-modal-btn nutri-modal-btn-yes", () => {
+        closeModal();
+        resolve(true);
+      });
+      const btnNo = createButton("No", "nutri-modal-btn nutri-modal-btn-no", () => {
+        closeModal();
+        resolve(false);
+      });
+      btnRow.appendChild(btnYes);
+      btnRow.appendChild(btnNo);
+    } else {
+      const btnOk = createButton("Aceptar", "nutri-modal-btn nutri-modal-btn-ok", () => {
+        closeModal();
+        resolve();
+      });
+      btnRow.appendChild(btnOk);
+    }
+    modal.appendChild(btnRow);
+    bg.appendChild(modal);
+    document.body.appendChild(bg);
+
+    setTimeout(() => modal.focus(), 10);
+
+    function closeModal() {
+      bg.remove();
+      document.removeEventListener("keydown", onKey);
+      bg.removeEventListener("mousedown", onClickOutside);
+    }
+
+    function onKey(e) {
+      if (e.key === "Escape") {
+        closeModal();
+        if (options.confirm) resolve(false);
+        else resolve();
+      }
+    }
+    function onClickOutside(e) {
+      if (e.target === bg) {
+        closeModal();
+        if (options.confirm) resolve(false);
+        else resolve();
+      }
+    }
+    document.addEventListener("keydown", onKey);
+    bg.addEventListener("mousedown", onClickOutside);
+  });
 }
