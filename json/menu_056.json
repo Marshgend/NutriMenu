@@ -1,0 +1,391 @@
+{
+  "id": "menu_056",
+  "breakfast": [
+    {
+      "menuName": "Verduras Cocidas y Omelette Mexicano con Chilaquiles",
+      "dishes": [
+        {
+          "name": "Verduras cocidas",
+          "ingredients": [
+            {
+              "name": "Coliflor",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Chilaquiles con huevo",
+          "ingredients": [
+            {
+              "name": "Queso panela",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 13,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Tostadas",
+              "metricQuantity": 48,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": "50",
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": "70",
+              "metricUnit": "gramos",
+              "alternativeQuantity": "3",
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": "30",
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2",
+              "alternativeUnit": "rebanadas"
+            }
+          ]
+        },
+        {
+          "name": "Omelette mexicano con queso",
+          "ingredients": [
+            {
+              "name": "Claras de huevo",
+              "metricQuantity": 132,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso oaxaca",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "spray"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 1,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Tomates Cherry con Queso Panela",
+      "dishes": [
+        {
+          "name": "Tomates cherry",
+          "ingredients": [
+            {
+              "name": "Jitomate",
+              "metricQuantity": 51,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso panela",
+              "metricQuantity": 50,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1 1/4",
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Aceite",
+          "ingredients": [
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Ceviche de Lentejas con Tostadas",
+      "dishes": [
+        {
+          "name": "Ceviche de lentejas",
+          "ingredients": [
+            {
+              "name": "Lentejas",
+              "metricQuantity": 180,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 16,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 3,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/10",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 113,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 19,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Tostadas",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": "30",
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Mug Cake de Zanahoria",
+      "dishes": [
+        {
+          "name": "Mug cake de zanahoria",
+          "ingredients": [
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 37,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 32,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/8",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Mantequilla de cacahuate",
+              "metricQuantity": 7,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Claras de huevo",
+              "metricQuantity": 132,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Ceviche de Garbanzo",
+      "dishes": [
+        {
+          "name": "Ceviche de garbanzo",
+          "ingredients": [
+            {
+              "name": "Garbanzos",
+              "metricQuantity": 100,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 100,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 12,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 14,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/10",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 57,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 100,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Tostadas",
+              "metricQuantity": "30",
+              "metricUnit": "gramos",
+              "alternativeQuantity": "3",
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

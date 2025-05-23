@@ -1,0 +1,459 @@
+{
+  "id": "menu_055",
+  "breakfast": [
+    {
+      "menuName": "Jugo Verde y Pancakes de Cacao y Plátano",
+      "dishes": [
+        {
+          "name": "Jugo verde",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 180,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "3/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 35,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 10,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Naranja",
+              "metricQuantity": 76,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Apio",
+              "metricQuantity": 23,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Pancakes de cacao y plátano",
+          "ingredients": [
+            {
+              "name": "Avena",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Polvo para hornear",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Claras de huevo",
+              "metricQuantity": 100,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 72,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Arándanos",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cacao en polvo",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 2,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "sobres"
+            },
+            {
+              "name": "Mantequilla",
+              "metricQuantity": 6,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            }
+          ]
+        },
+        {
+          "name": "Proteína",
+          "ingredients": [
+            {
+              "name": "Proteína en polvo",
+              "metricQuantity": 16,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "scoop"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Pudín de Chía con Fresas",
+      "dishes": [
+        {
+          "name": "Pudín de chía con fresas",
+          "ingredients": [
+            {
+              "name": "Fresas",
+              "metricQuantity": 96,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 8,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 150,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Chía",
+              "metricQuantity": 15,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Tacos de Pescado y Té de Limón",
+      "dishes": [
+        {
+          "name": "Tacos de pescado",
+          "ingredients": [
+            {
+              "name": "Pescado",
+              "metricQuantity": 120,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "filete"
+            },
+            {
+              "name": "Ajo en polvo",
+              "metricQuantity": 3,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pimienta",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 27,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 71,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Chipotle",
+              "metricQuantity": 10,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Tortillas",
+              "metricQuantity": 90,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Col",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Té de limón",
+          "ingredients": [
+            {
+              "name": "Limón",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Té matcha",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 1,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "sobre"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 200,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Snack Salado",
+      "dishes": [
+        {
+          "name": "Snack salado",
+          "ingredients": [
+            {
+              "name": "Cacahuates",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 10,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Tostadas",
+              "metricQuantity": "30",
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jícama",
+              "metricQuantity": 50,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Chile en polvo",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Mango",
+              "metricQuantity": 180,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Wraps de Lechuga con Huevo y Atún",
+      "dishes": [
+        {
+          "name": "Wraps de lechuga con huevo y atún",
+          "ingredients": [
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 16,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Elote",
+              "metricQuantity": 45,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/10",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Agua de jamaica con fresa",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 200,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 60,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Jamaica",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 1,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "sobre"
+            }
+          ]
+        },
+        {
+          "name": "Aderezo de cilantro",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 68,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 60,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

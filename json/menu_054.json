@@ -1,0 +1,302 @@
+{
+  "id": "menu_054",
+  "breakfast": [
+    {
+      "menuName": "Agua de Limón con Chía y Huevo con Pan Tostado",
+      "dishes": [
+        {
+          "name": "Agua de limón con chía",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1 1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 20,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Chía",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Linaza",
+              "metricQuantity": 15,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        },
+        {
+          "name": "Huevo con pan tostado",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 88,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "disparos"
+            },
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 18,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Champiñones",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Calabaza",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Naranja",
+      "dishes": [
+        {
+          "name": "Naranja",
+          "ingredients": [
+            {
+              "name": "Naranja",
+              "metricQuantity": 240,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Bowl de Pasta con Pollo y Verduras",
+      "dishes": [
+        {
+          "name": "Bowl de pasta con pollo y verduras",
+          "ingredients": [
+            {
+              "name": "Pasta",
+              "metricQuantity": 140,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1 1/5",
+              "alternativeUnit": "tazas"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 60,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "porción"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 52,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 70,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Brócoli y Pan con Cottage",
+      "dishes": [
+        {
+          "name": "Brócoli",
+          "ingredients": [
+            {
+              "name": "Brócoli",
+              "metricQuantity": 92,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Pan con cottage y arándanos",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 28,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Requesón",
+              "metricQuantity": 60,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Arándanos",
+              "metricQuantity": 50,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Miel",
+              "metricQuantity": 7,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Ceviche de Panela y Tomate con Tostadas",
+      "dishes": [
+        {
+          "name": "Ceviche de panela y tomate",
+          "ingredients": [
+            {
+              "name": "Queso panela",
+              "metricQuantity": 80,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Tomate",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2 1/2",
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 13,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Pimienta",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 10,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 100,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "3 1/3",
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 12,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 3,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Tostadas",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": "30",
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
