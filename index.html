@@ -1,26 +1,55 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Nutri Page - Selección Semanal (Tema Oscuro)</title>
-  <!-- Vincular el CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutri Planner - Planifica tu Semana</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Agrega esta línea para el favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+  <div id="app">
+    <!-- Header será dinámico -->
+  </div>
 
-  <header>
-    <h1>Planifica tu Semana Nutricional</h1>
-  </header>
+  <!-- Botón flotante derecho -->
+  <div id="floating-btn" class="floating-btn hidden">
+    <span id="floating-btn-text">Continuar</span>
+    <div class="floating-btn-icon">→</div>
+  </div>
 
-  <main>
-    <div id="app"></div>
-  </main>
+  <!-- Botón flotante izquierdo -->
+  <div id="floating-btn-left" class="floating-btn-left hidden">
+    <span id="floating-btn-left-text">Deshacer</span>
+    <div class="floating-btn-icon">↶</div>
+  </div>
 
-  <footer>
-    <p>&copy; 2023 - Nutri Page (Dark Theme)</p>
-  </footer>
+  <!-- Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <div class="modal-content">
+        <div id="modal-message"></div>
+        <div class="modal-actions">
+          <button id="modal-confirm" class="btn btn-primary">Aceptar</button>
+          <button id="modal-cancel" class="btn btn-secondary hidden">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Vincular el JavaScript -->
+  <!-- Loading -->
+  <div id="loading" class="loading">
+    <div class="loading-spinner"></div>
+    <p>Cargando menús...</p>
+  </div>
+
+  <!-- Contenedor para dropdowns -->
+  <div id="dropdown-container"></div>
+
   <script src="js/javascript.js"></script>
 </body>
+
 </html>
