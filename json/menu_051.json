@@ -1,0 +1,380 @@
+{
+  "id": "menu_051",
+  "breakfast": [
+    {
+      "menuName": "Green Smoothie y Tostadas con Huevo Revuelto",
+      "dishes": [
+        {
+          "name": "Green Smoothie",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 250,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Apio",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/10",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 10,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/10",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Linaza",
+              "metricQuantity": 15,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Jengibre en polvo",
+              "metricQuantity": 1,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Tostadas con huevo revuelto",
+          "ingredients": [
+            {
+              "name": "Aceite",
+              "metricQuantity": 3,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Claras de huevo",
+              "metricQuantity": 400,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Rice Cakes",
+              "metricQuantity": 18,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Naranja",
+          "ingredients": [
+            {
+              "name": "Naranja",
+              "metricQuantity": 240,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Melón y Almendras",
+      "dishes": [
+        {
+          "name": "Melón",
+          "ingredients": [
+            {
+              "name": "Melón",
+              "metricQuantity": 90,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Almendras",
+          "ingredients": [
+            {
+              "name": "Almendras",
+              "metricQuantity": 10,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 10,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Tinga de Pollo con Verduras y Tortillas",
+      "dishes": [
+        {
+          "name": "Aguacate",
+          "ingredients": [
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Tinga de pollo",
+          "ingredients": [
+            {
+              "name": "Pollo",
+              "metricQuantity": 109,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "porción"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 113,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Chipotle",
+              "metricQuantity": 57,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 27,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Ajo",
+              "metricQuantity": 6,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1 1/2",
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 100,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Verduras cocidas",
+          "ingredients": [
+            {
+              "name": "Coliflor",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Tortillas",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 36,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Gaspacho de Frutas",
+      "dishes": [
+        {
+          "name": "Gaspacho",
+          "ingredients": [
+            {
+              "name": "Mango",
+              "metricQuantity": 100,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jícama",
+              "metricQuantity": 100,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 100,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "2/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Naranja",
+              "metricQuantity": 63,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso fresco",
+              "metricQuantity": 20,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "rebanada"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Burrito de Pollo",
+      "dishes": [
+        {
+          "name": "Burrito de pollo",
+          "ingredients": [
+            {
+              "name": "Tortilla de harina",
+              "metricQuantity": 26,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pollo",
+              "metricQuantity": 75,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "porción"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Pimiento",
+              "metricQuantity": 23,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 18,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 54,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
