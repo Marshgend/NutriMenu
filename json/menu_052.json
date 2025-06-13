@@ -1,0 +1,369 @@
+{
+  "id": "menu_052",
+  "breakfast": [
+    {
+      "menuName": "Jugo Verde y Omelette con Molletes",
+      "dishes": [
+        {
+          "name": "Jugo verde",
+          "ingredients": [
+            {
+              "name": "Naranja",
+              "metricQuantity": 64,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Nopales",
+              "metricQuantity": 34,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 26,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 100,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jengibre en polvo",
+              "metricQuantity": 1,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Omelette de claras con champiñones",
+          "ingredients": [
+            {
+              "name": "Claras de huevo",
+              "metricQuantity": 132,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Champiñones",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        },
+        {
+          "name": "Molletes",
+          "ingredients": [
+            {
+              "name": "Bolillo",
+              "metricQuantity": 30,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 86,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Calabaza",
+              "metricQuantity": 60,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Jícama con Pepino",
+      "dishes": [
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1 1/4",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Jícama con pepino",
+          "ingredients": [
+            {
+              "name": "Pepino",
+              "metricQuantity": 50,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jícama",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Sopa de Verduras y Ceviche de Lentejas",
+      "dishes": [
+        {
+          "name": "Sopa de verduras",
+          "ingredients": [
+            {
+              "name": "Bolsa de verduras",
+              "metricQuantity": "300",
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1",
+              "alternativeUnit": "bolsa"
+            }
+          ]
+        },
+        {
+          "name": "Aguacate",
+          "ingredients": [
+            {
+              "name": "Aguacate",
+              "metricQuantity": 62,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 500,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "vasos"
+            }
+          ]
+        },
+        {
+          "name": "Ceviche de lentejas",
+          "ingredients": [
+            {
+              "name": "Lentejas",
+              "metricQuantity": 180,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 16,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 3,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/10",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 113,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 19,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Tostadas",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": "30",
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Verduras Fileteadas con Pistaches",
+      "dishes": [
+        {
+          "name": "Verduras fileteadas",
+          "ingredients": [
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 50,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pistaches",
+              "metricQuantity": "20",
+              "metricUnit": "gramos",
+              "alternativeQuantity": "20",
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Ceviche de Pescado con Tostadas",
+      "dishes": [
+        {
+          "name": "Ceviche de pescado",
+          "ingredients": [
+            {
+              "name": "Pescado",
+              "metricQuantity": 80,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "filete"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 40,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Pepino",
+              "metricQuantity": 31,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pimiento",
+              "metricQuantity": 23,
+              "metricUnit": "gramos",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 15,
+              "metricUnit": "gramos",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Naranja",
+              "metricQuantity": 10,
+              "metricUnit": "mililitros",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Tostadas",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": "30",
+              "metricUnit": "gramos",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
