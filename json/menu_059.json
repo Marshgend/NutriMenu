@@ -1,0 +1,279 @@
+﻿{
+  "id": "menu_059",
+  "breakfast": [
+    {
+      "menuName": "Quesadillas de Pollo y Licuado de Fresa",
+      "dishes": [
+        {
+          "name": "Licuado de fresas",
+          "ingredients": [
+            {
+              "name": "Fresas",
+              "metricQuantity": 85,
+              "metricUnit": "g",
+              "alternativeQuantity": 7,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 25,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 250,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 37,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Pepino",
+          "ingredients": [
+            {
+              "name": "Pepino",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Quesadilla con pollo",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 64,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Queso Oaxaca",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 63,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Mango Fresco",
+      "dishes": [
+        {
+          "name": "Mango",
+          "ingredients": [
+            {
+              "name": "Mango",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Pollo Teriyaki con Arroz y Vegetales",
+      "dishes": [
+        {
+          "name": "Teriyaki de pollo",
+          "ingredients": [
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pechuga de Pollo",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 120,
+              "alternativeUnit": "g"
+            },
+            {
+              "name": "Brócoli",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pimiento",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Ajo en polvo",
+              "metricQuantity": 6,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Zanahoria",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Ajonjolí",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Salsa de soya",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Miel",
+              "metricQuantity": 14,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Té Verde",
+      "dishes": [
+        {
+          "name": "Té verde",
+          "ingredients": [
+            {
+              "name": "Té verde",
+              "metricQuantity": 220,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Pan Tostado con Requesón, Aguacate y Huevo",
+      "dishes": [
+        {
+          "name": "Gelatina con yogurt",
+          "ingredients": [
+            {
+              "name": "Gelatina",
+              "metricQuantity": 143,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 75,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Pan tostado con requesón y aguacate",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Requesón",
+              "metricQuantity": 36,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 28,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Huevo cocido",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 44,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
