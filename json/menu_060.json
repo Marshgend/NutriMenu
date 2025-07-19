@@ -11,14 +11,14 @@
               "name": "Zanahoria",
               "metricQuantity": 20,
               "metricUnit": "g",
-              "alternativeQuantity": "1/4",
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Apio",
               "metricQuantity": 23,
               "metricUnit": "g",
-              "alternativeQuantity": "1/4",
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
@@ -47,7 +47,7 @@
               "metricQuantity": 30,
               "metricUnit": "g",
               "alternativeQuantity": 2,
-              "alternativeUnit": "cucharadas"
+              "alternativeUnit": "cucharas soperas"
             }
           ]
         },
@@ -58,14 +58,14 @@
               "name": "Frijoles",
               "metricQuantity": 75,
               "metricUnit": "g",
-              "alternativeQuantity": "1/3",
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
             },
             {
               "name": "Aguacate",
               "metricQuantity": 28,
               "metricUnit": "g",
-              "alternativeQuantity": "1/3",
+              "alternativeQuantity": "1/2",
               "alternativeUnit": "pieza"
             },
             {
@@ -110,7 +110,7 @@
   ],
   "snack1": [
     {
-      "menuName": "Café con Leche",
+      "menuName": "Café con Leche y Galletas",
       "dishes": [
         {
           "name": "Café con leche",
@@ -123,11 +123,23 @@
               "alternativeUnit": "taza"
             },
             {
-              "name": "Agua",
+              "name": "Café",
               "metricQuantity": 120,
               "metricUnit": "ml",
               "alternativeQuantity": "1/2",
               "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Galletas dulces",
+          "ingredients": [
+            {
+              "name": "Galletas dulces",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
             }
           ]
         }
@@ -145,15 +157,15 @@
               "name": "Pechuga de Pollo",
               "metricQuantity": 150,
               "metricUnit": "g",
-              "alternativeQuantity": 150,
-              "alternativeUnit": "g"
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
             },
             {
               "name": "Pimiento",
               "metricQuantity": 100,
               "metricUnit": "g",
-              "alternativeQuantity": 1,
-              "alternativeUnit": "taza"
+              "alternativeQuantity": "1.1",
+              "alternativeUnit": "tazas"
             },
             {
               "name": "Aceite",
@@ -173,7 +185,7 @@
               "name": "Limón",
               "metricQuantity": 10,
               "metricUnit": "g",
-              "alternativeQuantity": "1/2",
+              "alternativeQuantity": 1,
               "alternativeUnit": "pieza"
             },
             {
@@ -193,7 +205,7 @@
             {
               "name": "Chipotle",
               "metricQuantity": 10,
-              "metricUnit": "ml",
+              "metricUnit": "g",
               "alternativeQuantity": 1,
               "alternativeUnit": "cucharada"
             }
@@ -216,7 +228,7 @@
   ],
   "snack2": [
     {
-      "menuName": "Barritas de Yogur Congelado con Frutos Rojos",
+      "menuName": "Barritas de Yogurt Congelado con Frutas",
       "dishes": [
         {
           "name": "Barritas de yogur congelado",
@@ -249,7 +261,7 @@
   ],
   "dinner": [
     {
-      "menuName": "Hamburguesa de Res con Vegetales",
+      "menuName": "Hamburguesa de Res con Vegetales y Melón",
       "dishes": [
         {
           "name": "Hamburguesa con vegetales",
@@ -258,8 +270,8 @@
               "name": "Carne Molida de Res",
               "metricQuantity": 75,
               "metricUnit": "g",
-              "alternativeQuantity": 75,
-              "alternativeUnit": "g"
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
             },
             {
               "name": "Zanahoria",
@@ -293,8 +305,8 @@
               "name": "Cebolla",
               "metricQuantity": 10,
               "metricUnit": "g",
-              "alternativeQuantity": "1/8",
-              "alternativeUnit": "pieza"
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
             },
             {
               "name": "Jitomate",
@@ -302,6 +314,18 @@
               "metricUnit": "g",
               "alternativeQuantity": 1,
               "alternativeUnit": "rebanada"
+            }
+          ]
+        },
+        {
+          "name": "Melón",
+          "ingredients": [
+            {
+              "name": "Melón",
+              "metricQuantity": 179,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
             }
           ]
         }
