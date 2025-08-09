@@ -1,0 +1,441 @@
+﻿{
+  "id": "menu_064",
+  "breakfast": [
+    {
+      "menuName": "Omelette de Claras, Smoothie de Mango y Leche Dorada",
+      "dishes": [
+        {
+          "name": "Leche dorada",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 250,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cúrcuma",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Canela",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Ajo en polvo",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pimienta",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "0.1",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 4,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Smoothie de mango con coco",
+          "ingredients": [
+            {
+              "name": "Mango",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Coco deshidratado",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1 2/3",
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Hielo",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "0.1",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Leche",
+              "metricQuantity": 100,
+              "metricUnit": "ml",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Omelette de claras con zanahoria y calabaza",
+          "ingredients": [
+            {
+              "name": "Claras de huevo",
+              "metricQuantity": 133,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Zanahorias",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Calabaza",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso Panela",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Perejil",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Pan de caja",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 25,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Guayaba",
+          "ingredients": [
+            {
+              "name": "Guayabas",
+              "metricQuantity": 135,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Licuado de Mazapán",
+      "dishes": [
+        {
+          "name": "Licuado de mazapan",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 240,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 120,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Crema de cacahuate",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Filete de Pescado con Ensalada de Mango y Arroz",
+      "dishes": [
+        {
+          "name": "Agua de jamaica",
+          "ingredients": [
+            {
+              "name": "Agua de jamaica",
+              "metricQuantity": 300,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "vaso"
+            }
+          ]
+        },
+        {
+          "name": "Filete de pescado con ensalada de mango",
+          "ingredients": [
+            {
+              "name": "Pescado",
+              "metricQuantity": 160,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "filete"
+            },
+            {
+              "name": "Mango",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 10,
+              "metricUnit": "ml",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 8,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/8",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": "0.1",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepinos",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Arroz",
+          "ingredients": [
+            {
+              "name": "Arroz",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Mug Cake Lemon Pie",
+      "dishes": [
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "vaso"
+            }
+          ]
+        },
+        {
+          "name": "Mug cake lemon pie",
+          "ingredients": [
+            {
+              "name": "Avena",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 28,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 73,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Calabazas Rellenas",
+      "dishes": [
+        {
+          "name": "Calabazas rellenas",
+          "ingredients": [
+            {
+              "name": "Calabaza",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Carne Molida de Res",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso Mozzarella",
+              "metricQuantity": 35,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 45,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 12,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/8",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

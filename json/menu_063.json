@@ -1,0 +1,336 @@
+﻿{
+  "id": "menu_063",
+  "breakfast": [
+    {
+      "menuName": "Torta de Huevo a la Mexicana y Licuado de Papaya",
+      "dishes": [
+        {
+          "name": "Licuado de papaya en agua con avena",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 250,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Papaya",
+              "metricQuantity": 75,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Avena",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Linaza",
+              "metricQuantity": 15,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        },
+        {
+          "name": "Te de jengibre y canela",
+          "ingredients": [
+            {
+              "name": "Jengibre",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Agua",
+              "metricQuantity": 250,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Torta de huevo a la mexicana",
+          "ingredients": [
+            {
+              "name": "Bolillo",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 510,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/8",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Plátano con Arándanos Deshidratados",
+      "dishes": [
+        {
+          "name": "Arándanos deshidratados",
+          "ingredients": [
+            {
+              "name": "Arándanos",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        },
+        {
+          "name": "Plátano",
+          "ingredients": [
+            {
+              "name": "Plátano",
+              "metricQuantity": 108,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Ensalada de Colores con Pechuga y Papas Cocidas",
+      "dishes": [
+        {
+          "name": "Ensalada de colores con pechuga",
+          "ingredients": [
+            {
+              "name": "Aguacate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Manzanas",
+              "metricQuantity": 53,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Queso Mozzarella",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "0.1",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pechuga de Pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Papas cocidas",
+          "ingredients": [
+            {
+              "name": "Papas",
+              "metricQuantity": 140,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Papaya con Yogurt y Granola",
+      "dishes": [
+        {
+          "name": "Papaya con yogur",
+          "ingredients": [
+            {
+              "name": "Papaya",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Yogurt",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "unidad"
+            },
+            {
+              "name": "Miel",
+              "metricQuantity": 14,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharaditas"
+            }
+          ]
+        },
+        {
+          "name": "Granola",
+          "ingredients": [
+            {
+              "name": "Granola",
+              "metricQuantity": 7,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Bowl de Atún con Ensalada y Tostadas",
+      "dishes": [
+        {
+          "name": "Bowl de atún con ensalada",
+          "ingredients": [
+            {
+              "name": "Atún",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "lata"
+            },
+            {
+              "name": "Aguacate",
+              "metricQuantity": 47,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahorias",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Pepinos",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": "0.1",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Ajonjolí",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Tostadas",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "paquete"
+            }
+          ]
+        },
+        {
+          "name": "Agua",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 300,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "vaso"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

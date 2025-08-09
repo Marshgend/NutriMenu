@@ -1,0 +1,307 @@
+﻿{
+  "id": "menu_065",
+  "breakfast": [
+    {
+      "menuName": "Burrito de Huevo con Frijoles y Pico de Gallo",
+      "dishes": [
+        {
+          "name": "Burrito de huevo con frijoles",
+          "ingredients": [
+            {
+              "name": "Tortillas",
+              "metricQuantity": 110,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Huevos",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Frijoles",
+              "metricQuantity": 50,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Pico de gallo",
+          "ingredients": [
+            {
+              "name": "Jitomate",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Serrano",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Pan Tostado con Frutas y Crema de Cacahuate",
+      "dishes": [
+        {
+          "name": "Snack",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 35,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 24,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Crema de cacahuate",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Tacos de Res con Ensalada Verde",
+      "dishes": [
+        {
+          "name": "Aguacate",
+          "ingredients": [
+            {
+              "name": "Aguacate",
+              "metricQuantity": 38,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Ensalada verde",
+          "ingredients": [
+            {
+              "name": "Espinacas",
+              "metricQuantity": 63,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Zanahorias",
+              "metricQuantity": 38,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 57,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Tacos de res",
+          "ingredients": [
+            {
+              "name": "Carne de Res",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "filete"
+            },
+            {
+              "name": "Tortillas",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Snack de Jícama, Mango y Cacahuates",
+      "dishes": [
+        {
+          "name": "Snack jicama mango y cacahuates",
+          "ingredients": [
+            {
+              "name": "Jícama",
+              "metricQuantity": 100,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Mango",
+              "metricQuantity": 90,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cacahuates",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 10,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Chile en Polvo",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Limón",
+              "metricQuantity": 19,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Sándwich Caprese y Licuado de Papaya",
+      "dishes": [
+        {
+          "name": "Licuado de papaya y ciruela pasa",
+          "ingredients": [
+            {
+              "name": "Leche",
+              "metricQuantity": 245,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Papaya",
+              "metricQuantity": 75,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Endulzante",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            }
+          ]
+        },
+        {
+          "name": "Sándwich caprese",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 70,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Queso Panela",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 510,
+              "metricUnit": "g",
+              "alternativeQuantity": 5,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Albahaca",
+              "metricQuantity": 2,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "hojas"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

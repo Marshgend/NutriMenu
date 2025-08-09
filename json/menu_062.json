@@ -1,0 +1,448 @@
+﻿{
+  "id": "menu_062",
+  "breakfast": [
+    {
+      "menuName": "Chilaquiles con Huevo y Jugo de Betabel",
+      "dishes": [
+        {
+          "name": "Jugo de betabel",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 150,
+              "metricUnit": "ml",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "vaso"
+            },
+            {
+              "name": "Manzanas",
+              "metricQuantity": 53,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Betabel",
+              "metricQuantity": 39,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Hielo",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "0.1",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Jengibre",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Apio",
+              "metricQuantity": 3,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "tallo"
+            }
+          ]
+        },
+        {
+          "name": "Chilaquiles con huevo",
+          "ingredients": [
+            {
+              "name": "Salsa de tomate",
+              "metricQuantity": 70,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso Panela",
+              "metricQuantity": 20,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/8",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Cilantro",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Crema",
+              "metricQuantity": 13,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            }
+          ]
+        },
+        {
+          "name": "Totopos horneados",
+          "ingredients": [
+            {
+              "name": "Tostadas",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 8,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Huevo con ejotes",
+          "ingredients": [
+            {
+              "name": "Huevos",
+              "metricQuantity": 132,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Ejotes",
+              "metricQuantity": 32,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Cebolla",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Jitomate",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pimienta",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack1": [
+    {
+      "menuName": "Rice Cake Sandwich Pre-Entreno",
+      "dishes": [
+        {
+          "name": "Rice Cake Sandwich pre entreno",
+          "ingredients": [
+            {
+              "name": "Plátano",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Galletas de arroz",
+              "metricQuantity": 18,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Crema de cacahuate",
+              "metricQuantity": 10,
+              "metricUnit": "ml",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 48,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "lunch": [
+    {
+      "menuName": "Ensalada de Pollo con Arándanos y Pasta",
+      "dishes": [
+        {
+          "name": "Ensalada de pollo con arándanos",
+          "ingredients": [
+            {
+              "name": "Pepinos",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Queso de cabra",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "cucharadas"
+            },
+            {
+              "name": "Apio",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Lechuga",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/5",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Arándanos",
+              "metricQuantity": 5,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Pechuga de Pollo",
+              "metricQuantity": 150,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "pieza"
+            },
+            {
+              "name": "Pepinos",
+              "metricQuantity": 26,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/4",
+              "alternativeUnit": "taza"
+            }
+          ]
+        },
+        {
+          "name": "Aderezo de chipotle",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 68,
+              "metricUnit": "ml",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Chipotle",
+              "metricQuantity": 23,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Pasta plumilla",
+          "ingredients": [
+            {
+              "name": "Pasta",
+              "metricQuantity": 180,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "snack2": [
+    {
+      "menuName": "Naranja y Pepino en Trozos",
+      "dishes": [
+        {
+          "name": "Naranja y pepino en trozos",
+          "ingredients": [
+            {
+              "name": "Pepinos",
+              "metricQuantity": 180,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Naranjas",
+              "metricQuantity": 152,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dinner": [
+    {
+      "menuName": "Sándwich Caliente y Licuado de Frutas",
+      "dishes": [
+        {
+          "name": "Sándwich caliente",
+          "ingredients": [
+            {
+              "name": "Pan de caja",
+              "metricQuantity": 60,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Jamón",
+              "metricQuantity": 63,
+              "metricUnit": "g",
+              "alternativeQuantity": 3,
+              "alternativeUnit": "rebanadas"
+            },
+            {
+              "name": "Queso Panela",
+              "metricQuantity": 40,
+              "metricUnit": "g",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "rebanada"
+            },
+            {
+              "name": "Espinacas",
+              "metricQuantity": 30,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 48,
+              "metricUnit": "g",
+              "alternativeQuantity": 4,
+              "alternativeUnit": "piezas"
+            }
+          ]
+        },
+        {
+          "name": "Licuado de frutas",
+          "ingredients": [
+            {
+              "name": "Agua",
+              "metricQuantity": 150,
+              "metricUnit": "ml",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "vaso"
+            },
+            {
+              "name": "Papaya",
+              "metricQuantity": 38,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Fresas",
+              "metricQuantity": 23,
+              "metricUnit": "g",
+              "alternativeQuantity": 2,
+              "alternativeUnit": "piezas"
+            },
+            {
+              "name": "Hielo",
+              "metricQuantity": 10,
+              "metricUnit": "g",
+              "alternativeQuantity": "0.1",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Chía",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharadita"
+            },
+            {
+              "name": "Vainilla",
+              "metricQuantity": 1,
+              "metricUnit": "g",
+              "alternativeQuantity": "1/2",
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        },
+        {
+          "name": "Aderezo de chipotle",
+          "ingredients": [
+            {
+              "name": "Yogurt",
+              "metricQuantity": 68,
+              "metricUnit": "ml",
+              "alternativeQuantity": "1/3",
+              "alternativeUnit": "taza"
+            },
+            {
+              "name": "Chipotle",
+              "metricQuantity": 23,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharada"
+            },
+            {
+              "name": "Aceite",
+              "metricQuantity": 5,
+              "metricUnit": "ml",
+              "alternativeQuantity": 1,
+              "alternativeUnit": "cucharadita"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
