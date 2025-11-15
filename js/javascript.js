@@ -1412,9 +1412,8 @@ function mapCategoryToSpanish(cat) {
     case "breakfast":
       return "Desayuno";
     case "snack1":
-      return "Snack 1 (Matutino)"; // Más específico
     case "snack2":
-      return "Snack 2 (Vespertino)"; // Más específico
+      return "Colación / Snack";
     case "lunch":
       return "Comida";
     case "dinner":
