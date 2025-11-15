@@ -224,6 +224,17 @@ body {
   text-align: center;
 }
 
+/* INICIO DE CAMBIO: Estilo para texto de ayuda (UX Mejora) */
+.section-helper-text {
+  text-align: center;
+  color: var(--on-surface-variant);
+  margin-top: -16px;
+  margin-bottom: 24px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+/* FIN DE CAMBIO */
+
 /* Navegación del Carrusel - Z-index alto para dropdown */
 .carousel-navigation {
   display: flex;
@@ -346,6 +357,21 @@ body {
 .dropdown-item.current:hover {
   background: var(--primary-light);
 }
+
+/* INICIO DE CAMBIO: Estilo para item de dropdown "Usado" (UX Mejora) */
+.dropdown-item.is-used {
+  color: var(--on-surface-variant);
+}
+
+.dropdown-item.is-used::after {
+  content: '✓ Usado';
+  margin-left: 8px;
+  font-size: 0.8rem;
+  color: var(--success);
+  font-weight: 500;
+}
+/* FIN DE CAMBIO */
+
 
 /* Contenedor de la tarjeta única - Z-index bajo */
 .single-card-container {
@@ -500,6 +526,28 @@ body {
 .expand-toggle.expanded .expand-icon {
   transform: rotate(180deg);
 }
+
+/* INICIO DE CAMBIO: Estilo para tarjeta "Usada" (UX Mejora) */
+.menu-card.is-used {
+  opacity: 0.7;
+  border-color: var(--outline);
+}
+
+.menu-card.is-used::after {
+  content: 'Usado';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--success);
+  color: white;
+  padding: 4px 8px;
+  border-radius: var(--border-radius-small);
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 3;
+}
+/* FIN DE CAMBIO */
+
 
 /* Timeline de Días */
 .days-section {
@@ -760,14 +808,47 @@ body {
   padding: 16px;
   border: 1px solid var(--outline);
   margin-bottom: 0; /* Resetear */
+  transition: var(--transition); /* INICIO DE CAMBIO */
+  cursor: pointer; /* UX Mejora */
+}
+
+/* INICIO DE CAMBIO: Hover y estado colapsable (UX Mejora) */
+.menu-summary:hover {
+  background: var(--surface);
+  border-color: var(--primary-light);
 }
 
 .menu-summary-title {
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 0; /* Modificado */
   color: var(--on-surface);
   font-size: 1.1rem;
+  position: relative; /* Para el icono */
+  padding-right: 20px; /* Espacio para el icono */
 }
+
+.menu-summary-title::after {
+  content: '▼';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  color: var(--on-surface-variant);
+}
+
+.menu-summary.expanded .menu-summary-title::after {
+  transform: translateY(-50%) scale(0.9) rotate(180deg);
+}
+
+/* Contenedor para detalles colapsables */
+.summary-details {
+  padding-top: 16px;
+  border-top: 1px solid var(--outline);
+  margin-top: 16px;
+}
+/* FIN DE CAMBIO */
 
 /* Estilos para platillos e ingredientes */
 .summary-dish {
