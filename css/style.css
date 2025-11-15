@@ -590,6 +590,13 @@ body {
   color: white;
 }
 
+/* INICIO DE CAMBIO: Corregir bug de hover en botón de día seleccionado */
+.day-button.selected:hover:not(.disabled) {
+  color: white; /* Asegurar que el texto siga siendo blanco */
+  background: var(--primary-light); /* Opcional: aclarar un poco en hover */
+}
+/* FIN DE CAMBIO */
+
 .day-button.used {
   background: var(--surface-variant);
   border-color: var(--outline);
@@ -709,6 +716,7 @@ body {
   cursor: pointer;
   transition: var(--transition);
   font-size: 0.9rem;
+  text-decoration: none; /* INICIO DE CAMBIO: Quitar subrayado a links */
 }
 
 .btn-primary {
@@ -738,6 +746,19 @@ body {
 .btn-danger:hover {
   background: #d32f2f;
 }
+
+/* INICIO DE CAMBIO: Estilos para botones de IA (Gemini) */
+.btn-ia {
+  background: var(--secondary);
+  color: var(--background); /* Texto oscuro para fondo claro */
+  font-weight: 600;
+}
+
+.btn-ia:hover {
+  background: #00bfa5; /* Un poco más oscuro */
+  color: var(--background);
+}
+/* FIN DE CAMBIO */
 
 /* Modal */
 .modal-overlay {
@@ -984,6 +1005,9 @@ body {
 
   #app {
     padding: 16px;
+    /* INICIO DE CAMBIO: Padding para botones flotantes en móvil */
+    padding-bottom: 160px; /* 72px (deshacer) + 48px (reset) + 16px (base) + 24px (espacio extra) */
+    /* FIN DE CAMBIO */
   }
 
   .app-title {

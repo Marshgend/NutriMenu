@@ -1130,9 +1130,7 @@ function renderSummary() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
   
-  // --- INICIO DE CAMBIO: Botón Reiniciar Siempre Visible ---
   showFloatingButtonReset(() => confirmRestart());
-  // --- FIN DE CAMBIO ---
   
   const section = document.createElement("div");
   section.className = "summary-section";
@@ -1148,11 +1146,27 @@ function renderSummary() {
   copyBtn.textContent = "Copiar Resumen";
   copyBtn.addEventListener('click', copySummaryToClipboard);
   topActions.appendChild(copyBtn);
+  
   const shareBtn = document.createElement("button");
   shareBtn.className = "btn btn-primary";
   shareBtn.textContent = "Compartir Link";
   shareBtn.addEventListener('click', shareSummaryLink);
   topActions.appendChild(shareBtn);
+
+  // --- INICIO DE CAMBIO: Botones de IA (Gemini) ---
+  const geminiListBtn = document.createElement("button");
+  geminiListBtn.className = "btn btn-ia";
+  geminiListBtn.textContent = "Crear Lista de Súper (IA)";
+  geminiListBtn.addEventListener('click', () => handleAiPrompt('assets/aiprompt_shopping_list.txt'));
+  topActions.appendChild(geminiListBtn);
+
+  const geminiNotionBtn = document.createElement("button");
+  geminiNotionBtn.className = "btn btn-ia";
+  geminiNotionBtn.textContent = "Enviar a Notion (IA)";
+  geminiNotionBtn.addEventListener('click', () => handleAiPrompt('assets/aiprompt_to_notion.txt'));
+  topActions.appendChild(geminiNotionBtn);
+  // --- FIN DE CAMBIO ---
+
   section.appendChild(topActions);
 
   const grid = document.createElement("div");
@@ -1177,11 +1191,7 @@ function renderSummary() {
 }
 
 function updateFloatingButtonsForSummary() {
-  // --- INICIO DE CAMBIO: Botón Reiniciar ya no se maneja aquí ---
-  // El botón derecho (Continuar) se oculta
   hideFloatingButton();
-  // El botón de reiniciar (rojo) ya está visible gracias a renderSummary()
-  // --- FIN DE CAMBIO ---
   
   if (Array.isArray(selectionState.globalUndoHistory) &&
     selectionState.globalUndoHistory.length > 0) {
@@ -1189,6 +1199,7 @@ function updateFloatingButtonsForSummary() {
   } else {
     hideFloatingButtonLeft();
   }
+  // El botón de Reiniciar ya es visible
 }
 
 function renderMenuSummary(sel) {
@@ -1274,11 +1285,11 @@ function buildSummaryText() {
     if (selectionState[cat].length > 0) {
       text += `${mapCategoryToSpanish(cat)}\n`;
       selectionState[cat].forEach((sel) => {
-        text += `  ${sel.menuName} - ${sel.daysUsed} día${sel.daysUsed > 1 ? "s" : ""}\n`;
+        text += `  ${sel.menuName} - ${sel.daysUsed} día${sel.daysUsed > 1 ? "s" : ""}\n`;
         sel.dishes.forEach((dish) => {
-          text += `    ${dish.name}\n`;
+          text += `    ${dish.name}\n`;
           dish.ingredients.forEach((ing) => {
-            let ingredientText = `      ${ing.name}`;
+            let ingredientText = `      ${ing.name}`;
             if (ing.metricQuantity || ing.metricUnit) {
               let metric = "";
               if (ing.metricQuantity && ing.metricUnit) {
@@ -1325,6 +1336,39 @@ async function shareSummaryLink() {
   }
 }
 
+// --- INICIO DE CAMBIO: Nueva función para Prompts de IA ---
+async function handleAiPrompt(promptUrl) {
+  try {
+    // 1. Cargar el prompt desde el archivo de assets
+    const promptRes = await fetch(promptUrl);
+    if (!promptRes.ok) {
+      throw new Error(`No se pudo cargar el prompt: ${promptUrl}`);
+    }
+    const promptText = await promptRes.text();
+
+    // 2. Construir el resumen de texto
+    const summaryText = buildSummaryText();
+
+    // 3. Combinar
+    const combinedText = promptText + "\n\n" + summaryText;
+
+    // 4. Copiar al portapapeles
+    await navigator.clipboard.writeText(combinedText);
+
+    // 5. Abrir Gemini en una nueva pestaña
+    window.open('https://gemini.google.com', '_blank');
+
+    // 6. Mostrar modal de éxito
+    await showModal("¡Prompt copiado! Pégalo en la pestaña de Gemini que se acaba de abrir.");
+    
+  } catch (err) {
+    console.error("Error al procesar prompt de IA:", err);
+    showModal(`Hubo un error al preparar el prompt: ${err.message}`);
+  }
+}
+// --- FIN DE CAMBIO ---
+
+
 async function confirmRestart() {
   const confirmed = await showModal("¿Estás seguro de reiniciar todo? Se borrarán los menús cargados y tu selección.", true);
   if (confirmed) {
@@ -1332,7 +1376,6 @@ async function confirmRestart() {
   }
 }
 
-// --- INICIO DE CAMBIO: resetAll() con limpieza de caché ---
 function resetAll() {
   localStorage.removeItem(STATE_KEY);
   localStorage.removeItem(MANUAL_MENUS_KEY); // Limpiar menús manuales
@@ -1341,7 +1384,6 @@ function resetAll() {
   window.location.hash = "";
   window.location.reload(); // Forzar recarga a estado limpio
 }
-// --- FIN DE CAMBIO ---
 
 function renderSharedSummary() {
   renderSummary();
@@ -1434,7 +1476,6 @@ function checkForSharedSummary() {
   return null;
 }
 
-// --- INICIO DE CAMBIO: Restaurar mapCategoryToSpanish a tu versión ---
 function mapCategoryToSpanish(cat) {
   switch (cat) {
     case "breakfast":
@@ -1450,7 +1491,6 @@ function mapCategoryToSpanish(cat) {
       return cat;
   }
 }
-// --- FIN DE CAMBIO ---
 
 // Sistema de modales
 function showModal(message, isConfirm = false) {
