@@ -699,68 +699,91 @@ body {
   margin-top: 24px;
 }
 
-/* Resumen */
+/* Resumen - RE DISEÑADO */
 .summary-section {
   animation: fadeInUp 0.6s ease-out;
-}
-
-.summary-card {
-  background: var(--surface);
-  border-radius: var(--border-radius);
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: var(--elevation-1);
-  border: 1px solid var(--outline);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1000px; /* Ancho máximo para el área de resumen */
+  margin: 0 auto;
 }
 
 .summary-title {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Coherencia con app-title */
+  font-weight: 300;
   margin-bottom: 24px;
   text-align: center;
   color: var(--on-surface);
 }
 
+/* Contenedor de botones superior */
+.summary-actions-top {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px; /* Más espacio */
+}
+
+/* Grid para las tarjetas de categoría */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 100px; /* Espacio para botones flotantes */
+}
+
+/* Tarjeta de Categoría (EL CAMBIO PRINCIPAL) */
 .category-section {
-  margin-bottom: 32px;
+  background: var(--surface); /* Fondo de tarjeta */
+  border-radius: var(--border-radius);
+  padding: 24px;
+  box-shadow: var(--elevation-1);
+  border: 1px solid var(--outline);
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre items de menú */
+  margin-bottom: 0; /* Resetear el margen viejo */
 }
 
 .category-title {
   font-size: 1.3rem;
-  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary);
   color: var(--primary-light);
   font-weight: 500;
+  margin-bottom: 0; /* Resetear el margen viejo */
 }
 
+/* Cada menú seleccionado dentro de la tarjeta */
 .menu-summary {
-  background: var(--surface-variant);
+  background: var(--surface-variant); /* Fondo más oscuro */
   border-radius: var(--border-radius-small);
-  padding: 20px;
-  margin-bottom: 16px;
-  border-left: 4px solid var(--primary);
+  padding: 16px;
+  border: 1px solid var(--outline);
+  margin-bottom: 0; /* Resetear */
 }
 
 .menu-summary-title {
   font-weight: 600;
-  margin-bottom: 12px;
-  color: var(--primary-light);
+  margin-bottom: 16px;
+  color: var(--on-surface);
   font-size: 1.1rem;
 }
 
+/* Estilos para platillos e ingredientes */
 .summary-dish {
-  margin: 12px 0 8px 0;
   font-weight: 500;
   color: var(--on-surface);
   font-size: 1rem;
+  padding-left: 12px;
+  border-left: 3px solid var(--primary);
+  margin: 12px 0 8px 0;
 }
 
 .summary-ingredient {
-  background: var(--surface);
+  background: var(--surface); /* Fondo de tarjeta original */
   border-radius: 6px;
   padding: 8px 12px;
-  margin: 4px 0;
+  margin: 4px 0 4px 15px; /* Indentado */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -780,12 +803,9 @@ body {
   flex-shrink: 0;
 }
 
+/* Ocultar las acciones viejas del resumen */
 .summary-actions {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 24px;
+  display: none !important;
 }
 
 /* Animaciones */
@@ -904,7 +924,7 @@ body {
     padding: 20px;
   }
 
-  .summary-actions {
+  .summary-actions-top {
     flex-direction: column;
   }
 
@@ -921,9 +941,7 @@ body {
     align-items: flex-start;
   }
 
-  .summary-card {
-    max-width: 100%;
-  }
+  /* Ya no se usa .summary-card */
 }
 
 @media (max-width: 480px) {

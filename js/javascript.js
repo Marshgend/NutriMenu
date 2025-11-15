@@ -1219,6 +1219,7 @@ function undoLastSelectionGlobal() {
   }
 }
 
+// --- INICIO DE CAMBIO: renderSummary() REFACTORIZADO ---
 // Funciones de resumen - MODIFICADAS
 function renderSummary() {
   const appDiv = document.getElementById("app");
@@ -1227,18 +1228,39 @@ function renderSummary() {
   const section = document.createElement("div");
   section.className = "summary-section";
 
-  const card = document.createElement("div");
-  card.className = "summary-card";
-
+  // Título
   const title = document.createElement("h1");
   title.className = "summary-title";
   title.textContent = "Resumen de tu Semana";
-  card.appendChild(title);
+  section.appendChild(title);
 
+  // Acciones Superiores (Copiar y Compartir)
+  const topActions = document.createElement("div");
+  topActions.className = "summary-actions-top";
+
+  const copyBtn = document.createElement("button");
+  copyBtn.className = "btn btn-primary";
+  copyBtn.textContent = "Copiar Resumen";
+  copyBtn.addEventListener('click', copySummaryToClipboard);
+  topActions.appendChild(copyBtn);
+
+  const shareBtn = document.createElement("button");
+  shareBtn.className = "btn btn-primary";
+  shareBtn.textContent = "Compartir Link";
+  shareBtn.addEventListener('click', shareSummaryLink);
+  topActions.appendChild(shareBtn);
+
+  section.appendChild(topActions);
+
+  // Crear el grid
+  const grid = document.createElement("div");
+  grid.className = "summary-grid";
+
+  // Llenar el grid con tarjetas de categoría
   CATEGORY_ORDER.forEach((cat) => {
     if (selectionState[cat].length > 0) {
       const categorySection = document.createElement("div");
-      categorySection.className = "category-section";
+      categorySection.className = "category-section"; // Esto ahora es una tarjeta
 
       const categoryTitle = document.createElement("h2");
       categoryTitle.className = "category-title";
@@ -1249,33 +1271,17 @@ function renderSummary() {
         categorySection.appendChild(renderMenuSummary(sel));
       });
 
-      card.appendChild(categorySection);
+      grid.appendChild(categorySection); // Añadir la tarjeta al grid
     }
   });
 
-  // Acciones simplificadas (solo copiar y compartir)
-  const actions = document.createElement("div");
-  actions.className = "summary-actions";
+  section.appendChild(grid); // Añadir el grid a la sección
+  appDiv.appendChild(section); // Añadir la sección al app
 
-  const copyBtn = document.createElement("button");
-  copyBtn.className = "btn btn-primary";
-  copyBtn.textContent = "Copiar Resumen";
-  copyBtn.addEventListener('click', copySummaryToClipboard);
-  actions.appendChild(copyBtn);
-
-  const shareBtn = document.createElement("button");
-  shareBtn.className = "btn btn-primary";
-  shareBtn.textContent = "Compartir Link";
-  shareBtn.addEventListener('click', shareSummaryLink);
-  actions.appendChild(shareBtn);
-
-  card.appendChild(actions);
-  section.appendChild(card);
-  appDiv.appendChild(section);
-
-  // Actualizar botones flotantes para el resumen
+  // Actualizar botones flotantes (Reiniciar, Deshacer)
   updateFloatingButtonsForSummary();
 }
+// --- FIN DE CAMBIO ---
 
 // NUEVA FUNCIÓN: Actualizar botones flotantes en el resumen
 function updateFloatingButtonsForSummary() {
@@ -1539,7 +1545,6 @@ function mapCategoryToSpanish(cat) {
     case "lunch":
       return "Comida";
     case "dinner":
-allMenus
       return "Cena";
     default:
       return cat;
