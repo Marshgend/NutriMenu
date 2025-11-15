@@ -6,28 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutri Planner - Planifica tu Semana</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Agrega esta línea para el favicon -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <div id="app">
-    <!-- Header será dinámico -->
-  </div>
+    </div>
 
-  <!-- Botón flotante derecho -->
   <div id="floating-btn" class="floating-btn hidden">
     <span id="floating-btn-text">Continuar</span>
     <div class="floating-btn-icon">→</div>
   </div>
 
-  <!-- Botón flotante izquierdo -->
   <div id="floating-btn-left" class="floating-btn-left hidden">
     <span id="floating-btn-left-text">Deshacer</span>
     <div class="floating-btn-icon">↶</div>
   </div>
 
-  <!-- Modal -->
   <div id="modal-overlay" class="modal-overlay hidden">
     <div class="modal">
       <div class="modal-content">
@@ -40,13 +35,18 @@
     </div>
   </div>
 
-  <!-- Loading -->
   <div id="loading" class="loading">
     <div class="loading-spinner"></div>
     <p>Cargando menús...</p>
-  </div>
+    <div id="initial-load-container" class="hidden">
+      <p>No hay menús cargados.</p>
+      <label class="btn btn-primary btn-load">
+        Seleccionar archivo JSON
+        <input type="file" id="initial-load-input" accept=".json" class="hidden">
+      </label>
+    </div>
+    </div>
 
-  <!-- Contenedor para dropdowns -->
   <div id="dropdown-container"></div>
 
   <script src="js/javascript.js"></script>

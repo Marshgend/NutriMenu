@@ -66,6 +66,23 @@ body {
   margin-bottom: 16px;
 }
 
+/* INICIO DE CAMBIO: Estilos para carga inicial */
+#initial-load-container {
+  margin-top: 24px;
+  text-align: center;
+}
+
+#initial-load-container p {
+  margin-bottom: 16px;
+  color: var(--on-surface-variant);
+}
+
+.btn-load {
+  position: relative;
+  overflow: hidden;
+}
+/* FIN DE CAMBIO */
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -90,6 +107,21 @@ body {
   margin-bottom: 40px;
   animation: fadeInDown 0.6s ease-out;
 }
+
+/* INICIO DE CAMBIO: Estilos para botones de header */
+.header-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-load-header {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+/* FIN DE CAMBIO */
 
 .app-title {
   font-size: 2.5rem;

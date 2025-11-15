@@ -23,6 +23,7 @@ let allMenus = {
 
 let selectionState = {};
 let currentMenuIndex = 0; // Índice de la tarjeta actual
+let loadedFileCount = 0; // INICIO DE CAMBIO: Contador de archivos JSON
 
 // Inicialización
 window.addEventListener("DOMContentLoaded", init);
@@ -47,10 +48,18 @@ function init() {
   // Cargar estado y menús
   loadStateFromLocalStorage();
   ensureSelectionStateIntegrity();
-  loadMenus();
+  loadMenus(true); // Indicar que es la carga inicial
+
+  // INICIO DE CAMBIO: Listeners para carga de JSON
+  // Listener para el botón de carga inicial
+  const initialInput = document.getElementById('initial-load-input');
+  if (initialInput) {
+    initialInput.addEventListener('change', handleJsonFileSelect);
+  }
+  // FIN DE CAMBIO
 }
 
-function loadMenus() {
+function loadMenus(isInitialLoad = false) { // INICIO DE CAMBIO
   fetch("json_directory.json")
     .then((res) => {
       if (!res.ok) throw new Error("No se pudo cargar el directorio de menús");
@@ -59,6 +68,17 @@ function loadMenus() {
     .then((directoryData) => {
       const files = directoryData.jsonFiles || [];
       console.log("Archivos JSON a cargar:", files);
+      loadedFileCount = files.length; // INICIO DE CAMBIO
+
+      // INICIO DE CAMBIO (check for empty)
+      if (isInitialLoad && files.length === 0) {
+        console.warn("No se encontraron archivos en json_directory.json.");
+        hideLoading(true); // Ocultar spinner, pero no el overlay
+        showInitialLoadButton();
+        return Promise.reject("No files"); // Stop the promise chain
+      }
+      // FIN DE CAMBIO
+
       return loadAllJsonMenus(files);
     })
     .then((loadResult) => {
@@ -89,18 +109,149 @@ function loadMenus() {
       renderApp();
     })
     .catch((err) => {
+      // INICIO DE CAMBIO (catch)
+      if (err === "No files") {
+        // This is the expected "error" when no files are present, do nothing.
+        return;
+      }
       console.error("Error al cargar menús:", err);
-      hideLoading();
-      showModal("Error al cargar la lista de archivos JSON. Asegúrate de que json_directory.json existe.");
+      // If *any* other error happens during initial load (e.g., 404 on json_directory.json),
+      // also show the load button.
+      if (isInitialLoad) {
+        hideLoading(true);
+        showInitialLoadButton();
+      } else {
+        hideLoading();
+        showModal("Error al cargar la lista de archivos JSON. Asegúrate de que json_directory.json existe.");
+      }
+      // FIN DE CAMBIO
     });
 }
 
-function hideLoading() {
+function hideLoading(keepOverlay = false) {
   const loading = document.getElementById("loading");
   if (loading) {
-    loading.classList.add("hidden");
+    // INICIO DE CAMBIO
+    if (keepOverlay) {
+      // Ocultar solo el spinner y el texto
+      const spinner = loading.querySelector('.loading-spinner');
+      const p = loading.querySelector('p');
+      if (spinner) spinner.classList.add("hidden");
+      if (p) p.classList.add("hidden");
+    } else {
+      // Ocultar todo el overlay
+      loading.classList.add("hidden");
+    }
+    // FIN DE CAMBIO
   }
 }
+
+// INICIO DE CAMBIO: Nuevas funciones para carga de JSON
+
+function showInitialLoadButton() {
+  const container = document.getElementById('initial-load-container');
+  if (container) {
+    container.classList.remove('hidden');
+  }
+}
+
+// Manejador para el <input type="file">
+function handleJsonFileSelect(event) {
+  const file = event.target.files[0];
+  if (!file) {
+    showModal("No se seleccionó ningún archivo.");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const menuData = JSON.parse(e.target.result);
+      console.log("Cargando JSON manual:", menuData);
+      // Procesar este único archivo
+      processSingleMenuData(menuData);
+    } catch (err) {
+      console.error("Error al parsear JSON:", err);
+      showModal(`Error al leer el archivo JSON: ${err.message}`);
+    }
+  };
+  reader.readAsText(file);
+  
+  // Limpiar el valor del input para permitir recargar el mismo archivo
+  event.target.value = null;
+}
+
+// Procesa los datos de un único archivo JSON
+function processSingleMenuData(menuData) {
+  // 1. Limpiar menús anteriores
+  originalMenus = { breakfast: [], snack: [], lunch: [], dinner: [] };
+  
+  if (!menuData || typeof menuData !== "object") {
+    showModal("Archivo JSON inválido o vacío.");
+    return;
+  }
+
+  let menusAdded = 0;
+  // 2. Poblar originalMenus
+  Object.keys(menuData).forEach((key) => {
+    if (key === "id") return;
+
+    let targetKey = key.toLowerCase();
+    if (targetKey.startsWith("snack")) targetKey = "snack";
+
+    if (!originalMenus[targetKey]) originalMenus[targetKey] = [];
+
+    if (Array.isArray(menuData[key])) {
+      const validMenus = menuData[key].filter(
+        (m) =>
+          m &&
+          typeof m.menuName === "string" &&
+          Array.isArray(m.dishes) &&
+          m.dishes.length > 0
+      );
+      originalMenus[targetKey].push(...validMenus);
+      menusAdded += validMenus.length;
+      console.log(`Agregados ${validMenus.length} menús a ${targetKey}`);
+    }
+  });
+
+  if (menusAdded === 0) {
+    showModal("El JSON no contiene menús válidos.");
+    return;
+  }
+  
+  // 3. Marcar como 1 archivo cargado (para el botón de autocompletar)
+  loadedFileCount = 1;
+  
+  // 4. Reiniciar el estado y la app
+  resetAndSetupApp();
+}
+
+// Función para reiniciar el estado y correr la app con los nuevos menús
+function resetAndSetupApp() {
+  // 1. Ocultar loading
+  hideLoading(); // Ocultar todo el overlay
+
+  // 2. Reiniciar estado 
+  initializeSelectionState(); 
+
+  // 3. Copiar y barajar menús
+  copyOriginalToAllMenus_NoShuffle();
+  shuffleAllMenus();
+  selectionState.shuffledMenus = deepClone(allMenus);
+  saveStateToLocalStorage();
+
+  // 4. Restaurar índice
+  currentMenuIndex = 0;
+  if (selectionState.currentMenuIndex !== undefined) {
+    currentMenuIndex = selectionState.currentMenuIndex;
+  }
+
+  // 5. Renderizar
+  console.log("Menús finales (manual):", allMenus);
+  renderApp();
+}
+// FIN DE CAMBIO
 
 function loadAllJsonMenus(fileList) {
   const errors = [];
@@ -291,6 +442,37 @@ function renderApp() {
   header.appendChild(title);
   header.appendChild(subtitle);
   appDiv.appendChild(header);
+
+  // INICIO DE CAMBIO: Añadir botones de Carga y Autocompletar
+  const headerActions = document.createElement('div');
+  headerActions.className = 'header-actions';
+  
+  // Botón de Cargar JSON (siempre visible)
+  const loadJsonLabel = document.createElement('label');
+  loadJsonLabel.className = 'btn btn-secondary btn-load-header';
+  loadJsonLabel.textContent = 'Cargar JSON';
+  
+  const loadJsonInput = document.createElement('input');
+  loadJsonInput.type = 'file';
+  loadJsonInput.accept = '.json';
+  loadJsonInput.className = 'hidden';
+  loadJsonInput.addEventListener('change', handleJsonFileSelect);
+  
+  loadJsonLabel.appendChild(loadJsonInput);
+  headerActions.appendChild(loadJsonLabel);
+
+  // Botón de Autocompletar (condicional)
+  if (loadedFileCount === 1 && !allCategoriesCompleted()) {
+    const autoFillBtn = document.createElement('button');
+    autoFillBtn.id = 'autofill-button';
+    autoFillBtn.className = 'btn btn-primary';
+    autoFillBtn.textContent = 'Autocompletar Semana';
+    autoFillBtn.addEventListener('click', autoFillWeek);
+    headerActions.appendChild(autoFillBtn);
+  }
+  
+  appDiv.appendChild(headerActions);
+  // FIN DE CAMBIO
 
   // Progress
   appDiv.appendChild(renderProgressBar(categoryKey, usedDays));
@@ -1272,6 +1454,71 @@ function renderSharedSummary() {
   renderSummary();
 }
 
+// INICIO DE CAMBIO: Nueva función para autocompletar la semana
+
+async function autoFillWeek() {
+  // 1. Validar que los menús base existan
+  const bfast = originalMenus.breakfast[0];
+  const snack1 = originalMenus.snack[0];
+  const lunch = originalMenus.lunch[0];
+  const dinner = originalMenus.dinner[0];
+  // Usar el segundo snack si existe, si no, repetir el primero
+  const snack2 = originalMenus.snack[1] || originalMenus.snack[0];
+
+  if (!bfast || !snack1 || !lunch || !snack2 || !dinner) {
+    showModal("El archivo JSON cargado no contiene los 5 menús necesarios (desayuno, 2 snacks, comida, cena) para autocompletar.");
+    return;
+  }
+  
+  // 2. Confirmar
+  const confirmed = await showModal("¿Estás seguro de autocompletar la semana? Esto reemplazará tu selección actual.", true);
+  
+  if (!confirmed) return;
+
+  // 3. Reiniciar estado de selección
+  initializeSelectionState(); // Limpia todo
+
+  // 4. Llenar el estado
+  selectionState.breakfast = [{
+    menuName: bfast.menuName,
+    daysUsed: TOTAL_DAYS,
+    dishes: bfast.dishes,
+  }];
+  selectionState.snack1 = [{
+    menuName: snack1.menuName,
+    daysUsed: TOTAL_DAYS,
+    dishes: snack1.dishes,
+  }];
+  selectionState.lunch = [{
+    menuName: lunch.menuName,
+    daysUsed: TOTAL_DAYS,
+    dishes: lunch.dishes,
+  }];
+  selectionState.snack2 = [{
+    menuName: snack2.menuName,
+    daysUsed: TOTAL_DAYS,
+    dishes: snack2.dishes,
+  }];
+  selectionState.dinner = [{
+    menuName: dinner.menuName,
+    daysUsed: TOTAL_DAYS,
+    dishes: dinner.dishes,
+  }];
+  
+  // 5. Marcar categorías como completadas
+  CATEGORY_ORDER.forEach(cat => {
+    selectionState.completedCategories[cat] = TOTAL_DAYS;
+  });
+  
+  // 6. Mover al final (para que muestre el resumen)
+  selectionState.currentCategoryIndex = CATEGORY_ORDER.length;
+  
+  // 7. Guardar y renderizar (mostrará el resumen)
+  saveStateToLocalStorage();
+  renderApp();
+}
+// FIN DE CAMBIO
+
 function checkForSharedSummary() {
   const hash = window.location.hash || "";
   const prefix = "#share=";
@@ -1292,6 +1539,7 @@ function mapCategoryToSpanish(cat) {
     case "lunch":
       return "Comida";
     case "dinner":
+allMenus
       return "Cena";
     default:
       return cat;
