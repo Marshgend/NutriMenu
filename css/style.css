@@ -646,9 +646,36 @@ body {
   font-size: 1.2rem;
 }
 
-.floating-btn-left {
+/* --- INICIO DE CAMBIO: Botón Reset y Botón Deshacer Apilados --- */
+.floating-btn-reset {
   position: fixed;
   bottom: 24px;
+  left: 24px;
+  background: var(--error); /* Rojo */
+  color: white;
+  border: none;
+  border-radius: 56px;
+  height: 56px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--elevation-3);
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1000;
+  font-weight: 500;
+  animation: slideInUp 0.4s ease-out;
+}
+
+.floating-btn-reset:hover {
+  background: #d32f2f; /* Rojo más oscuro */
+  transform: scale(1.05);
+}
+
+.floating-btn-left {
+  position: fixed;
+  bottom: 88px; /* 24px (bottom) + 56px (reset btn) + 8px (margin) */
   left: 24px;
   background: var(--outline);
   color: white;
@@ -666,6 +693,7 @@ body {
   font-weight: 500;
   animation: slideInUp 0.4s ease-out;
 }
+/* --- FIN DE CAMBIO --- */
 
 .floating-btn-left:hover {
   background: var(--on-surface-variant);
@@ -993,12 +1021,21 @@ body {
     padding: 0 20px;
   }
 
-  .floating-btn-left {
+  /* --- INICIO DE CAMBIO: Botones Apilados en Móvil --- */
+  .floating-btn-reset {
     bottom: 16px;
     left: 16px;
     height: 48px;
     padding: 0 20px;
   }
+  
+  .floating-btn-left {
+    bottom: 72px; /* 16px (bottom) + 48px (reset btn) + 8px (margin) */
+    left: 16px;
+    height: 48px;
+    padding: 0 20px;
+  }
+  /* --- FIN DE CAMBIO --- */
 
   .modal {
     margin: 16px;

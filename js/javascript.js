@@ -6,6 +6,12 @@
 const CATEGORY_ORDER = ["breakfast", "snack1", "lunch", "snack2", "dinner"];
 const TOTAL_DAYS = 7;
 
+// --- INICIO DE CAMBIO: Claves de LocalStorage ---
+const STATE_KEY = "nutriSelectionStateDark";
+const MANUAL_MENUS_KEY = "nutriManualMenus";
+const MENU_SOURCE_KEY = "nutriMenuSource";
+// --- FIN DE CAMBIO ---
+
 let originalMenus = {
   breakfast: [],
   snack: [],
@@ -28,7 +34,7 @@ let currentMenuIndex = 0; // Índice de la tarjeta actual
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
-  // Verificar si es un resumen compartido
+  // 1. Verificar si es un resumen compartido
   const sharedData = checkForSharedSummary();
   if (sharedData) {
     try {
@@ -44,19 +50,46 @@ function init() {
     }
   }
 
-  // Cargar estado y menús
+  // 2. Cargar estado (selecciones)
   loadStateFromLocalStorage();
   ensureSelectionStateIntegrity();
-  loadMenus(true); // Indicar que es la carga inicial
 
-  // Listener para el botón de carga inicial
+  // --- INICIO DE CAMBIO: Lógica de Carga de Menús (Persistencia) ---
+  const menuSource = localStorage.getItem(MENU_SOURCE_KEY);
+
+  if (menuSource === "manual") {
+    // 3a. Si la fuente es manual, cargar desde localStorage
+    console.log("Cargando menús manuales desde localStorage...");
+    const manualMenusData = localStorage.getItem(MANUAL_MENUS_KEY);
+    if (manualMenusData) {
+      try {
+        originalMenus = JSON.parse(manualMenusData);
+        // Tenemos menús, ahora configurar la app
+        setupAppFromLoadedMenus();
+        return; // Detener aquí, no cargar desde directorio
+      } catch (e) {
+        console.error("Error al parsear menús manuales de localStorage", e);
+        // Datos corruptos, limpiar flags y seguir a carga de directorio
+        localStorage.removeItem(MANUAL_MENUS_KEY);
+        localStorage.removeItem(MENU_SOURCE_KEY);
+      }
+    }
+  }
+
+  // 3b. Si la fuente es 'directory', 'null', o si 'manual' falló, cargar desde directorio
+  console.log("Cargando menús desde directorio...");
+  loadMenusFromDirectory(true);
+  // --- FIN DE CAMBIO ---
+
+  // 4. Listener para carga inicial
   const initialInput = document.getElementById('initial-load-input');
   if (initialInput) {
     initialInput.addEventListener('change', handleJsonFileSelect);
   }
 }
 
-function loadMenus(isInitialLoad = false) {
+// Carga desde json_directory.json
+function loadMenusFromDirectory(isInitialLoad = false) {
   fetch("json_directory.json")
     .then((res) => {
       if (!res.ok) throw new Error("No se pudo cargar el directorio de menús");
@@ -67,50 +100,71 @@ function loadMenus(isInitialLoad = false) {
       console.log("Archivos JSON a cargar:", files);
 
       if (isInitialLoad && files.length === 0) {
+        // No hay menús en directorio Y no hay menús manuales cacheados
         console.warn("No se encontraron archivos en json_directory.json.");
-        hideLoading(true); // Ocultar spinner, pero no el overlay
+        hideLoading(true);
         showInitialLoadButton();
-        return Promise.reject("No files"); // Detener la cadena
+        return Promise.reject("No files");
       }
+      
+      // Si cargamos desde directorio, esta es nuestra fuente. Limpiar caché manual.
+      localStorage.setItem(MENU_SOURCE_KEY, "directory");
+      localStorage.removeItem(MANUAL_MENUS_KEY);
+      
       return loadAllJsonMenus(files);
     })
     .then((loadResult) => {
-      hideLoading();
-      console.log("Menús cargados:", originalMenus);
-
-      if (loadResult && loadResult.errors && loadResult.errors.length > 0) {
-        console.warn("Errores al cargar menús:", loadResult.errors);
-        showModal(`Algunos menús no se pudieron cargar: ${loadResult.errors.join(', ')}`);
-      }
-
-      if (selectionState.shuffledMenus) {
-        allMenus = deepClone(selectionState.shuffledMenus);
-      } else {
-        copyOriginalToAllMenus_NoShuffle();
-        shuffleAllMenus();
-        selectionState.shuffledMenus = deepClone(allMenus);
-        saveStateToLocalStorage();
-      }
-
-      if (selectionState.currentMenuIndex !== undefined) {
-        currentMenuIndex = selectionState.currentMenuIndex;
-      }
-
-      console.log("Menús finales:", allMenus);
-      renderApp();
+      setupAppFromLoadedMenus(loadResult); // Llamar a la función común
     })
     .catch((err) => {
-      if (err === "No files") return;
+      if (err === "No files") return; // Silenciar error esperado
       console.error("Error al cargar menús:", err);
       if (isInitialLoad) {
         hideLoading(true);
         showInitialLoadButton();
       } else {
         hideLoading();
-        showModal("Error al cargar la lista de archivos JSON. Asegúrate de que json_directory.json existe.");
+        showModal("Error al cargar la lista de archivos JSON.");
       }
     });
 }
+
+// NUEVA FUNCIÓN: Lógica común para configurar la app
+function setupAppFromLoadedMenus(loadResult = null) {
+  hideLoading();
+  if (loadResult && loadResult.errors && loadResult.errors.length > 0) {
+    showModal(`Algunos menús no se pudieron cargar: ${loadResult.errors.join(', ')}`);
+  }
+
+  // Comprobar si ya tenemos menús barajados (y con estado 'isUsed') en el estado
+  if (selectionState.shuffledMenus && selectionState.shuffledMenus.breakfast.length > 0) {
+      console.log("Restaurando menús barajados y estado 'isUsed' desde localStorage.");
+      allMenus = deepClone(selectionState.shuffledMenus);
+  } else {
+      console.log("Creando nuevos menús barajados.");
+      copyOriginalToAllMenus_NoShuffle();
+      shuffleAllMenus();
+      // Asignar IDs únicos y estado 'isUsed'
+      CATEGORY_ORDER.forEach(catKey => {
+        if (allMenus[catKey]) {
+          allMenus[catKey].forEach((menu, index) => {
+            menu.uniqueId = `${catKey}-${index}-${menu.menuName.replace(/\s/g, '')}`;
+            menu.isUsed = false; 
+          });
+        }
+      });
+      selectionState.shuffledMenus = deepClone(allMenus);
+  }
+
+  if (selectionState.currentMenuIndex !== undefined) {
+    currentMenuIndex = selectionState.currentMenuIndex;
+  }
+
+  saveStateToLocalStorage(); // Guardar el estado (incluyendo shuffledMenus)
+  console.log("Menús finales listos:", allMenus);
+  renderApp();
+}
+
 
 function hideLoading(keepOverlay = false) {
   const loading = document.getElementById("loading");
@@ -133,7 +187,6 @@ function showInitialLoadButton() {
   }
 }
 
-// --- INICIO DE CAMBIO: Lógica de Carga Múltiple ---
 function handleJsonFileSelect(event) {
   const files = event.target.files;
   if (!files || files.length === 0) {
@@ -168,27 +221,20 @@ function handleJsonFileSelect(event) {
       showModal(`Error al cargar archivos: ${err}`);
     });
 
-  event.target.value = null; // Permitir recargar los mismos archivos
+  event.target.value = null;
 }
 
 function processLoadedMenus(menuDataArray) {
-  // 1. Limpiar menús anteriores
   originalMenus = { breakfast: [], snack: [], lunch: [], dinner: [] };
-  
   let menusAdded = 0;
   
-  // 2. Acumular menús de todos los archivos
   menuDataArray.forEach(menuData => {
     if (!menuData || typeof menuData !== "object") return;
-    
     Object.keys(menuData).forEach((key) => {
       if (key === "id") return;
-
       let targetKey = key.toLowerCase();
       if (targetKey.startsWith("snack")) targetKey = "snack";
-
       if (!originalMenus[targetKey]) originalMenus[targetKey] = [];
-
       if (Array.isArray(menuData[key])) {
         const validMenus = menuData[key].filter(
           (m) =>
@@ -208,40 +254,44 @@ function processLoadedMenus(menuDataArray) {
     return;
   }
 
-  // 3. Reiniciar el estado y la app
+  // --- INICIO DE CAMBIO: Guardar Menús Manuales en LocalStorage ---
+  console.log("Guardando menús manuales en localStorage...");
+  localStorage.setItem(MANUAL_MENUS_KEY, JSON.stringify(originalMenus));
+  localStorage.setItem(MENU_SOURCE_KEY, "manual");
+  // --- FIN DE CAMBIO ---
+  
   resetAndSetupApp();
 }
-// --- FIN DE CAMBIO ---
 
-// Función para reiniciar el estado y correr la app con los nuevos menús
+// Se llama después de cargar archivosNUEVOS (limpia selecciones)
 function resetAndSetupApp() {
   hideLoading();
-  initializeSelectionState(); // Reiniciar estado
+  initializeSelectionState(); // Reiniciar selectionState
   copyOriginalToAllMenus_NoShuffle();
   shuffleAllMenus();
   
-  // Asignar IDs únicos a cada menú para el "feature" de marcar usado
   CATEGORY_ORDER.forEach(catKey => {
     if (allMenus[catKey]) {
       allMenus[catKey].forEach((menu, index) => {
         menu.uniqueId = `${catKey}-${index}-${menu.menuName.replace(/\s/g, '')}`;
-        menu.isUsed = false; // Estado inicial
+        menu.isUsed = false; 
       });
     }
   });
 
   selectionState.shuffledMenus = deepClone(allMenus);
-  saveStateToLocalStorage();
-
+  
   currentMenuIndex = 0;
   selectionState.currentMenuIndex = 0;
+
+  saveStateToLocalStorage(); // Guardar estado limpio
   
   console.log("Menús finales (manual):", allMenus);
   renderApp();
 }
 
+// Solo acumula menús de la carga de directorio
 function loadAllJsonMenus(fileList) {
-  // Esta función ahora solo se usa para la carga inicial desde json_directory.json
   const errors = [];
   const promises = fileList.map((file) =>
     fetch(file)
@@ -254,7 +304,6 @@ function loadAllJsonMenus(fileList) {
           errors.push(`Archivo inválido: ${file}`);
           return;
         }
-        // Acumular menús en originalMenus
         Object.keys(menuData).forEach((key) => {
           if (key === "id") return;
           let targetKey = key.toLowerCase();
@@ -299,24 +348,22 @@ function initializeSelectionState() {
     currentMenuIndex: 0,
     tempSelections: {},
     tempDaysSelection: null,
-    shuffledMenus: null,
+    shuffledMenus: null, // Se llenará en setupAppFromLoadedMenus
     globalUndoHistory: [],
   };
-  saveStateToLocalStorage();
+  // No guardar aquí, se guarda después de poblar shuffledMenus
 }
 
 function saveStateToLocalStorage() {
   try {
     selectionState.currentMenuIndex = currentMenuIndex;
     
-    // --- INICIO DE CAMBIO: Persistir estado "isUsed" ---
-    // Guardar el estado actual de allMenus (que contiene isUsed) en shuffledMenus
-    if (allMenus.breakfast.length > 0) { // Solo si allMenus está poblado
+    // Guardar el estado 'isUsed' en shuffledMenus
+    if (allMenus.breakfast.length > 0) { 
        selectionState.shuffledMenus = deepClone(allMenus);
     }
-    // --- FIN DE CAMBIO ---
     
-    localStorage.setItem("nutriSelectionStateDark", JSON.stringify(selectionState));
+    localStorage.setItem(STATE_KEY, JSON.stringify(selectionState));
     console.log("Estado guardado:", selectionState);
   } catch (e) {
     console.error("Error al guardar estado:", e);
@@ -324,7 +371,7 @@ function saveStateToLocalStorage() {
 }
 
 function loadStateFromLocalStorage() {
-  const data = localStorage.getItem("nutriSelectionStateDark");
+  const data = localStorage.getItem(STATE_KEY);
   if (data) {
     try {
       selectionState = JSON.parse(data);
@@ -362,7 +409,7 @@ function ensureSelectionStateIntegrity() {
   if (!Array.isArray(selectionState.globalUndoHistory))
     selectionState.globalUndoHistory = [];
 
-  saveStateToLocalStorage();
+  // No guardar aquí, se guarda en setupApp
 }
 
 function copyOriginalToAllMenus_NoShuffle() {
@@ -397,6 +444,10 @@ function renderApp() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
 
+  // --- INICIO DE CAMBIO: Botón Reiniciar Siempre Visible ---
+  showFloatingButtonReset(() => confirmRestart());
+  // --- FIN DE CAMBIO ---
+
   if (allCategoriesCompleted()) {
     renderSummary();
     return;
@@ -424,11 +475,9 @@ function renderApp() {
   header.appendChild(subtitle);
   appDiv.appendChild(header);
 
-  // --- INICIO DE CAMBIO: Lógica de Botones de Header ---
   const headerActions = document.createElement('div');
   headerActions.className = 'header-actions';
   
-  // Botón de Cargar JSON (ahora múltiple)
   const loadJsonLabel = document.createElement('label');
   loadJsonLabel.className = 'btn btn-secondary btn-load-header';
   loadJsonLabel.textContent = 'Cargar JSON(s)';
@@ -436,12 +485,11 @@ function renderApp() {
   loadJsonInput.type = 'file';
   loadJsonInput.accept = '.json';
   loadJsonInput.className = 'hidden';
-  loadJsonInput.multiple = true; // Aceptar múltiples archivos
+  loadJsonInput.multiple = true;
   loadJsonInput.addEventListener('change', handleJsonFileSelect);
   loadJsonLabel.appendChild(loadJsonInput);
   headerActions.appendChild(loadJsonLabel);
 
-  // Botón de Autocompletar Inteligente
   if (shouldShowAutofill() && !allCategoriesCompleted()) {
     const autoFillBtn = document.createElement('button');
     autoFillBtn.id = 'autofill-button';
@@ -452,7 +500,6 @@ function renderApp() {
   }
   
   appDiv.appendChild(headerActions);
-  // --- FIN DE CAMBIO ---
 
   // Progress
   appDiv.appendChild(renderProgressBar(categoryKey, usedDays));
@@ -483,25 +530,17 @@ function renderApp() {
   }
 }
 
-// --- INICIO DE CAMBIO: Lógica Autocompletar Inteligente ---
 function shouldShowAutofill() {
-  // Solo se muestra si hay 1 o 0 menús para desayuno, comida, cena
-  // y 2 o menos menús para snack (0, 1, o 2).
   const bfast = originalMenus.breakfast.length <= 1;
   const lunch = originalMenus.lunch.length <= 1;
   const dinner = originalMenus.dinner.length <= 1;
   const snack = originalMenus.snack.length <= 2;
-  
-  // Y al menos debe haber UN menú cargado en total
   const hasAtLeastOne = originalMenus.breakfast.length > 0 ||
                         originalMenus.lunch.length > 0 ||
                         originalMenus.dinner.length > 0 ||
                         originalMenus.snack.length > 0;
-
   return bfast && lunch && dinner && snack && hasAtLeastOne;
 }
-// --- FIN DE CAMBIO ---
-
 
 function updateFloatingButtons() {
   const catIndex = selectionState.currentCategoryIndex;
@@ -527,6 +566,7 @@ function updateFloatingButtons() {
   } else {
     hideFloatingButtonLeft();
   }
+  // El botón de Reiniciar es visible por defecto desde renderApp()
 }
 
 function canUndo() {
@@ -602,7 +642,7 @@ function renderSimpleCarousel(arrayKey, categoryKey) {
   updateIndicator(indicator, currentMenuIndex, menus.length);
   indicator.addEventListener('click', (e) => {
     e.stopPropagation();
-    toggleDropdown(indicator, menus, categoryKey); // Pasar categoryKey
+    toggleDropdown(indicator, menus, categoryKey);
   });
   navigation.appendChild(indicator);
 
@@ -617,9 +657,7 @@ function renderSimpleCarousel(arrayKey, categoryKey) {
   cardContainer.className = "single-card-container";
   cardContainer.id = "single-card-container";
   
-  // --- INICIO DE CAMBIO: Pasar categoryKey ---
   const currentCard = createMenuCard(menus[currentMenuIndex], currentMenuIndex, menus.length, categoryKey);
-  // --- FIN DE CAMBIO ---
   
   cardContainer.appendChild(currentCard);
   section.appendChild(cardContainer);
@@ -627,7 +665,7 @@ function renderSimpleCarousel(arrayKey, categoryKey) {
   return section;
 }
 
-function toggleDropdown(indicator, menus, categoryKey) { // Recibir categoryKey
+function toggleDropdown(indicator, menus, categoryKey) {
   const existingDropdown = document.querySelector('.indicator-dropdown');
   if (existingDropdown) {
     existingDropdown.remove();
@@ -667,17 +705,13 @@ function toggleDropdown(indicator, menus, categoryKey) { // Recibir categoryKey
     if (index === currentMenuIndex) {
       item.classList.add('current');
     }
-    
-    // --- INICIO DE CAMBIO: Marcar "Usado" en Dropdown ---
     if (menu.isUsed) {
       item.classList.add('is-used');
     }
-    // --- FIN DE CAMBIO ---
-
     item.textContent = menu.menuName;
     item.addEventListener('click', (e) => {
       e.stopPropagation();
-      navigateToMenu(index, menus, categoryKey); // Pasar categoryKey
+      navigateToMenu(index, menus, categoryKey);
       dropdown.remove();
     });
     dropdown.appendChild(item);
@@ -702,12 +736,12 @@ function toggleDropdown(indicator, menus, categoryKey) { // Recibir categoryKey
   }, 10);
 }
 
-function navigateToMenu(targetIndex, menus, categoryKey) { // Recibir categoryKey
+function navigateToMenu(targetIndex, menus, categoryKey) {
   if (targetIndex >= 0 && targetIndex < menus.length) {
     currentMenuIndex = targetIndex;
     selectionState.currentMenuIndex = currentMenuIndex;
     saveStateToLocalStorage();
-    updateDisplayedCard(menus, categoryKey); // Pasar categoryKey
+    updateDisplayedCard(menus, categoryKey);
     const indicator = document.getElementById("carousel-indicator");
     updateIndicator(indicator, currentMenuIndex, menus.length);
     clearTempDaysSelection();
@@ -726,21 +760,19 @@ function navigateMenu(direction, menus) {
   selectionState.currentMenuIndex = currentMenuIndex;
   saveStateToLocalStorage();
   
-  // --- INICIO DE CAMBIO: Obtener categoryKey y pasarlo ---
   const catIndex = selectionState.currentCategoryIndex;
   const categoryKey = CATEGORY_ORDER[catIndex];
   updateDisplayedCard(menus, categoryKey);
-  // --- FIN DE CAMBIO ---
   
   const indicator = document.getElementById("carousel-indicator");
   updateIndicator(indicator, currentMenuIndex, menus.length);
   clearTempDaysSelection();
 }
 
-function updateDisplayedCard(menus, categoryKey) { // Recibir categoryKey
+function updateDisplayedCard(menus, categoryKey) {
   const container = document.getElementById("single-card-container");
   const currentMenu = menus[currentMenuIndex];
-  const newCard = createMenuCard(currentMenu, currentMenuIndex, menus.length, categoryKey); // Pasar categoryKey
+  const newCard = createMenuCard(currentMenu, currentMenuIndex, menus.length, categoryKey);
   container.innerHTML = "";
   container.appendChild(newCard);
 }
@@ -754,16 +786,14 @@ function updateNavigationButtons(prevBtn, nextBtn, current, total) {
   nextBtn.disabled = total <= 1;
 }
 
-function createMenuCard(menu, originalIndex, totalMenus, categoryKey) { // Recibir categoryKey
+function createMenuCard(menu, originalIndex, totalMenus, categoryKey) {
   const card = document.createElement("div");
   card.className = "menu-card";
   card.dataset.originalIndex = originalIndex;
 
-  // --- INICIO DE CAMBIO: Marcar "Usado" en Tarjeta ---
   if (menu.isUsed) {
     card.classList.add('is-used');
   }
-  // --- FIN DE CAMBIO ---
 
   const cardNumber = document.createElement("div");
   cardNumber.className = "card-number";
@@ -874,12 +904,10 @@ function renderDaysSelector() {
   sectionTitle.textContent = `Selecciona cuántos días (${remainingDays} disponibles)`;
   section.appendChild(sectionTitle);
 
-  // --- INICIO DE CAMBIO: Claridad del Selector ---
   const helperText = document.createElement("p");
   helperText.className = "section-helper-text";
   helperText.textContent = `Asigna este menú para ${remainingDays > 1 ? `hasta ${remainingDays} días` : '1 día'} de tu semana.`;
   section.appendChild(helperText);
-  // --- FIN DE CAMBIO ---
 
   const timeline = document.createElement("div");
   timeline.className = "days-timeline";
@@ -965,20 +993,15 @@ function confirmSelection(daysCount) {
     menuName: chosenMenu.menuName,
     daysUsed: daysCount,
     dishes: chosenMenu.dishes,
-    uniqueId: chosenMenu.uniqueId // Guardar el ID único en la selección
+    uniqueId: chosenMenu.uniqueId
   });
   selectionState.completedCategories[categoryKey] += daysCount;
   
-  // --- INICIO DE CAMBIO: Lógica "Marcar Usado" ---
-  // 1. Marcar como usado en el array `allMenus` en tiempo real
   chosenMenu.isUsed = true;
-  
-  // 2. Encontrar el menú equivalente en `shuffledMenus` y marcarlo también
   const persistedMenu = selectionState.shuffledMenus[arrayKey].find(m => m.uniqueId === chosenMenu.uniqueId);
   if (persistedMenu) {
     persistedMenu.isUsed = true;
   }
-  // --- FIN DE CAMBIO ---
 
   selectionState.globalUndoHistory = selectionState.globalUndoHistory || [];
   selectionState.globalUndoHistory.push({
@@ -988,14 +1011,11 @@ function confirmSelection(daysCount) {
     daysUsed: daysCount,
     previousCategoryIndex: selectionState.currentCategoryIndex,
     previousMenuIndex: currentMenuIndex,
-    uniqueId: chosenMenu.uniqueId // Guardar ID en historial de deshacer
+    uniqueId: chosenMenu.uniqueId
   });
 
-  // --- YA NO SE ELIMINA EL MENÚ ---
-  // allMenus[arrayKey].splice(currentMenuIndex, 1); 
-
   selectionState.tempDaysSelection = null;
-  selectionState.currentMenuIndex = currentMenuIndex; // Mantener el índice
+  selectionState.currentMenuIndex = currentMenuIndex;
   saveStateToLocalStorage();
   
   if (selectionState.completedCategories[categoryKey] >= TOTAL_DAYS) {
@@ -1017,9 +1037,24 @@ function showFloatingButtonLeft(onClick) {
   btn.onclick = onClick;
 }
 
+// --- INICIO DE CAMBIO: Nuevas funciones Botón Reiniciar ---
+function showFloatingButtonReset(onClick) {
+  const btn = document.getElementById('floating-btn-reset');
+  btn.classList.remove('hidden');
+  btn.onclick = onClick;
+}
+
+function hideFloatingButtonReset() {
+  const btn = document.getElementById('floating-btn-reset');
+  btn.classList.add('hidden');
+  btn.onclick = null;
+}
+// --- FIN DE CAMBIO ---
+
 function hideFloatingButtons() {
   hideFloatingButton();
   hideFloatingButtonLeft();
+  hideFloatingButtonReset(); // Ocultarlos todos
 }
 
 function hideFloatingButton() {
@@ -1060,11 +1095,8 @@ function undoLastSelectionGlobal() {
     selectionState[category].pop();
     selectionState.completedCategories[category] -= daysUsed;
 
-    // --- INICIO DE CAMBIO: Lógica "Marcar Usado" (Deshacer) ---
-    // 1. Verificar si este menú todavía está "usado" en otra selección
     const isStillUsed = selectionState[category].some(sel => sel.uniqueId === uniqueId);
     
-    // 2. Si ya no está en uso, desmarcarlo en `allMenus` y `shuffledMenus`
     if (!isStillUsed) {
       const menuInAllMenus = allMenus[category].find(m => m.uniqueId === uniqueId);
       if (menuInAllMenus) {
@@ -1075,8 +1107,6 @@ function undoLastSelectionGlobal() {
         menuInShuffled.isUsed = false;
       }
     }
-    // Ya no se re-inserta el menú porque nunca se quitó (no splice)
-    // --- FIN DE CAMBIO ---
   }
 
   if (previousCategoryIndex !== undefined) {
@@ -1096,10 +1126,14 @@ function undoLastSelectionGlobal() {
   }
 }
 
-// --- INICIO DE CAMBIO: renderSummary() REFACTORIZADO ---
 function renderSummary() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
+  
+  // --- INICIO DE CAMBIO: Botón Reiniciar Siempre Visible ---
+  showFloatingButtonReset(() => confirmRestart());
+  // --- FIN DE CAMBIO ---
+  
   const section = document.createElement("div");
   section.className = "summary-section";
   const title = document.createElement("h1");
@@ -1141,11 +1175,14 @@ function renderSummary() {
   appDiv.appendChild(section);
   updateFloatingButtonsForSummary();
 }
-// --- FIN DE CAMBIO ---
 
 function updateFloatingButtonsForSummary() {
-  showFloatingButton(confirmRestart);
-  document.getElementById('floating-btn-text').textContent = "Reiniciar Todo";
+  // --- INICIO DE CAMBIO: Botón Reiniciar ya no se maneja aquí ---
+  // El botón derecho (Continuar) se oculta
+  hideFloatingButton();
+  // El botón de reiniciar (rojo) ya está visible gracias a renderSummary()
+  // --- FIN DE CAMBIO ---
+  
   if (Array.isArray(selectionState.globalUndoHistory) &&
     selectionState.globalUndoHistory.length > 0) {
     showFloatingButtonLeft(() => performUndo());
@@ -1154,17 +1191,15 @@ function updateFloatingButtonsForSummary() {
   }
 }
 
-// --- INICIO DE CAMBIO: Resumen Colapsable ---
 function renderMenuSummary(sel) {
   const summary = document.createElement("div");
-  summary.className = "menu-summary"; // Clicable
-
+  summary.className = "menu-summary"; 
   const title = document.createElement("div");
   title.className = "menu-summary-title";
   title.textContent = `${sel.menuName} - ${sel.daysUsed} día${sel.daysUsed > 1 ? "s" : ""}`;
   
   const details = document.createElement("div");
-  details.className = "summary-details hidden"; // Oculto por defecto
+  details.className = "summary-details hidden"; 
 
   sel.dishes.forEach((dish) => {
     const dishDiv = document.createElement("div");
@@ -1215,7 +1250,6 @@ function renderMenuSummary(sel) {
   summary.appendChild(title);
   summary.appendChild(details);
 
-  // Evento para colapsar
   summary.addEventListener('click', () => {
     summary.classList.toggle('expanded');
     details.classList.toggle('hidden');
@@ -1223,7 +1257,6 @@ function renderMenuSummary(sel) {
 
   return summary;
 }
-// --- FIN DE CAMBIO ---
 
 async function copySummaryToClipboard() {
   const text = buildSummaryText();
@@ -1293,37 +1326,36 @@ async function shareSummaryLink() {
 }
 
 async function confirmRestart() {
-  const confirmed = await showModal("¿Estás seguro de reiniciar todo?", true);
+  const confirmed = await showModal("¿Estás seguro de reiniciar todo? Se borrarán los menús cargados y tu selección.", true);
   if (confirmed) {
     resetAll();
   }
 }
 
+// --- INICIO DE CAMBIO: resetAll() con limpieza de caché ---
 function resetAll() {
-  localStorage.removeItem("nutriSelectionStateDark");
+  localStorage.removeItem(STATE_KEY);
+  localStorage.removeItem(MANUAL_MENUS_KEY); // Limpiar menús manuales
+  localStorage.removeItem(MENU_SOURCE_KEY); // Limpiar flag de fuente
   currentMenuIndex = 0;
-  // No llamar a initializeSelectionState(), porque `originalMenus` está vacío
-  // En lugar de eso, forzar recarga de página para reiniciar el flujo de carga
   window.location.hash = "";
-  window.location.reload();
+  window.location.reload(); // Forzar recarga a estado limpio
 }
+// --- FIN DE CAMBIO ---
 
 function renderSharedSummary() {
   renderSummary();
 }
 
-// --- INICIO DE CAMBIO: Autocompletar Inteligente ---
 async function autoFillWeek() {
-  // 1. Definir las fuentes de menús (el primero o nulo)
   const menuSources = {
     breakfast: originalMenus.breakfast[0] || null,
     snack1: originalMenus.snack[0] || null,
-    snack2: originalMenus.snack[1] || originalMenus.snack[0] || null, // Reutiliza snack1 si snack2 no existe
+    snack2: originalMenus.snack[1] || originalMenus.snack[0] || null,
     lunch: originalMenus.lunch[0] || null,
     dinner: originalMenus.dinner[0] || null,
   };
 
-  // 2. Construir mensaje de advertencia para categorías faltantes
   let baseMessage = "¿Estás seguro de autocompletar la semana? Esto reemplazará tu selección actual.";
   const missingCategories = [];
   
@@ -1337,12 +1369,10 @@ async function autoFillWeek() {
     baseMessage += `\n\nADVERTENCIA:\nNo se encontraron menús para: ${missingCategories.join(", ")}. Se autocompletará sin estas categorías.`;
   }
 
-  // 3. Confirmar
   const confirmed = await showModal(baseMessage, true);
   if (!confirmed) return;
 
-  // 4. Reiniciar estado y llenar
-  initializeSelectionState(); // Limpia todo
+  initializeSelectionState(); 
 
   if (menuSources.breakfast) {
     selectionState.breakfast = [{
@@ -1389,14 +1419,11 @@ async function autoFillWeek() {
     selectionState.completedCategories.dinner = TOTAL_DAYS;
   }
   
-  // 5. Mover al resumen
   selectionState.currentCategoryIndex = CATEGORY_ORDER.length;
   
-  // 6. Guardar y renderizar
   saveStateToLocalStorage();
   renderApp();
 }
-// --- FIN DE CAMBIO ---
 
 function checkForSharedSummary() {
   const hash = window.location.hash || "";
@@ -1407,6 +1434,7 @@ function checkForSharedSummary() {
   return null;
 }
 
+// --- INICIO DE CAMBIO: Restaurar mapCategoryToSpanish a tu versión ---
 function mapCategoryToSpanish(cat) {
   switch (cat) {
     case "breakfast":
@@ -1422,6 +1450,7 @@ function mapCategoryToSpanish(cat) {
       return cat;
   }
 }
+// --- FIN DE CAMBIO ---
 
 // Sistema de modales
 function showModal(message, isConfirm = false) {
