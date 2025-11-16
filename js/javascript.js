@@ -54,7 +54,6 @@ function init() {
   loadStateFromLocalStorage();
   ensureSelectionStateIntegrity();
 
-  // --- INICIO DE CAMBIO: Lógica de Carga de Menús (Persistencia) ---
   const menuSource = localStorage.getItem(MENU_SOURCE_KEY);
 
   if (menuSource === "manual") {
@@ -64,12 +63,10 @@ function init() {
     if (manualMenusData) {
       try {
         originalMenus = JSON.parse(manualMenusData);
-        // Tenemos menús, ahora configurar la app
         setupAppFromLoadedMenus();
-        return; // Detener aquí, no cargar desde directorio
+        return;
       } catch (e) {
         console.error("Error al parsear menús manuales de localStorage", e);
-        // Datos corruptos, limpiar flags y seguir a carga de directorio
         localStorage.removeItem(MANUAL_MENUS_KEY);
         localStorage.removeItem(MENU_SOURCE_KEY);
       }
@@ -79,13 +76,40 @@ function init() {
   // 3b. Si la fuente es 'directory', 'null', o si 'manual' falló, cargar desde directorio
   console.log("Cargando menús desde directorio...");
   loadMenusFromDirectory(true);
-  // --- FIN DE CAMBIO ---
 
-  // 4. Listener para carga inicial
+  // 4. Listener para carga inicial (clic)
   const initialInput = document.getElementById('initial-load-input');
   if (initialInput) {
     initialInput.addEventListener('change', handleJsonFileSelect);
   }
+
+  // --- INICIO DE CAMBIO: Listeners para Drag and Drop ---
+  const dropOverlay = document.getElementById('drag-drop-overlay');
+  const initialDropZone = document.getElementById('initial-load-container');
+
+  // Mostrar overlay cuando arrastras sobre la ventana
+  window.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropOverlay.classList.remove('hidden');
+    initialDropZone.classList.add('drag-over'); // Resaltar también zona inicial
+  });
+
+  // Ocultar overlay si el drag sale de la ventana
+  window.addEventListener('dragleave', (e) => {
+    if (e.relatedTarget === null) {
+      dropOverlay.classList.add('hidden');
+      initialDropZone.classList.remove('drag-over');
+    }
+  });
+
+  // Manejar el soltar archivo
+  window.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropOverlay.classList.add('hidden');
+    initialDropZone.classList.remove('drag-over');
+    handleDroppedFiles(e.dataTransfer.files);
+  });
+  // --- FIN DE CAMBIO ---
 }
 
 // Carga desde json_directory.json
@@ -100,24 +124,22 @@ function loadMenusFromDirectory(isInitialLoad = false) {
       console.log("Archivos JSON a cargar:", files);
 
       if (isInitialLoad && files.length === 0) {
-        // No hay menús en directorio Y no hay menús manuales cacheados
         console.warn("No se encontraron archivos en json_directory.json.");
         hideLoading(true);
         showInitialLoadButton();
         return Promise.reject("No files");
       }
       
-      // Si cargamos desde directorio, esta es nuestra fuente. Limpiar caché manual.
       localStorage.setItem(MENU_SOURCE_KEY, "directory");
       localStorage.removeItem(MANUAL_MENUS_KEY);
       
       return loadAllJsonMenus(files);
     })
     .then((loadResult) => {
-      setupAppFromLoadedMenus(loadResult); // Llamar a la función común
+      setupAppFromLoadedMenus(loadResult);
     })
     .catch((err) => {
-      if (err === "No files") return; // Silenciar error esperado
+      if (err === "No files") return;
       console.error("Error al cargar menús:", err);
       if (isInitialLoad) {
         hideLoading(true);
@@ -129,14 +151,12 @@ function loadMenusFromDirectory(isInitialLoad = false) {
     });
 }
 
-// NUEVA FUNCIÓN: Lógica común para configurar la app
 function setupAppFromLoadedMenus(loadResult = null) {
   hideLoading();
   if (loadResult && loadResult.errors && loadResult.errors.length > 0) {
     showModal(`Algunos menús no se pudieron cargar: ${loadResult.errors.join(', ')}`);
   }
 
-  // Comprobar si ya tenemos menús barajados (y con estado 'isUsed') en el estado
   if (selectionState.shuffledMenus && selectionState.shuffledMenus.breakfast.length > 0) {
       console.log("Restaurando menús barajados y estado 'isUsed' desde localStorage.");
       allMenus = deepClone(selectionState.shuffledMenus);
@@ -144,7 +164,6 @@ function setupAppFromLoadedMenus(loadResult = null) {
       console.log("Creando nuevos menús barajados.");
       copyOriginalToAllMenus_NoShuffle();
       shuffleAllMenus();
-      // Asignar IDs únicos y estado 'isUsed'
       CATEGORY_ORDER.forEach(catKey => {
         if (allMenus[catKey]) {
           allMenus[catKey].forEach((menu, index) => {
@@ -160,7 +179,7 @@ function setupAppFromLoadedMenus(loadResult = null) {
     currentMenuIndex = selectionState.currentMenuIndex;
   }
 
-  saveStateToLocalStorage(); // Guardar el estado (incluyendo shuffledMenus)
+  saveStateToLocalStorage();
   console.log("Menús finales listos:", allMenus);
   renderApp();
 }
@@ -187,15 +206,40 @@ function showInitialLoadButton() {
   }
 }
 
+// --- INICIO DE CAMBIO: Lógica de Carga Refactorizada ---
+
+// 1. Wrapper para el <input type="file"> (clic)
 function handleJsonFileSelect(event) {
   const files = event.target.files;
   if (!files || files.length === 0) {
     showModal("No se seleccionaron archivos.");
     return;
   }
+  readAndProcessFiles(files); // Llamar a la función núcleo
+  event.target.value = null; // Resetear input
+}
+
+// 2. Wrapper para Drag and Drop
+function handleDroppedFiles(files) {
+  if (!files || files.length === 0) {
+    showModal("No se soltaron archivos.");
+    return;
+  }
+  readAndProcessFiles(files); // Llamar a la función núcleo
+}
+
+// 3. Función Núcleo que leen la FileList
+function readAndProcessFiles(files) {
+  // Filtrar solo archivos JSON
+  const jsonFiles = Array.from(files).filter(file => file.type === "application/json" || file.name.endsWith('.json'));
+
+  if (jsonFiles.length === 0) {
+    showModal("No se encontraron archivos .json válidos. Asegúrate de que los archivos tengan la extensión .json.");
+    return;
+  }
 
   const readPromises = [];
-  for (const file of files) {
+  for (const file of jsonFiles) {
     readPromises.push(new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = (e) => {
@@ -214,15 +258,14 @@ function handleJsonFileSelect(event) {
   Promise.all(readPromises)
     .then(allMenuData => {
       console.log("Todos los JSON cargados:", allMenuData);
-      processLoadedMenus(allMenuData);
+      processLoadedMenus(allMenuData); // Función que ya teníamos
     })
     .catch(err => {
       console.error("Error al cargar archivos JSON:", err);
       showModal(`Error al cargar archivos: ${err}`);
     });
-
-  event.target.value = null;
 }
+// --- FIN DE CAMBIO ---
 
 function processLoadedMenus(menuDataArray) {
   originalMenus = { breakfast: [], snack: [], lunch: [], dinner: [] };
@@ -254,19 +297,16 @@ function processLoadedMenus(menuDataArray) {
     return;
   }
 
-  // --- INICIO DE CAMBIO: Guardar Menús Manuales en LocalStorage ---
   console.log("Guardando menús manuales en localStorage...");
   localStorage.setItem(MANUAL_MENUS_KEY, JSON.stringify(originalMenus));
   localStorage.setItem(MENU_SOURCE_KEY, "manual");
-  // --- FIN DE CAMBIO ---
   
   resetAndSetupApp();
 }
 
-// Se llama después de cargar archivosNUEVOS (limpia selecciones)
 function resetAndSetupApp() {
   hideLoading();
-  initializeSelectionState(); // Reiniciar selectionState
+  initializeSelectionState(); 
   copyOriginalToAllMenus_NoShuffle();
   shuffleAllMenus();
   
@@ -284,13 +324,12 @@ function resetAndSetupApp() {
   currentMenuIndex = 0;
   selectionState.currentMenuIndex = 0;
 
-  saveStateToLocalStorage(); // Guardar estado limpio
+  saveStateToLocalStorage(); 
   
   console.log("Menús finales (manual):", allMenus);
   renderApp();
 }
 
-// Solo acumula menús de la carga de directorio
 function loadAllJsonMenus(fileList) {
   const errors = [];
   const promises = fileList.map((file) =>
@@ -348,17 +387,15 @@ function initializeSelectionState() {
     currentMenuIndex: 0,
     tempSelections: {},
     tempDaysSelection: null,
-    shuffledMenus: null, // Se llenará en setupAppFromLoadedMenus
+    shuffledMenus: null,
     globalUndoHistory: [],
   };
-  // No guardar aquí, se guarda después de poblar shuffledMenus
 }
 
 function saveStateToLocalStorage() {
   try {
     selectionState.currentMenuIndex = currentMenuIndex;
     
-    // Guardar el estado 'isUsed' en shuffledMenus
     if (allMenus.breakfast.length > 0) { 
        selectionState.shuffledMenus = deepClone(allMenus);
     }
@@ -408,8 +445,6 @@ function ensureSelectionStateIntegrity() {
   if (!("tempDaysSelection" in selectionState)) selectionState.tempDaysSelection = null;
   if (!Array.isArray(selectionState.globalUndoHistory))
     selectionState.globalUndoHistory = [];
-
-  // No guardar aquí, se guarda en setupApp
 }
 
 function copyOriginalToAllMenus_NoShuffle() {
@@ -444,9 +479,7 @@ function renderApp() {
   const appDiv = document.getElementById("app");
   appDiv.innerHTML = "";
 
-  // --- INICIO DE CAMBIO: Botón Reiniciar Siempre Visible ---
   showFloatingButtonReset(() => confirmRestart());
-  // --- FIN DE CAMBIO ---
 
   if (allCategoriesCompleted()) {
     renderSummary();
@@ -1037,7 +1070,6 @@ function showFloatingButtonLeft(onClick) {
   btn.onclick = onClick;
 }
 
-// --- INICIO DE CAMBIO: Nuevas funciones Botón Reiniciar ---
 function showFloatingButtonReset(onClick) {
   const btn = document.getElementById('floating-btn-reset');
   btn.classList.remove('hidden');
@@ -1049,12 +1081,11 @@ function hideFloatingButtonReset() {
   btn.classList.add('hidden');
   btn.onclick = null;
 }
-// --- FIN DE CAMBIO ---
 
 function hideFloatingButtons() {
   hideFloatingButton();
   hideFloatingButtonLeft();
-  hideFloatingButtonReset(); // Ocultarlos todos
+  hideFloatingButtonReset(); 
 }
 
 function hideFloatingButton() {
@@ -1141,6 +1172,7 @@ function renderSummary() {
   
   const topActions = document.createElement("div");
   topActions.className = "summary-actions-top";
+  
   const copyBtn = document.createElement("button");
   copyBtn.className = "btn btn-primary";
   copyBtn.textContent = "Copiar Resumen";
@@ -1154,16 +1186,26 @@ function renderSummary() {
   topActions.appendChild(shareBtn);
 
   // --- INICIO DE CAMBIO: Botones de IA (Gemini) ---
-  const geminiListBtn = document.createElement("button");
+  const geminiListBtn = document.createElement("a"); // Cambiado a <a> para click derecho
   geminiListBtn.className = "btn btn-ia";
   geminiListBtn.textContent = "Crear Lista de Súper (IA)";
-  geminiListBtn.addEventListener('click', () => handleAiPrompt('assets/aiprompt_shopping_list.txt'));
+  geminiListBtn.href = "https://gemini.google.com"; // Link base
+  geminiListBtn.target = "_blank"; // Abrir en nueva pestaña
+  geminiListBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevenir navegación inmediata
+      handleAiPrompt('assets/aiprompt_shopping_list.txt');
+  });
   topActions.appendChild(geminiListBtn);
 
-  const geminiNotionBtn = document.createElement("button");
+  const geminiNotionBtn = document.createElement("a"); // Cambiado a <a>
   geminiNotionBtn.className = "btn btn-ia";
   geminiNotionBtn.textContent = "Enviar a Notion (IA)";
-  geminiNotionBtn.addEventListener('click', () => handleAiPrompt('assets/aiprompt_to_notion.txt'));
+  geminiNotionBtn.href = "https://gemini.google.com"; // Link base
+  geminiNotionBtn.target = "_blank"; // Abrir en nueva pestaña
+  geminiNotionBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevenir navegación inmediata
+      handleAiPrompt('assets/aiprompt_to_notion.txt');
+  });
   topActions.appendChild(geminiNotionBtn);
   // --- FIN DE CAMBIO ---
 

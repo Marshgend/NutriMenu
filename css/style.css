@@ -72,6 +72,23 @@ body {
   text-align: center;
 }
 
+/* INICIO DE CAMBIO: Zona de Drag and Drop */
+.drag-drop-zone {
+  padding: 40px 20px;
+  border: 2px dashed var(--outline);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.drag-drop-zone.drag-over {
+  border-color: var(--primary);
+  background: var(--surface-variant);
+}
+/* FIN DE CAMBIO */
+
+
 #initial-load-container p {
   margin-bottom: 16px;
   color: var(--on-surface-variant);
@@ -795,6 +812,49 @@ body {
   justify-content: center;
   margin-top: 24px;
 }
+
+/* INICIO DE CAMBIO: Estilos para Drag and Drop Overlay */
+.drag-drop-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998; /* Justo debajo del loading */
+  backdrop-filter: blur(4px);
+}
+
+.drag-drop-message {
+  border: 3px dashed var(--primary-light);
+  border-radius: var(--border-radius);
+  padding: 40px 60px;
+  background: var(--surface);
+  text-align: center;
+  color: var(--on-surface);
+}
+
+.drag-drop-icon {
+  font-size: 3rem;
+  color: var(--primary-light);
+  animation: bounce 1s infinite;
+}
+
+.drag-drop-message p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+/* FIN DE CAMBIO */
+
 
 /* Resumen - RE DISEÑADO */
 .summary-section {

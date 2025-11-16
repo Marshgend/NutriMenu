@@ -42,17 +42,24 @@
   <div id="loading" class="loading">
     <div class="loading-spinner"></div>
     <p>Cargando menús...</p>
-    <div id="initial-load-container" class="hidden">
-      <p>No hay menús cargados.</p>
-      <label class="btn btn-primary btn-load">
+    
+    <div id="initial-load-container" class="hidden drag-drop-zone">
+      <p>Arrastra tus archivos JSON aquí o</p>
+    <label class="btn btn-primary btn-load">
         Seleccionar archivo(s) JSON
         <input type="file" id="initial-load-input" accept=".json" class="hidden" multiple>
       </label>
     </div>
-    </div>
+  </div>
 
   <div id="dropdown-container"></div>
 
+  <div id="drag-drop-overlay" class="drag-drop-overlay hidden">
+    <div class="drag-drop-message">
+      <div class="drag-drop-icon">⤓</div>
+      <p>Suelta tus archivos JSON aquí</p>
+    </div>
+  </div>
   <script src="js/javascript.js"></script>
 </body>
 
